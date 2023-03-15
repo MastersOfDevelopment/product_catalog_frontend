@@ -1,5 +1,5 @@
 @font-face {
-  font-family: Mont;
+  font-family: 'Mont';
   src: url(../../public/fonts/Mont-Bold.otf);
 }
 
@@ -9,7 +9,7 @@
 
 html,
 body {
-  font-family: Mont;
+  font-family: 'Mont', sans-serif;
   height: auto;
   width: 100%;
 }

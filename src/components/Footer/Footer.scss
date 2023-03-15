@@ -1,0 +1,82 @@
+@font-face {
+  font-family: MontBold;
+  src: url(../../../public/fonts/Mont-Bold.otf);
+}
+@font-face {
+  font-family: MontSemiBold;
+  src: url(../../../public/fonts/Mont-SemiBold.otf);
+}
+
+$primaryColorBackground: #fff;
+$primaryColorText: #0f0f11;
+$secondaryColorText: #89939a;
+
+.footer {
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 257px;
+  background-color: $primaryColorBackground;
+
+  &__logo {
+    font-family: 'MontBold';
+    line-height: 15px;
+    color: $primaryColorText;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  &__nav {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    list-style-type: none;
+
+    &__item {
+      display: block;
+    }
+
+    &__link {
+      font-family: 'MontBold';
+      font-style: normal;
+      font-size: 12px;
+      line-height: 11px;
+      letter-spacing: 0.04em;
+      color: $secondaryColorText;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+  }
+
+  &__backToTop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+
+    &__title {
+      font-family: 'MontSemiBold';
+      margin-right: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 15px;
+      color: $secondaryColorText;
+    }
+
+    &__btn {
+      margin-left: 8px;
+      display: inline-block;
+      line-height: 34px;
+      height: 32px;
+      font-size: 16px;
+      text-align: center;
+      color: $primaryColorText;
+      width: 32px;
+      border: 1.5px solid $secondaryColorText;
+      border-radius: 50%;
+    }
+  }
+}
