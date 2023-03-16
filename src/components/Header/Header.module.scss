@@ -1,86 +1,71 @@
+.header {
+  border-bottom: 1px solid #e2e6e9;
+
+  &_shoppingbag_icon {
+    height: 16px;
+    width: 16px;
+    margin: 24px;
+  }
+
+  &_shoppingbag_link {
+    height: 64px;
+    border-left: 1px solid #e2e6e9;
+  }
+
+  &_logo {
+    color: #0f0f11;
+    height: 26px;
+    width: 80px;
+    margin: 19px 48px 18px 24px;
+  }
+
+  &_favourite_icon {
+    height: 16px;
+    width: 16px;
+    margin: 24px;
+  }
+
+  &_favourite_link {
+    height: 64px;
+  }
+
+  &_container {
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    align-items: center;
+  }
+
+  &_menu {
+    display: flex;
+    align-items: center;
+    height: 64px;
+    border-left: 1px solid #e2e6e9;
+  }
+
+  &_burgermenu_icon {
+    height: 0;
+    width: 0;
+    padding: 0;
+    border-left: 0;
+  }
+}
+
 .navigation_container {
   display: flex;
 }
 
-.header {
-  border-bottom: 1px solid #e2e6e9;
-}
-
-.navLink {
-  font-size: 12px;
-  font-weight: 800;
-  text-transform: uppercase;
-  line-height: 64px;
-  color: #88939a;
-  text-decoration: none;
-}
-
-.header_logo {
-  color: #0f0f11;
-  height: 26px;
-  width: 80px;
-  margin: 19px 48px 18px 24px;
-}
-
-.header_favourite_icon {
-  height: 16px;
-  width: 15px;
-  padding: 25px;
-  margin-left: -32px;
-  border-left: 1px solid #e2e6e9;
-}
-
-.header_shopping-bag_icon {
-  height: 16px;
-  width: 15px;
-  padding: 25px;
-  border-left: 1px solid #e2e6e9;
-}
-
-.header_container {
-  display: flex;
-  justify-content: space-between;
-  height: 64px;
-  align-items: center;
-}
-
-.header_menu {
-  display: flex;
-  align-items: center;
-}
-
-.header_burger-menu_icon {
-  height: 0;
-  width: 0;
-  padding: 0;
-  border-left: 0;
-}
 
 .navLinkWrapper {
   position: relative;
   gap: 150px;
+  height: 66px;
 }
 
 .navList {
   display: flex;
   list-style-type: none;
   gap: 64px;
-}
-
-.activeLink {
-  color: black;
-}
-
-.activeLink::after {
-  display: inline-block;
-  position: absolute;
-  width: 100%;
-  height: 3px;
-  bottom: 0;
-  left: 0;
-  background-color: black;
-  border-radius: 8px;
-  content: '';
 }
 
 @media (max-width: 1439px) {
@@ -91,31 +76,24 @@
 
 .header_logo_link {
   position: relative;
-  top: 16px;
 }
 
 @media (max-width: 639px) {
   .header_favourite_icon {
     width: 0;
-    padding: 0;
     border-left: 0;
+    margin: 0;
   }
 
-  .header_burger-menu_icon {
+  .header_burgermenu_icon {
     height: 16px;
     width: 15px;
-    padding: 25px;
-    border-left: 1px solid #e2e6e9;
+    margin: 24px;
   }
 
-  .header_shopping-bag_icon {
+  .header_shoppingbag_icon {
     width: 0;
     border-left: 0;
-    padding: 0;
-  }
-
-  .navLink {
-    margin-right: 0;
-    font-size: 0;
+    margin: 0;
   }
 }
