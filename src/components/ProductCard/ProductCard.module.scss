@@ -1,0 +1,93 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 272px;
+  height: 506px;
+  border: 1px solid #E2E6E9;
+  border-radius: 8px;
+  padding: 32px;
+}
+
+.container:hover {
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product-card {
+  display: flex;
+  justify-content: space-between;
+  background-color: #FFFFFF;
+  flex-direction: column;
+  font-style: normal;
+}
+
+.image {
+  display: block;
+  object-fit: contain;
+  width: 208px;
+  height: 196px;
+  margin-bottom: 24px;
+}
+
+.name {
+  display: flex;
+  font-size: 14px;
+  line-height: 21px;
+  color: #0F0F11;
+  margin-bottom: 8px;
+}
+
+.prices {
+  display: flex;
+  flex-direction: row;
+  font-size: 22px;
+  line-height: 140%;
+  padding-bottom: 8px;
+}
+
+.price {
+  color: #0F0F11;
+  padding-right: 8px;
+  font-weight: 800;
+}
+
+.fullPrice {
+  font-weight: 500;
+  color: #89939A;
+  text-decoration-line: line-through;
+}
+ 
+.separator {
+  height: 1px;
+  width: 208px;
+  background-color: #E2E6E9;
+  margin-bottom: 8px;
+}
+
+.description {
+  padding-bottom: 24px;
+}
+
+.descriptionTitle {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  color: #89939A;
+  margin-top: 8px;
+}
+
+.descriptionData {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  margin-top: 8px;
+}
+
+.line {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttonLine {
+  display: flex;
+  justify-content: space-between;
+}

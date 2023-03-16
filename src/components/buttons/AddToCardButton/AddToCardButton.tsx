@@ -1,12 +1,9 @@
 import React from 'react'
+import styles from './AddToCardButton.module.scss'
 
 export const AddToCardButton: React.FC = () => {
   return (
-    <button
-      type="button"
-      className="product-card__button-add"
-      // onClick={}
-    >
+    <button type="button" className={styles.buttonAddToCard}>
       Add to card
     </button>
   )

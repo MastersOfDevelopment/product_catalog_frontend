@@ -1,14 +1,33 @@
-.product-card {
-  &__button-add {
-    width: 57px;
-    height: 15px;
-    border-radius: 48px;
-    background-color: #4219d0;
-    color: #ffffff;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 21px;
-    text-align: center;
-  }
+.buttonAddToCard {
+  font-family: Mont, sans-serif;
+  width: 160px;
+  height: 40px;
+  border-radius: 48px;
+  background-color: #4219D0;
+  color: #FFFFFF;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: box-shadow 0.5s;
+}
+
+.buttonAddToCard:hover {
+  box-shadow: 0px 3px 13px rgba(21, 25, 31, 0.4);
+}
+
+.buttonAddToCard:active {
+  box-shadow: none;
+  background-color: #FFFFFF;
+  color: #4219D0;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #E2E6E9;
 }
