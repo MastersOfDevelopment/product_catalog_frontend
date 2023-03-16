@@ -1,5 +1,5 @@
 import React from 'react'
-import { ProductCardPhone } from '../../types/ProductCardPhoneType'
+// import { ProductCardPhone } from '../../types/ProductCardPhoneType'
 import { AddToFavoriteButton } from '../buttons/AddToFavoriteButton'
 import { AddToCardButton } from '../buttons/AddToCardButton'
 import styles from './ProductCard.module.scss'
