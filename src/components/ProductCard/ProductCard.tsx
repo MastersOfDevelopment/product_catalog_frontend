@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'
 // import classNames from 'classnames';
 // import { ProductCard } from './Todotype';
-import { AddToFavoriteButton } from '../buttons/AddToFavoriteButton';
-import { AddToCardButton } from '../buttons/AddToCardButton';
-import './ProductCard.modules.scss';
+import { AddToFavoriteButton } from '../buttons/AddToFavoriteButton'
+import { AddToCardButton } from '../buttons/AddToCardButton'
+import './ProductCard.modules.scss'
 
 export const ProductCard: React.FC = () => {
   return (
@@ -13,18 +13,14 @@ export const ProductCard: React.FC = () => {
         alt="Apple iPhone Xs 64GB Silver (iMT9G2FS/A)"
         className="product-card__image"
       />
-      <p className="product-card__name">
-        Apple iPhone Xs 64GB Silver (iMT9G2FS/A)
-      </p>
+      <p className="product-card__name">Apple iPhone Xs 64GB Silver (iMT9G2FS/A)</p>
 
       <div className="product-card__prices">
         <p className="product-card__price">
           $799
         </p>
 
-        <p className="product-card__fullPrice">
-          $899
-        </p>
+        <p className="product-card__fullPrice">$899</p>
       </div>
 
       <div className="product-card__separator" />
@@ -63,5 +59,5 @@ export const ProductCard: React.FC = () => {
         <AddToFavoriteButton />
       </div>
     </div>
-  );
-};
+  )
+}

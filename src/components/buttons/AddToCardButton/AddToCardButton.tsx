@@ -10,5 +10,5 @@ export const AddToCardButton: React.FC = () => {
     >
       Add to card
     </button>
-  );
-};
+  )
+}

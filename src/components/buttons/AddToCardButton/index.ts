@@ -1,1 +1,1 @@
-export * from './AddToCardButton';
+export * from './AddToCardButton'

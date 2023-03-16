@@ -1,0 +1,77 @@
+$white-color: #fff;
+$violet-color: #4219d0;
+
+.content {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  min-width: 300px;
+  height: auto;
+  flex-basis: 50%;
+}
+
+.text {
+  display: flex;
+  flex-flow: column;
+  font-family: 'Mont-Bold';
+  font-weight: 300;
+  font-size: 15px;
+  flex-basis: 50%;
+}
+
+.errorText {
+  margin-bottom: 15px;
+}
+
+.cosmonaut {
+  width: 100%;
+  height: 100%;
+}
+
+.errorCode {
+  font-size: 7.5em;
+  margin-bottom: 5px;
+  font-weight: normal;
+}
+
+.btn {
+  font-family: 'Mont';
+  padding: 9.5px 60.5px;
+  border-radius: 48px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s ease;
+  font-weight: bold;
+  margin: 5px 0px;
+  color: $white-color;
+  background: $violet-color;
+  border: 1px solid $violet-color;
+  align-self: flex-start;
+
+  &:hover {
+    box-shadow: 0px 3px 13px rgba(23, 32, 49, 0.4);
+  }
+
+  &:focus {
+    background-color: $white-color;
+    color: $violet-color;
+    border: 1px solid #89939a;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .content {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 70px;
+  }
+}

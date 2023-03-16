@@ -10,5 +10,5 @@ export const AddToFavoriteButton: React.FC = () => {
     >
       Add
     </button>
-  );
-};
+  )
+}
