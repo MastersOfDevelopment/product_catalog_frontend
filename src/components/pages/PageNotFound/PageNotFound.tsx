@@ -1,11 +1,11 @@
 /* eslint-disable max-len */
 import React from 'react'
-import './PageNotFound.modules.scss'
+import styles from './PageNotFound.module.scss'
 import './PageNotFoundAnimation'
 
 export const PageNotFound: React.FC = () => (
-  <div className="content">
-    <div className="image">
+  <div className={styles.content}>
+    <div className={styles.image}>
       <svg
         className="cosmonaut"
         version="1.1"
@@ -642,14 +642,14 @@ export const PageNotFound: React.FC = () => (
         </g>
       </svg>
     </div>
-    <div className="text">
-      <h1 className="errorCode">404</h1>
+    <div className={styles.text}>
+      <h1 className={styles.errorCode}>404</h1>
       <h2>UH OH! You&apos;re lost.</h2>
-      <p className="errorText">
+      <p className={styles.errorText}>
         The page you are looking for does not exist. How you got here is a mystery. But you can click the button below
         to go back to the homepage.
       </p>
-      <button type="button" className="btn">
+      <button type="button" className={styles.btn}>
         Home
       </button>
     </div>
