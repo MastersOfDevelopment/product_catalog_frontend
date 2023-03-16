@@ -1,6 +1,10 @@
 $white-color: #fff;
 $violet-color: #4219d0;
 
+.container {
+  display: block;
+}
+
 .content {
   position: absolute;
   top: 50%;
@@ -14,20 +18,20 @@ $violet-color: #4219d0;
 .image {
   min-width: 300px;
   height: auto;
-  flex-basis: 50%;
+  flex-basis: 70%;
 }
 
 .text {
   display: flex;
   flex-flow: column;
-  font-family: 'Mont-Bold';
-  font-weight: 300;
+  font-weight: 600;
   font-size: 15px;
   flex-basis: 50%;
 }
 
 .errorText {
   margin-bottom: 15px;
+  font-weight: 600;
 }
 
 .cosmonaut {
@@ -38,11 +42,11 @@ $violet-color: #4219d0;
 .errorCode {
   font-size: 7.5em;
   margin-bottom: 5px;
-  font-weight: normal;
+  font-weight: 600;
 }
 
 .btn {
-  font-family: 'Mont';
+  font-weight: 600;
   padding: 9.5px 60.5px;
   border-radius: 48px;
   font-weight: 700;
@@ -50,7 +54,6 @@ $violet-color: #4219d0;
   cursor: pointer;
   font-size: 14px;
   transition: 0.2s ease;
-  font-weight: bold;
   margin: 5px 0px;
   color: $white-color;
   background: $violet-color;

@@ -5,7 +5,7 @@ import mainLogo from 'assets/icons/logo.svg'
 export const Footer: FC = () => (
   <footer className={styles.footer}>
     <a className={styles.footer__logo} href="/">
-      <img src={mainLogo} alt="" />
+      <img src={mainLogo} alt="nice gadgets logo" />
     </a>
     <ul className={styles.footer__nav}>
       <li className={styles.footer__nav__item}>
