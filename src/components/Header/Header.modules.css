@@ -1,0 +1,121 @@
+.navigation_container {
+  display: flex;
+}
+
+.header {
+  border-bottom: 1px solid #E2E6E9;
+}
+
+.navLink {
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 64px;
+  color: #88939A;
+  text-decoration: none;
+}
+
+.header_logo {
+  color: #0F0F11;
+  height: 26px;
+  width: 80px;
+  margin: 19px 48px 18px 24px;
+}
+
+.header_favourite_icon {
+  height: 16px;
+  width: 15px;
+  padding: 25px;
+  margin-left: -32px;
+  border-left: 1px solid #E2E6E9;
+}
+
+.header_shopping-bag_icon {
+  height: 16px;
+  width: 15px;
+  padding: 25px;
+  border-left: 1px solid #E2E6E9;
+}
+
+.header_container {
+  display: flex;
+  justify-content:space-between;
+  height: 64px;
+  align-items: center;
+}
+
+.header_menu {
+  display: flex;
+  align-items: center;
+}
+
+.header_burger-menu_icon {
+  height: 0;
+  width: 0;
+  padding: 0;
+  border-left: 0;
+}
+
+.navLinkWrapper {
+  position: relative;
+  gap: 150px
+}
+
+.navList {
+  display: flex;
+  list-style-type: none;
+  gap: 64px
+}
+
+.activeLink {
+  color: black;
+}
+
+.activeLink::after {
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  border-radius: 8px;
+  content: "";
+}
+
+@media (max-width: 1439px) {
+  .navList {
+    gap: 39px;
+  }
+}
+
+.header_logo_link {
+  position: relative;
+  top: 16px;
+}
+
+@media (max-width: 639px) {
+  .header_favourite_icon {
+    width: 0;
+    padding: 0;
+    border-left: 0;
+  }
+
+  .header_burger-menu_icon {
+    height: 16px;
+    width: 15px;
+    padding: 25px;
+    border-left: 1px solid #E2E6E9;
+  }
+
+  .header_shopping-bag_icon {
+    width: 0;
+    border-left: 0;
+    padding: 0;
+  }
+
+  .navLink {
+    margin-right: 0;
+    font-size: 0;
+  }
+}
