@@ -1,0 +1,34 @@
+// .button-add {
+//   display: flex;
+//   justify-content: space-between;
+// }
+
+.button-add-to-card {
+    width: 160px;
+    height: 40px;
+    border-radius: 48px;
+    background-color: #4219D0;
+    color: #FFFFFF;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid transparent;
+  }
+
+  .button-added {
+    width: 160px;
+    height: 40px;
+    border-radius: 48px;
+    background-color: #FFFFFF;
+    color: #4219D0;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #E2E6E9;
+  }

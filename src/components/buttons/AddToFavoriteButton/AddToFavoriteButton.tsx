@@ -1,13 +1,14 @@
 import React from 'react';
+import './AddToFavoriteButton.modules.scss';
 
 export const AddToFavoriteButton: React.FC = () => {
   return (
     <button
       type="button"
-      className="product-card__button-add-to-favorites"
+      className="button-favorites"
       //  onClick={}
     >
-      Add to card
+      Add
     </button>
   );
 };
