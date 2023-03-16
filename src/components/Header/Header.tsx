@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom'
 import React from 'react'
 import styles from './Header.module.scss'
-import { NavLinkBar } from './NavLinkBar'
+import { NavLinkBar } from 'components/NavLinkBar'
 import logoFavouriteIcon from 'assets/icons/favourites.svg'
 import logoBagIcon from 'assets/icons/shopping-bag.svg'
 import burgerMenuIcon from 'assets/icons/burger-menu.svg'
