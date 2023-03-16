@@ -1,34 +1,32 @@
 import { FC } from 'react'
-import './Footer.scss'
+import styles from './Footer.module.scss'
+import mainLogo from 'assets/icons/logo.svg'
 
 export const Footer: FC = () => (
-  <footer className="footer">
-    <a className="footer__logo" href="/">
-      Nice
-      <img src="../../../public/logo_hand.png" alt="" />
-      <br />
-      Gadgets
+  <footer className={styles.footer}>
+    <a className={styles.footer__logo} href="/">
+      <img src={mainLogo} alt="" />
     </a>
-    <ul className="footer__nav">
-      <li className="footer__nav__item">
-        <a className="footer__nav__link" href="/">
+    <ul className={styles.footer__nav}>
+      <li className={styles.footer__nav__item}>
+        <a className={styles.footer__nav__link} href="/">
           Github
         </a>
       </li>
-      <li className="footer__nav__item">
-        <a className="footer__nav__link" href="/">
+      <li className={styles.footer__nav__item}>
+        <a className={styles.footer__nav__link} href="/">
           Contacts
         </a>
       </li>
-      <li className="footer__nav__item">
-        <a className="footer__nav__link" href="/">
+      <li className={styles.footer__nav__item}>
+        <a className={styles.footer__nav__link} href="/">
           Rights
         </a>
       </li>
     </ul>
-    <a className="footer__backToTop" href="/">
-      <span className="footer__backToTop__title">Back to top</span>
-      <span className="footer__backToTop__btn">^</span>
+    <a className={styles.footer__backToTop} href="/">
+      <span className={styles.footer__backToTop__title}>Back to top</span>
+      <span className={styles.footer__backToTop__btn}>^</span>
     </a>
   </footer>
 )
