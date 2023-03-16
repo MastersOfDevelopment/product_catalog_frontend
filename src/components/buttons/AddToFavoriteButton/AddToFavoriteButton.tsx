@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 export const AddToFavoriteButton: React.FC = () => {
   return (
@@ -9,5 +9,5 @@ export const AddToFavoriteButton: React.FC = () => {
     >
       Add to card
     </button>
-  );
-};
+  )
+}

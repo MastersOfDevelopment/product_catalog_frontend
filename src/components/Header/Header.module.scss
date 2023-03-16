@@ -3,7 +3,7 @@
 }
 
 .header {
-  border-bottom: 1px solid #E2E6E9;
+  border-bottom: 1px solid #e2e6e9;
 }
 
 .navLink {
@@ -11,12 +11,12 @@
   font-weight: 800;
   text-transform: uppercase;
   line-height: 64px;
-  color: #88939A;
+  color: #88939a;
   text-decoration: none;
 }
 
 .header_logo {
-  color: #0F0F11;
+  color: #0f0f11;
   height: 26px;
   width: 80px;
   margin: 19px 48px 18px 24px;
@@ -27,19 +27,19 @@
   width: 15px;
   padding: 25px;
   margin-left: -32px;
-  border-left: 1px solid #E2E6E9;
+  border-left: 1px solid #e2e6e9;
 }
 
 .header_shopping-bag_icon {
   height: 16px;
   width: 15px;
   padding: 25px;
-  border-left: 1px solid #E2E6E9;
+  border-left: 1px solid #e2e6e9;
 }
 
 .header_container {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   height: 64px;
   align-items: center;
 }
@@ -58,13 +58,13 @@
 
 .navLinkWrapper {
   position: relative;
-  gap: 150px
+  gap: 150px;
 }
 
 .navList {
   display: flex;
   list-style-type: none;
-  gap: 64px
+  gap: 64px;
 }
 
 .activeLink {
@@ -80,7 +80,7 @@
   left: 0;
   background-color: black;
   border-radius: 8px;
-  content: "";
+  content: '';
 }
 
 @media (max-width: 1439px) {
@@ -105,7 +105,7 @@
     height: 16px;
     width: 15px;
     padding: 25px;
-    border-left: 1px solid #E2E6E9;
+    border-left: 1px solid #e2e6e9;
   }
 
   .header_shopping-bag_icon {

@@ -1,23 +1,19 @@
-import { NavLink } from 'react-router-dom';
-import React from 'react';
-import './Header.modules.css';
-import { NavLinkBar } from './NavLinkBar';
-import logoFavouriteIcon from '../../images/favouriteIcon.svg';
-import mainLogo from '../../images/mainLogo.svg';
-import logoBagIcon from '../../images/Shoppingbag.svg';
-import burgerMenuIcon from '../../images/burger-menu.svg';
+import { NavLink } from 'react-router-dom'
+import React from 'react'
+import styles from './Header.module.scss'
+import { NavLinkBar } from './NavLinkBar'
+import logoFavouriteIcon from 'assets/icons/favourites.svg'
+import mainLogo from 'assets/icons/logo.svg'
+import logoBagIcon from 'assets/icons/shopping-bag.svg'
+import burgerMenuIcon from 'assets/icons/burger-menu.svg'
 /* eslint-disable max-len */
 
 export const Header: React.FC = () => (
-  <header className="header">
+  <header className={styles.header}>
     <div className="header_container">
       <div className="navigation_container">
         <NavLink to="/" className="header_logo_link">
-          <img
-            className="header_logo"
-            alt="Main Logo"
-            src={mainLogo}
-          />
+          <img className="header_logo" alt="Main Logo" src={mainLogo} />
         </NavLink>
         <nav className="header_navigation">
           <ul className="navList">
@@ -38,27 +34,15 @@ export const Header: React.FC = () => (
       </div>
       <div className="header_menu">
         <NavLink className="header_favourite_link" to="/favourites">
-          <img
-            className="header_favourite_icon"
-            alt="Favourite icon"
-            src={logoFavouriteIcon}
-          />
+          <img className="header_favourite_icon" alt="Favourite icon" src={logoFavouriteIcon} />
         </NavLink>
         <NavLink className="header_shopping-bag_link" to="/shopping-bag">
-          <img
-            className="header_shopping-bag_icon"
-            alt="Shopping Bag icon"
-            src={logoBagIcon}
-          />
+          <img className="header_shopping-bag_icon" alt="Shopping Bag icon" src={logoBagIcon} />
         </NavLink>
         <NavLink className="header_burger-menu_link" to="/burger-menu">
-          <img
-            className="header_burger-menu_icon"
-            alt="Shopping Bag icon"
-            src={burgerMenuIcon}
-          />
+          <img className="header_burger-menu_icon" alt="Shopping Bag icon" src={burgerMenuIcon} />
         </NavLink>
       </div>
     </div>
   </header>
-);
+)

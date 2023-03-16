@@ -8,12 +8,11 @@
 }
 
 $primaryColorBackground: #fff;
-$primaryColorText: #0F0F11;
-$secondaryColorText: #89939A;
-
+$primaryColorText: #0f0f11;
+$secondaryColorText: #89939a;
 
 .footer {
-  padding:0 16px;
+  padding: 0 16px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -26,7 +25,7 @@ $secondaryColorText: #89939A;
     color: $primaryColorText;
     text-decoration: none;
     text-transform: uppercase;
-  };
+  }
 
   &__nav {
     padding: 0;

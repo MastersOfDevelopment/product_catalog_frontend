@@ -1,5 +1,5 @@
-import { FC } from 'react';
-import './Footer.scss';
+import { FC } from 'react'
+import './Footer.scss'
 
 export const Footer: FC = () => (
   <footer className="footer">
@@ -31,4 +31,4 @@ export const Footer: FC = () => (
       <span className="footer__backToTop__btn">^</span>
     </a>
   </footer>
-);
+)
