@@ -1,4 +1,4 @@
-export interface ProductCard {
+export interface ProductCardPhone {
   id: number
   name: string
   fullPrice: number
