@@ -1,60 +1,48 @@
 import React from 'react'
-// import classNames from 'classnames';
-// import { ProductCard } from './Todotype';
+import { ProductCardPhone } from '../../types/ProductCardPhoneType'
 import { AddToFavoriteButton } from '../buttons/AddToFavoriteButton'
 import { AddToCardButton } from '../buttons/AddToCardButton'
-import './ProductCard.modules.scss'
+import styles from './ProductCard.module.scss'
+import somePhoto from '../../assets/images/phones/apple-iphone-xs-max/silver/00.jpg'
+
+// type Props = {
+//   phoneCard: ProductCardPhone
+// }
 
 export const ProductCard: React.FC = () => {
+  // const { image, name, price, fullPrice, screen, capacity, ram } = phoneCard
+
   return (
-    <div className="container">
-      <img
-        // src="./01.jpg"
-        alt="Apple iPhone Xs 64GB Silver (iMT9G2FS/A)"
-        className="product-card__image"
-      />
-      <p className="product-card__name">Apple iPhone Xs 64GB Silver (iMT9G2FS/A)</p>
+    <div className={styles.container}>
+      <img src={somePhoto} alt="" className={styles.image} />
+      <p className={styles.name}>Apple iPhone Xs 64GB Silver (iMT9G2FS/A)</p>
 
-      <div className="product-card__prices">
-        <p className="product-card__price">
-          $799
-        </p>
+      <div className={styles.prices}>
+        <p className={styles.price}>$799</p>
 
-        <p className="product-card__fullPrice">$899</p>
+        <p className={styles.fullPrice}>$899</p>
       </div>
 
-      <div className="product-card__separator" />
+      <div className={styles.separator} />
 
-      <div className="product-card__description">
-        <div className="product-card__line">
-          <p className="product-card__description-title">
-            Screen
-          </p>
-          <p className="product-card__description-data">
-            5.8&quot; OLED
-          </p>
+      <div className={styles.description}>
+        <div className={styles.line}>
+          <p className={styles.descriptionTitle}>Screen</p>
+          <p className={styles.descriptionData}>5.8” OLED</p>
         </div>
 
-        <div className="product-card__line">
-          <p className="product-card__description-title">
-            Capacity
-          </p>
-          <p className="product-card__description-data">
-            64 GB
-          </p>
+        <div className={styles.line}>
+          <p className={styles.descriptionTitle}>Capacity</p>
+          <p className={styles.descriptionData}>64 GB</p>
         </div>
 
-        <div className="product-card__line">
-          <p className="product-card__description-title">
-            RAM
-          </p>
-          <p className="product-card__description-data">
-            4 GB
-          </p>
+        <div className={styles.line}>
+          <p className={styles.descriptionTitle}>RAM</p>
+          <p className={styles.descriptionData}>4 GB</p>
         </div>
       </div>
 
-      <div className="button-line">
+      <div className={styles.buttonLine}>
         <AddToCardButton />
         <AddToFavoriteButton />
       </div>
