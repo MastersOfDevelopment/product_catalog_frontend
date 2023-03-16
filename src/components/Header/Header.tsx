@@ -3,18 +3,16 @@ import React from 'react'
 import styles from './Header.module.scss'
 import { NavLinkBar } from './NavLinkBar'
 import logoFavouriteIcon from 'assets/icons/favourites.svg'
-import mainLogo from 'assets/icons/logo.svg'
 import logoBagIcon from 'assets/icons/shopping-bag.svg'
 import burgerMenuIcon from 'assets/icons/burger-menu.svg'
+import { HeaderLogo } from './HeaderLogo'
 /* eslint-disable max-len */
 
 export const Header: React.FC = () => (
   <header className={styles.header}>
     <div className={styles.header_container}>
       <div className={styles.navigation_container}>
-        <NavLink to="/" className={styles.header_logo_link}>
-          <img className={styles.header_logo} alt="Main Logo" src={mainLogo} />
-        </NavLink>
+        <HeaderLogo />
         <nav className={styles.header_navigation}>
           <ul className={styles.navList}>
             <li className={styles.navLinkWrapper}>
