@@ -10,37 +10,37 @@ import burgerMenuIcon from 'assets/icons/burger-menu.svg'
 
 export const Header: React.FC = () => (
   <header className={styles.header}>
-    <div className="header_container">
-      <div className="navigation_container">
-        <NavLink to="/" className="header_logo_link">
-          <img className="header_logo" alt="Main Logo" src={mainLogo} />
+    <div className={styles.header_container}>
+      <div className={styles.navigation_container}>
+        <NavLink to="/" className={styles.header_logo_link}>
+          <img className={styles.header_logo} alt="Main Logo" src={mainLogo} />
         </NavLink>
-        <nav className="header_navigation">
-          <ul className="navList">
-            <li className="navLinkWrapper">
+        <nav className={styles.header_navigation}>
+          <ul className={styles.navList}>
+            <li className={styles.navLinkWrapper}>
               <NavLinkBar to="/" title="Home" />
             </li>
-            <li className="navLinkWrapper">
+            <li className={styles.navLinkWrapper}>
               <NavLinkBar to="/phones" title="phones" />
             </li>
-            <li className="navLinkWrapper">
+            <li className={styles.navLinkWrapper}>
               <NavLinkBar to="/tablets" title="tablets" />
             </li>
-            <li className="navLinkWrapper">
+            <li className={styles.navLinkWrapper}>
               <NavLinkBar to="/accesories" title="accesories" />
             </li>
           </ul>
         </nav>
       </div>
-      <div className="header_menu">
-        <NavLink className="header_favourite_link" to="/favourites">
-          <img className="header_favourite_icon" alt="Favourite icon" src={logoFavouriteIcon} />
+      <div className={styles.header_menu}>
+        <NavLink className={styles.header_favourite_link} to="/favourites">
+          <img className={styles.header_favourite_icon} alt="Favourite icon" src={logoFavouriteIcon} />
         </NavLink>
-        <NavLink className="header_shopping-bag_link" to="/shopping-bag">
-          <img className="header_shopping-bag_icon" alt="Shopping Bag icon" src={logoBagIcon} />
+        <NavLink className={styles.header_shoppingbag_link} to="/shopping-bag">
+          <img className={styles.header_shoppingbag_icon} alt="Shopping Bag icon" src={logoBagIcon} />
         </NavLink>
-        <NavLink className="header_burger-menu_link" to="/burger-menu">
-          <img className="header_burger-menu_icon" alt="Shopping Bag icon" src={burgerMenuIcon} />
+        <NavLink className={styles.header_burgermenu_link} to="/burger-menu">
+          <img className={styles.header_burgermenu_icon} alt="Shopping Bag icon" src={burgerMenuIcon} />
         </NavLink>
       </div>
     </div>
