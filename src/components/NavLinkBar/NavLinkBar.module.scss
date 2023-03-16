@@ -1,3 +1,17 @@
+.navLink {
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 64px;
+  color: #88939a;
+  text-decoration: none;
+
+  @media (max-width: 639px) {
+    margin-right: 0;
+    font-size: 0;
+  }
+}
+
 .activeLink {
   color: black;
 
@@ -11,19 +25,5 @@
     background-color: black;
     border-radius: 8px;
     content: '';
-  }
-}
-
-.navLink {
-  font-size: 12px;
-  font-weight: 800;
-  text-transform: uppercase;
-  line-height: 64px;
-  color: #88939a;
-  text-decoration: none;
-
-  @media (max-width: 639px) {
-    margin-right: 0;
-    font-size: 0;
   }
 }

@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom'
 import React from 'react'
 import styles from './Header.module.scss'
-import { NavLinkBar } from './NavLinkBar'
+import { NavLinkBar } from 'components/NavLinkBar'
 import logoFavouriteIcon from 'assets/icons/favourites.svg'
 import mainLogo from 'assets/icons/logo.svg'
 import logoBagIcon from 'assets/icons/shopping-bag.svg'
@@ -36,7 +36,7 @@ export const Header: React.FC = () => (
         <NavLink className={styles.header_favourite_link} to="/favourites">
           <img className={styles.header_favourite_icon} alt="Favourite icon" src={logoFavouriteIcon} />
         </NavLink>
-        <NavLink className={styles.header_shoppingbag_link} to="/shopping-bag">
+        <NavLink className={styles.header_shoppingbag_link} to="/cart">
           <img className={styles.header_shoppingbag_icon} alt="Shopping Bag icon" src={logoBagIcon} />
         </NavLink>
         <NavLink className={styles.header_burgermenu_link} to="/burger-menu">

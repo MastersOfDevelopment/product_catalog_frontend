@@ -12,18 +12,16 @@ function App() {
     <div className="App">
       <Header />
 
-      <div className="container">
-        <Routes>
-          <Route path="*" element={<PageNotFound />} />
-          <Route path="/" element={<HomePage />} />
-          <Route path="/home" element={<Navigate to="/" replace />} />
-          <Route path="/phones" element={<PhonesPage />}>
-            <Route index />
-            <Route path=":phoneId" element={<PhonesPage />} />
-          </Route>
-        </Routes>
-      </div>
-      
+      <Routes>
+        <Route path="*" element={<PageNotFound />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/home" element={<Navigate to="/" replace />} />
+        <Route path="/phones" element={<PhonesPage />}>
+          <Route index />
+          <Route path=":phoneId" element={<PhonesPage />} />
+        </Route>
+      </Routes>
+
       <Footer />
     </div>
   )
