@@ -2,7 +2,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import cn from 'classnames'
-import styles from '../Header.module.scss'
+import styles from './NavLinkBar.module.scss'
 
 type Props = {
   to: string
