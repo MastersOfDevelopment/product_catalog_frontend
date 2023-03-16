@@ -1,1 +1,1 @@
-export * from './navLinkBar';
+export * from './navLinkBar'
