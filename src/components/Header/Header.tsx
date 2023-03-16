@@ -25,33 +25,33 @@ export const Header: React.FC = () => (
               <NavLinkBar to="/" title="Home" />
             </li>
             <li className="navLinkWrapper">
-              <NavLinkBar to="/Phones" title="Phones" />
+              <NavLinkBar to="/phones" title="phones" />
             </li>
             <li className="navLinkWrapper">
-              <NavLinkBar to="/Tablets" title="Tablets" />
+              <NavLinkBar to="/tablets" title="tablets" />
             </li>
             <li className="navLinkWrapper">
-              <NavLinkBar to="/Accesories" title="Accesories" />
+              <NavLinkBar to="/accesories" title="accesories" />
             </li>
           </ul>
         </nav>
       </div>
       <div className="header_menu">
-        <NavLink className="header_favourite_link" to="/Favourites">
+        <NavLink className="header_favourite_link" to="/favourites">
           <img
             className="header_favourite_icon"
             alt="Favourite icon"
             src={logoFavouriteIcon}
           />
         </NavLink>
-        <NavLink className="header_shopping-bag_link" to="/Shopping-bag">
+        <NavLink className="header_shopping-bag_link" to="/shopping-bag">
           <img
             className="header_shopping-bag_icon"
             alt="Shopping Bag icon"
             src={logoBagIcon}
           />
         </NavLink>
-        <NavLink className="header_burger-menu_link" to="/Burger-menu">
+        <NavLink className="header_burger-menu_link" to="/burger-menu">
           <img
             className="header_burger-menu_icon"
             alt="Shopping Bag icon"
