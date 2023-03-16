@@ -45,7 +45,7 @@ export const BurgerMenu = () => (
       <NavLink className={styles.burgerMenu_link} to="/favourites">
         <img className={styles.burgerMenu_icon} alt="Shopping Bag icon" src={logoFavouriteIcon} />
       </NavLink>
-      <NavLink className={styles.burgerMenu_link} to="/shopping-bag">
+      <NavLink className={styles.burgerMenu_link} to="/cart">
         <img className={styles.burgerMenu_icon} alt="Shopping Bag icon" src={logoBagIcon} />
       </NavLink>
     </div>

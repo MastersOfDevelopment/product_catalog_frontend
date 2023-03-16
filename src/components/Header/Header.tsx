@@ -34,7 +34,7 @@ export const Header: React.FC = () => (
         <NavLink className={styles.header_favourite_link} to="/favourites">
           <img className={styles.header_favourite_icon} alt="Favourite icon" src={logoFavouriteIcon} />
         </NavLink>
-        <NavLink className={styles.header_shoppingbag_link} to="/shopping-bag">
+        <NavLink className={styles.header_shoppingbag_link} to="/cart">
           <img className={styles.header_shoppingbag_icon} alt="Shopping Bag icon" src={logoBagIcon} />
         </NavLink>
         <NavLink className={styles.header_burgermenu_link} to="/burger-menu">

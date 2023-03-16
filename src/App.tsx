@@ -1,24 +1,34 @@
 import './styles/global.scss'
-import { PageNotFound } from 'components/pages/PageNotFound'
+import { Navigate, Route, Routes, useLocation } from 'react-router'
 
-import { Header } from 'components/Header/Header'
-// import { Footer } from 'components/Footer'
+import { Header } from 'components/Header'
 // import { ProductCard } from 'components/ProductCard'
-import { Route, Routes, useLocation } from 'react-router'
 import { BurgerMenu } from 'components/Header/BurgerMenu'
+import { Footer } from 'components/Footer'
+import { HomePage } from 'components/pages/HomePage'
+import { PhonesPage } from 'components/pages/PhonesPage'
+import { PageNotFound } from 'components/pages/PageNotFound'
 
 function App() {
   const location = useLocation()
 
   return (
     <div className="App">
-      {location.pathname !== '/burger-menu' && <Header />}
-      <Routes>
-        <Route path="/burger-menu" element={<BurgerMenu />} />
-        <Route path="*" element={<PageNotFound />} />
-      </Routes>
-      {/* <ProductCard /> */}
-      {/* <Footer /> */}
+      <div className="container">
+        {location.pathname !== '/burger-menu' && <Header />}
+        <Routes>
+          <Route path="*" element={<PageNotFound />} />
+          <Route path="/burger-menu" element={<BurgerMenu />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/home" element={<Navigate to="/" replace />} />
+          <Route path="/phones" element={<PhonesPage />}>
+            <Route index />
+            <Route path=":phoneId" element={<PhonesPage />} />
+          </Route>
+        </Routes>
+      </div>
+
+      {location.pathname !== '/burger-menu' && <Footer />}
     </div>
   )
 }
