@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/product_catalog_frontend/static/css/main.ad643838.css",
-    "main.js": "/product_catalog_frontend/static/js/main.2b9feab6.js",
+    "main.css": "/product_catalog_frontend/static/css/main.c38b8580.css",
+    "main.js": "/product_catalog_frontend/static/js/main.d7f77b40.js",
     "static/media/logo.svg": "/product_catalog_frontend/static/media/logo.c6f2f3eda1b32d5740ad62b825eab096.svg",
     "static/media/Mont-SemiBold.otf": "/product_catalog_frontend/static/media/Mont-SemiBold.8979d71a3146ca1d761f.otf",
     "static/media/Mont-Bold.otf": "/product_catalog_frontend/static/media/Mont-Bold.03c8c2f6127c1da0fc39.otf",
@@ -10,12 +10,13 @@
     "static/media/favourites.svg": "/product_catalog_frontend/static/media/favourites.cc696932b63c19f487763e75a935dfcb.svg",
     "static/media/favourites-filled.svg": "/product_catalog_frontend/static/media/favourites-filled.b224c57f5cf288112dee.svg",
     "index.html": "/product_catalog_frontend/index.html",
+    "static/media/close.svg": "/product_catalog_frontend/static/media/close.cdfb6ae506fe360c9ad495bfc61f521d.svg",
     "static/media/burger-menu.svg": "/product_catalog_frontend/static/media/burger-menu.3f3c3f2fcc2d0b60dfa752fd3c1cab9c.svg",
-    "main.ad643838.css.map": "/product_catalog_frontend/static/css/main.ad643838.css.map",
-    "main.2b9feab6.js.map": "/product_catalog_frontend/static/js/main.2b9feab6.js.map"
+    "main.c38b8580.css.map": "/product_catalog_frontend/static/css/main.c38b8580.css.map",
+    "main.d7f77b40.js.map": "/product_catalog_frontend/static/js/main.d7f77b40.js.map"
   },
   "entrypoints": [
-    "static/css/main.ad643838.css",
-    "static/js/main.2b9feab6.js"
+    "static/css/main.c38b8580.css",
+    "static/js/main.d7f77b40.js"
   ]
 }
