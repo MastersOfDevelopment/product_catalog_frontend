@@ -8,6 +8,7 @@
   }
 
   &_shoppingbag_link {
+    position: relative;
     height: 64px;
     border-left: 1px solid #e2e6e9;
   }
@@ -19,6 +20,7 @@
   }
 
   &_favourite_link {
+    position: relative;
     height: 64px;
   }
 
@@ -36,7 +38,7 @@
     border-left: 1px solid #e2e6e9;
   }
 
-  &_burgermenu_icon {
+  &_burgermenu_container {
     height: 0;
     width: 0;
     padding: 0;
@@ -52,14 +54,29 @@
 
 .navLinkWrapper {
   position: relative;
-  gap: 150px;
   height: 66px;
 }
 
 .navList {
   display: flex;
+  justify-content: center;
+  align-items: center;
   list-style-type: none;
   gap: 64px;
+}
+
+.activeLink {
+  &::after {
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    border-radius: 8px;
+    content: '';
+  }
 }
 
 @media (max-width: 1439px) {
@@ -69,21 +86,33 @@
 }
 
 @media (max-width: 639px) {
-  .header_favourite_icon {
-    width: 0;
-    border-left: 0;
-    margin: 0;
-  }
+  .header {
+    &_shoppingbag_link {
+      border-left: 0;
+    }
 
-  .header_burgermenu_icon {
-    height: 16px;
-    width: 15px;
-    margin: 24px;
-  }
+    &_menu {
+      border-left: 0;
+    }
 
-  .header_shoppingbag_icon {
-    width: 0;
-    border-left: 0;
-    margin: 0;
-  }
+    &_favourite_icon {
+      width: 0;
+      border-left: 0;
+      margin: 0;
+      border-left: 0;
+    }
+
+    &_burgermenu_container {
+      height: 16px;
+      width: 15px;
+      margin: 24p;
+    }
+
+    &_shoppingbag_icon {
+      width: 0;
+      border-left: 0;
+      margin: 0;
+      border-left: 0;
+    }
+  }  
 }

@@ -1,15 +1,19 @@
-.burgerMenu_navLink {
-  font-size: 12px;
-  font-weight: 800;
-  text-transform: uppercase;
-  line-height: 64px;
-  color: #88939a;
-  text-decoration: none;
+.burgerMenu {
+  &_link {
+    border-right: 1px solid #e2e6e9;
+    width: 50%;
+    position: relative;
+    height: 64px;
+  }
+
+  &_icon {
+    position: relative;
+    top: 25px;
+    left: 50%;
+  }
 }
 
 .activeLink {
-  color: black;
-
   &::after {
     display: inline-block;
     position: absolute;
