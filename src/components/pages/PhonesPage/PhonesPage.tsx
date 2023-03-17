@@ -5,7 +5,7 @@ import { Phone } from 'types/Phone'
 
 export const PhonesPage: React.FC = () => {
   const [phones, setPhones] = useState<Phone[]>([])
-  const [isLoading, setIsLoading] = useState(false)
+  // const [isLoading, setIsLoading] = useState(false)
 
   console.log(phones)
 
@@ -13,12 +13,12 @@ export const PhonesPage: React.FC = () => {
     try {
       const phonesFromServer = await getAllPhones()
 
-      setIsLoading(true)
+      // setIsLoading(true)
       setPhones(phonesFromServer)
     } catch (error) {
       console.log(error)
     } finally {
-      setIsLoading(false)
+      // setIsLoading(false)
     }
   }
 
