@@ -1,20 +1,15 @@
-- name: ESLint checker
-  on:
-  pull_request:
-    branches: [main]
-  jobs:
-  run_linter:
+name: ESLint Check
+on: pull_request
+jobs:
+  eslint:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [14.x]
-
     steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}
-      - run: npm install
-      - run: npm run lint
+    - uses: actions/checkout@v2
+    - name: Use Node.js 14.x
+      uses: actions/setup-node@v1
+      with:
+        node-version: 14.x
+    - name: Install dependencies
+      run: npm i
+    - name: Run ESLint
+      run: npm run lint
