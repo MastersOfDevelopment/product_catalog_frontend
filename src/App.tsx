@@ -2,9 +2,9 @@ import './styles/global.scss'
 import { Navigate, Route, Routes } from 'react-router'
 
 import { useState } from 'react'
-import { Header } from 'components/Header'
 // import { ProductCard } from 'components/ProductCard'
 import { BurgerMenu } from 'components/BurgerMenu'
+import { Header } from 'components/Header/Header'
 import { Footer } from 'components/Footer'
 import { HomePage } from 'components/pages/HomePage'
 import { PhonesPage } from 'components/pages/PhonesPage'
@@ -18,7 +18,7 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        {isBurgerMenuOpen && screenWidth < 641 ? (
+        {isBurgerMenuOpen && screenWidth < 640 ? (
           <BurgerMenu setIsBurgerMenuOpen={setIsBurgerMenuOpen} />
         ) : (
           <>
