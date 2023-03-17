@@ -1,4 +1,4 @@
-- name: ESLint checker
+  name: ESLint checker
   on:
   pull_request:
     branches: [main]
