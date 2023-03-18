@@ -1,10 +1,12 @@
+@import '../../../styles/variables.scss';
+
 .buttonAddToCard {
   font-family: Mont, sans-serif;
   width: 160px;
   height: 40px;
   border-radius: 48px;
-  background-color: #4219d0;
-  color: #ffffff;
+  background-color: $accent-color;
+  color: $white-color;
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -21,13 +23,13 @@
 
 .buttonAddToCard:active {
   box-shadow: none;
-  background-color: #ffffff;
-  color: #4219d0;
+  background-color: $white-color;
+  color: $accent-color;
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
   line-height: 21px;
   text-align: center;
   cursor: pointer;
-  border: 1px solid #e2e6e9;
+  border: 1px solid $elements-color;
 }
