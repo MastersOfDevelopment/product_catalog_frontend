@@ -1,26 +1,25 @@
 import React from 'react'
-// import { ProductCardPhone } from '../../types/ProductCardPhoneType'
+import { Phone } from '../../types/Phone'
 import { AddToFavoriteButton } from '../buttons/AddToFavoriteButton'
 import { AddToCardButton } from '../buttons/AddToCardButton'
 import styles from './ProductCard.module.scss'
-import somePhoto from '../../assets/images/phones/apple-iphone-xs-max/silver/00.jpg'
 
-// type Props = {
-//   phoneCard: ProductCardPhone
-// }
+type Props = {
+  phone: Phone
+}
 
-export const ProductCard: React.FC = () => {
-  // const { image, name, price, fullPrice, screen, capacity, ram } = phoneCard
+export const ProductCard: React.FC<Props> = ({ phone }) => {
+  const { name, fullPrice, price, screen, capacity, ram, image } = phone
 
   return (
     <div className={styles.container}>
-      <img src={somePhoto} alt="" className={styles.image} />
-      <p className={styles.name}>Apple iPhone Xs 64GB Silver (iMT9G2FS/A)</p>
+      <img src={require(`../../assets/${image}`)} alt={name} className={styles.image} />
+      <p className={styles.name}>{name}</p>
 
       <div className={styles.prices}>
-        <p className={styles.price}>$799</p>
+        <p className={styles.price}>${price}</p>
 
-        <p className={styles.fullPrice}>$899</p>
+        <p className={styles.fullPrice}>${fullPrice}</p>
       </div>
 
       <div className={styles.separator} />
@@ -28,17 +27,17 @@ export const ProductCard: React.FC = () => {
       <div className={styles.description}>
         <div className={styles.line}>
           <p className={styles.descriptionTitle}>Screen</p>
-          <p className={styles.descriptionData}>5.8” OLED</p>
+          <p className={styles.descriptionData}>{screen}</p>
         </div>
 
         <div className={styles.line}>
           <p className={styles.descriptionTitle}>Capacity</p>
-          <p className={styles.descriptionData}>64 GB</p>
+          <p className={styles.descriptionData}>{capacity}</p>
         </div>
 
         <div className={styles.line}>
           <p className={styles.descriptionTitle}>RAM</p>
-          <p className={styles.descriptionData}>4 GB</p>
+          <p className={styles.descriptionData}>{ram}</p>
         </div>
       </div>
 
