@@ -3,7 +3,6 @@ import { Phone } from '../../types/Phone'
 import { AddToFavoriteButton } from '../buttons/AddToFavoriteButton'
 import { AddToCardButton } from '../buttons/AddToCardButton'
 import styles from './ProductCard.module.scss'
-import JJFF from '../../assets/img/phones/apple-iphone-xs-max/spacegray/00.jpg'
 
 type Props = {
   phone: Phone
@@ -11,10 +10,10 @@ type Props = {
 
 export const ProductCard: React.FC<Props> = ({ phone }) => {
   const { name, fullPrice, price, screen, capacity, ram, image } = phone
-  console.log(image)
+
   return (
     <div className={styles.container}>
-      <img src={JJFF} alt={name} className={styles.image} />
+      <img src={require(`../../assets/${image}`)} alt={name} className={styles.image} />
       <p className={styles.name}>{name}</p>
 
       <div className={styles.prices}>
