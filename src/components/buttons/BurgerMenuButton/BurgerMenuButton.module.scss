@@ -1,0 +1,38 @@
+.burgerMenu {
+  &_button {
+    padding: 0;
+    border: none;
+    width: auto;
+    overflow: visible;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    line-height: normal;
+    cursor: pointer;
+    height: 64px;
+    border-left: 1px solid #e2e6e9;
+  }
+
+  &_close_image {
+    height: 16px;
+    width: 15px;
+    margin: 0 24px;
+    position: relative;
+    top: 4px;
+  }
+}
+
+@media (min-width: 639px) {
+  .burgerMenu {
+    &_close_image {
+      height: 16px;
+      width: 15px;
+      margin: 0;
+      position: relative;
+    }
+
+    &_close_image {
+      width: 0;
+    }
+  }
+}

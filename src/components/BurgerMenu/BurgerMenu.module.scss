@@ -7,6 +7,13 @@
     height: 64px;
   }
 
+  &_navList {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   &_button {
     padding: 0;
     border: none;
@@ -44,10 +51,9 @@
     width: 100%;
   }
 
-  &_icon {
-    position: relative;
-    top: 25px;
-    left: 50%;
+  &_navLink_center {
+    background-color: black;
+    width: min-content;
   }
 
   &_navLink_wrapper {
@@ -57,12 +63,7 @@
     align-items: center;
   }
 
-  &_navList {
-    list-style: none;
-  }
-
-  &_link {
-    border-right: 1px solid #e2e6e9;
-    width: 50%;
+  &_navLink_element {
+    position: relative;
   }
 }

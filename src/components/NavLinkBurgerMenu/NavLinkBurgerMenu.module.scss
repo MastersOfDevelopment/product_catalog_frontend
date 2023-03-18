@@ -1,3 +1,18 @@
+.burgerMenu {
+  &_navLink_element {
+    position: relative;
+  }
+
+  &_navLink {
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 64px;
+    color: #88939a;
+    text-decoration: none;
+  }
+}
+
 .activeLink {
   color: black;
 
@@ -12,13 +27,4 @@
     border-radius: 8px;
     content: '';
   }
-}
-
-.navLink {
-  font-size: 12px;
-  font-weight: 800;
-  text-transform: uppercase;
-  line-height: 64px;
-  color: #88939a;
-  text-decoration: none;
 }

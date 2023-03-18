@@ -5,10 +5,16 @@ import { NavLinkBar } from 'components/NavLinkBar'
 import logoFavouriteIcon from 'assets/icons/favourites.svg'
 import logoBagIcon from 'assets/icons/shopping-bag.svg'
 import burgerMenuIcon from 'assets/icons/burger-menu.svg'
-import { HeaderLogo } from './HeaderLogo'
+import { HeaderLogo } from '../HeaderLogo'
+import { BurgerMenuButton } from 'components/buttons/BurgerMenuButton'
+import classNames from 'classnames'
 /* eslint-disable max-len */
 
-export const Header: React.FC = () => (
+type Props = {
+  setIsBurgerMenuOpen: (type: boolean) => void
+}
+
+export const Header: React.FC<Props> = ({ setIsBurgerMenuOpen }) => (
   <header className={styles.header}>
     <div className={styles.header_container}>
       <div className={styles.navigation_container}>
@@ -31,15 +37,27 @@ export const Header: React.FC = () => (
         </nav>
       </div>
       <div className={styles.header_menu}>
-        <NavLink className={styles.header_favourite_link} to="/favourites">
+        <NavLink
+          className={({ isActive }) =>
+            classNames(styles.header_favourite_link, {
+              [styles.activeLink]: isActive,
+            })
+          }
+          to="/favourites"
+        >
           <img className={styles.header_favourite_icon} alt="Favourite icon" src={logoFavouriteIcon} />
         </NavLink>
-        <NavLink className={styles.header_shoppingbag_link} to="/cart">
+        <NavLink
+          className={({ isActive }) =>
+            classNames(styles.header_shoppingbag_link, {
+              [styles.activeLink]: isActive,
+            })
+          }
+          to="/cart"
+        >
           <img className={styles.header_shoppingbag_icon} alt="Shopping Bag icon" src={logoBagIcon} />
         </NavLink>
-        <NavLink className={styles.header_burgermenu_link} to="/burger-menu">
-          <img className={styles.header_burgermenu_icon} alt="Shopping Bag icon" src={burgerMenuIcon} />
-        </NavLink>
+        <BurgerMenuButton setIsBurgerMenuOpen={setIsBurgerMenuOpen} image={burgerMenuIcon} type={true} />
       </div>
     </div>
   </header>
