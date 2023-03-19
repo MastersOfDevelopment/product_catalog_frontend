@@ -1,3 +1,4 @@
+import { Pagination } from 'components/Pagination'
 import { getAllPhones } from 'api/getPhones'
 import React, { useEffect, useState } from 'react'
 import { Phone } from 'types/Phone'
@@ -37,6 +38,7 @@ export const PhonesPage: React.FC = () => {
 
         {!isLoading && <ProductList phones={phones} />}
       </div>
+      <Pagination />
     </div>
   )
 }

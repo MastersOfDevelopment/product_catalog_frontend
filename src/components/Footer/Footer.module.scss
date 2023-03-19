@@ -1,11 +1,7 @@
-@font-face {
-  font-family: MontBold;
-  src: url(../../assets/fonts/Mont-Bold.otf);
-}
-@font-face {
-  font-family: MontSemiBold;
-  src: url(../../assets/fonts/Mont-SemiBold.otf);
-}
+@import '../../styles/fonts.scss';
+@import '../../styles/global.scss';
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
 
 $primaryColorBackground: #fff;
 $primaryColorText: #0f0f11;
@@ -19,12 +15,16 @@ $secondaryColorText: #89939a;
   height: 257px;
   background-color: $primaryColorBackground;
 
+  @include onTablet {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    padding: 0 32px;
+  }
+
   &__logo {
-    font-family: 'MontBold';
-    line-height: 15px;
-    color: $primaryColorText;
-    text-decoration: none;
-    text-transform: uppercase;
+    height: 30px;
   }
 
   &__nav {
@@ -35,12 +35,20 @@ $secondaryColorText: #89939a;
     justify-content: space-between;
     list-style-type: none;
 
+    @include onTablet {
+      flex-direction: row;
+      gap: 14px;
+    }
+
+    @include onDesktop {
+      gap: 106px;
+    }
+
     &__item {
       display: block;
     }
 
     &__link {
-      font-family: 'MontBold';
       font-style: normal;
       font-size: 12px;
       line-height: 11px;
@@ -58,7 +66,6 @@ $secondaryColorText: #89939a;
     text-decoration: none;
 
     &__title {
-      font-family: 'MontSemiBold';
       margin-right: 8px;
       font-size: 12px;
       font-weight: 700;
@@ -67,13 +74,12 @@ $secondaryColorText: #89939a;
     }
 
     &__btn {
+      background-image: url('../../assets/icons/arrow-up.svg');
+      background-repeat: no-repeat;
+      background-position: center;
       margin-left: 8px;
       display: inline-block;
-      line-height: 34px;
       height: 32px;
-      font-size: 16px;
-      text-align: center;
-      color: $primaryColorText;
       width: 32px;
       border: 1.5px solid $secondaryColorText;
       border-radius: 50%;
