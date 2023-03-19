@@ -13,7 +13,7 @@ export const ProductCard: React.FC<Props> = ({ phone }) => {
 
   return (
     <div className={styles.container}>
-      <img src={require(`../../assets/${image}`)} alt={name} className={styles.image} />
+      <img src={require(`assets/${image}`)} alt={name} className={styles.image} />
       <p className={styles.name}>{name}</p>
 
       <div className={styles.prices}>
@@ -43,7 +43,7 @@ export const ProductCard: React.FC<Props> = ({ phone }) => {
 
       <div className={styles.buttonLine}>
         <AddToCardButton />
-        <AddToFavoriteButton />
+        <AddToFavoriteButton phone={phone} />
       </div>
     </div>
   )
