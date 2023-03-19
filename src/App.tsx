@@ -1,4 +1,5 @@
 import './styles/global.scss'
+import './App.scss'
 import { Navigate, Route, Routes } from 'react-router'
 
 import { useState } from 'react'

@@ -3,23 +3,20 @@
 @import '../../styles/variables.scss';
 @import '../../styles/mixins.scss';
 
-$primaryColorBackground: #fff;
-$primaryColorText: #0f0f11;
-$secondaryColorText: #89939a;
-
 .footer {
   padding: 0 16px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   height: 257px;
-  background-color: $primaryColorBackground;
+  margin-top: auto;
+  border-top: 1px solid $elements-color;
 
   @include onTablet {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: auto;
+    height: 96px;
     padding: 0 32px;
   }
 
@@ -53,7 +50,7 @@ $secondaryColorText: #89939a;
       font-size: 12px;
       line-height: 11px;
       letter-spacing: 0.04em;
-      color: $secondaryColorText;
+      color: $secondary-color;
       text-transform: uppercase;
       text-decoration: none;
     }
@@ -64,13 +61,14 @@ $secondaryColorText: #89939a;
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    cursor: pointer;
 
     &__title {
       margin-right: 8px;
       font-size: 12px;
       font-weight: 700;
       line-height: 15px;
-      color: $secondaryColorText;
+      color: $secondary-color;
     }
 
     &__btn {
@@ -81,7 +79,7 @@ $secondaryColorText: #89939a;
       display: inline-block;
       height: 32px;
       width: 32px;
-      border: 1.5px solid $secondaryColorText;
+      border: 1.5px solid $secondary-color;
       border-radius: 50%;
     }
   }
