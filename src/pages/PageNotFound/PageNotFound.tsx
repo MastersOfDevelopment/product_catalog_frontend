@@ -2,7 +2,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styles from './PageNotFound.module.scss'
-import './PageNotFoundAnimation'
 
 export const PageNotFound: React.FC = () => (
   <div className={styles.container}>

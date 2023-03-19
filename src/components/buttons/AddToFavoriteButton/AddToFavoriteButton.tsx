@@ -1,3 +1,4 @@
+import classnames from 'classnames'
 import { ProductsContext } from 'components/ProductsProvider'
 import React, { useContext } from 'react'
 import { Phone } from 'types/Phone'
@@ -10,6 +11,8 @@ type Props = {
 export const AddToFavoriteButton: React.FC<Props> = ({ phone }) => {
   const { favourites, setFavourites } = useContext(ProductsContext)
 
+  const isActive = favourites.map((favPhone) => favPhone.id).includes(phone.id)
+
   const handleAddToFavourites = (phone: Phone) => {
     const favouritesIds = favourites.map((favPhone) => favPhone.id)
 
@@ -20,5 +23,13 @@ export const AddToFavoriteButton: React.FC<Props> = ({ phone }) => {
     }
   }
 
-  return <button type="button" className={styles.buttonFavorites} onClick={() => handleAddToFavourites(phone)} />
+  return (
+    <button
+      type="button"
+      className={classnames(styles.buttonFavorites, {
+        [styles.buttonFavorites_active]: isActive,
+      })}
+      onClick={() => handleAddToFavourites(phone)}
+    />
+  )
 }

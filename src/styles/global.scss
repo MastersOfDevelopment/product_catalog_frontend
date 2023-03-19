@@ -1,10 +1,12 @@
+@import '../styles/mixins.scss';
+
 * {
   box-sizing: border-box;
 }
 
 html,
 body {
-  font-family: "Mont", sans-serif;
+  font-family: 'Mont', sans-serif;
   height: auto;
   width: 100%;
   scroll-behavior: smooth;
@@ -26,6 +28,12 @@ li,
 ul {
   margin: 0;
   padding: 0;
+}
+
+h1 {
+  font-family: 'Mont', sans-serif;
+  font-size: 48px;
+  font-weight: 800;
 }
 
 button {

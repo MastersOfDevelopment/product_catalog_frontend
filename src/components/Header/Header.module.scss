@@ -15,17 +15,6 @@
     border-left: 1px solid $elements-color;
   }
 
-  &_favourite_icon {
-    height: 16px;
-    width: 16px;
-    margin: 24px;
-  }
-
-  &_favourite_link {
-    position: relative;
-    height: 64px;
-  }
-
   &_container {
     display: flex;
     justify-content: space-between;
@@ -65,24 +54,6 @@
   align-items: center;
   list-style-type: none;
   gap: 64px;
-}
-
-.icon_container {
-  position: relative;
-}
-
-.counter {
-  position: absolute;
-  width: 14px;
-  height: 14px;
-  top: 15%;
-  right: 15%;
-  background-color: $accent-color;
-  color: $white-color;
-  border-radius: 50%;
-  padding: 5px;
-  font-size: 9px;
-  line-height: 12px;
 }
 
 .activeLink {
