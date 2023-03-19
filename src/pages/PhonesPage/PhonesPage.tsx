@@ -5,6 +5,7 @@ import { Phone } from 'types/Phone'
 import styles from './PhonesPage.module.scss'
 import { Loader } from 'components/Loader'
 import { ProductList } from 'components/ProductList'
+import { SortBar } from 'components/SortBar'
 
 export const PhonesPage: React.FC = () => {
   const [phones, setPhones] = useState<Phone[]>([])
@@ -33,6 +34,8 @@ export const PhonesPage: React.FC = () => {
       <div className={styles.main}>
         <h1 className={styles.title}>Mobile phones</h1>
         <p className={styles.subtitle}>{`${phones.length} models`}</p>
+
+        <SortBar />
 
         {isLoading && <Loader />}
 

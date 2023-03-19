@@ -1,19 +1,98 @@
 @import '../../styles/fonts.scss';
 @import '../../styles/global.scss';
 @import '../../styles/variables.scss';
-@import '../../utils/mixins.scss';
+@import '../../styles/mixins.scss';
 
-$primaryColorBackground: #fff;
-$primaryColorText: #0f0f11;
-$secondaryColorText: #89939a;
-
-.sortingPanel {
+.sortBar {
+  display: flex;
+  gap: 16px;
   margin-bottom: 24px;
 
   &__title {
-    color: $secondaryColorText;
+    color: $icons-color;
     font-weight: 700;
     font-size: 12px;
     line-height: 15px;
+    margin-bottom: 4px;
+  }
+
+  &__select {
+    font-family: 'Mont';
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    height: 40px;
+    width: 136px;
+    border: 1px solid $icons-color;
+    border-radius: 8px;
+    text-indent: 12px;
+    padding-right: 20px;
+    background-image: url('../../assets/icons/arrow-down.svg');
+    background-repeat: no-repeat;
+    background-position: 92% 50%;
+    background-size: 16px;
+    appearance: none;
+    cursor: pointer;
+
+    @include onTablet {
+      width: 187px;
+    }
+
+    &:hover {
+      border: 1px solid $secondary-color;
+    }
+
+    &:focus {
+      background-image: url('../../assets/icons/arrow-up.svg');
+    }
+  }
+
+  &__selectItems {
+    font-family: 'Mont';
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    height: 40px;
+    width: 136px;
+    border: 1px solid $icons-color;
+    border-radius: 8px;
+    text-indent: 12px;
+    padding-right: 20px;
+    background-image: url('../../assets/icons/arrow-down.svg');
+    background-repeat: no-repeat;
+    background-position: 92% 50%;
+    background-size: 16px;
+    appearance: none;
+    cursor: pointer;
+
+    @include onTablet {
+      width: 136px;
+    }
+
+    &:hover {
+      border: 1px solid $secondary-color;
+    }
+
+    &:focus {
+      background-image: url('../../assets/icons/arrow-up.svg');
+    }
+  }
+
+  &__option {
+    font-family: 'Mont';
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    color: $secondary-color;
+
+    &:hover {
+      background-color: #fff;
+      color: $primary-color;
+    }
+
+    &:active {
+      background-color: #fff;
+      color: $primary-color;
+    }
   }
 }
