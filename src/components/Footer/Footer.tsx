@@ -1,6 +1,7 @@
 import { FC } from 'react'
 import styles from './Footer.module.scss'
 import mainLogo from 'assets/icons/logo.svg'
+import { Link } from 'react-router-dom'
 
 export const Footer: FC = () => (
   <footer className={styles.footer}>
@@ -9,24 +10,24 @@ export const Footer: FC = () => (
     </a>
     <ul className={styles.footer__nav}>
       <li className={styles.footer__nav__item}>
-        <a className={styles.footer__nav__link} href="/">
+        <Link className={styles.footer__nav__link} to="https://github.com/MastersOfDevelopment" target="_blank">
           Github
-        </a>
+        </Link>
       </li>
       <li className={styles.footer__nav__item}>
-        <a className={styles.footer__nav__link} href="/">
+        <Link className={styles.footer__nav__link} to="/contacts">
           Contacts
-        </a>
+        </Link>
       </li>
       <li className={styles.footer__nav__item}>
-        <a className={styles.footer__nav__link} href="/">
+        <Link className={styles.footer__nav__link} to="/rights">
           Rights
-        </a>
+        </Link>
       </li>
     </ul>
     <a className={styles.footer__backToTop} href="/">
       <span className={styles.footer__backToTop__title}>Back to top</span>
-      <span className={styles.footer__backToTop__btn}>^</span>
+      <span className={styles.footer__backToTop__btn}></span>
     </a>
   </footer>
 )

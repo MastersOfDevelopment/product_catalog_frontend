@@ -1,0 +1,24 @@
+@import '../../../styles/variables.scss';
+
+.title {
+  font-weight: 700;
+  font-size: 48px;
+  color: $primary-color;
+  margin-top: 80px;
+}
+
+.subtitle {
+  font-weight: 600;
+  font-size: 14px;
+  color: $secondary-color;
+  margin-top: 8px;
+}
+
+.gridMui {
+  max-width: 1200px;
+  justify-content: center;
+}
+
+.phonePage {
+  margin-top: 24px;
+}

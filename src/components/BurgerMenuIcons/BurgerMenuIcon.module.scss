@@ -1,0 +1,28 @@
+.burgerMenu {
+  &_link {
+    border-right: 1px solid #e2e6e9;
+    width: 50%;
+    position: relative;
+    height: 64px;
+  }
+
+  &_icon {
+    position: relative;
+    top: 25px;
+    left: 50%;
+  }
+}
+
+.activeLink {
+  &::after {
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    border-radius: 8px;
+    content: '';
+  }
+}

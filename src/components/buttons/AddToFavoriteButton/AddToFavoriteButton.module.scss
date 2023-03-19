@@ -1,3 +1,5 @@
+@import '../../../styles/variables.scss';
+
 .buttonFavorites {
   background-image: url('../../../assets/icons/favourites.svg');
   background-repeat: no-repeat;
@@ -5,17 +7,17 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 1px solid #b4bdc4;
-  background-color: #ffffff;
+  border: 1px solid $icons-color;
+  background-color: $white-color;
   cursor: pointer;
   transition: background-image 0.5s;
 }
 
 .buttonFavorites:hover {
-  border: 1px solid #0f0f11;
+  border: 1px solid $primary-color;
 }
 
 .buttonFavorites:active {
-  border: 1px solid #b4bdc4;
+  border: 1px solid $icons-color;
   background-image: url('../../../assets/icons/favourites-filled.svg');
 }

@@ -1,0 +1,19 @@
+@import '../../styles/fonts.scss';
+@import '../../styles/global.scss';
+@import '../../styles/variables.scss';
+@import '../../utils/mixins.scss';
+
+$primaryColorBackground: #fff;
+$primaryColorText: #0f0f11;
+$secondaryColorText: #89939a;
+
+.sortingPanel {
+  margin-bottom: 24px;
+
+  &__title {
+    color: $secondaryColorText;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
