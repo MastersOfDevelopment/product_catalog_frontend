@@ -1,3 +1,4 @@
+import { Pagination } from 'components/Pagination'
 import { getAllPhones } from 'api/getPhones'
 import { ProductCard } from 'components/ProductCard'
 import React, { useEffect, useState } from 'react'
@@ -37,6 +38,7 @@ export const PhonesPage: React.FC = () => {
           <SortBar />
         </div>
       </div>
+      <Pagination />
     </div>
   )
 }
