@@ -3,25 +3,17 @@ import { ProductCard } from 'components/ProductCard'
 import React, { useEffect, useState } from 'react'
 import { Phone } from 'types/Phone'
 import styles from './PhonesPage.module.scss'
-// import '../../../styles/grid.scss'
 import { Grid } from '@mui/material'
+import { SortBar } from 'components/SortBar'
 
 export const PhonesPage: React.FC = () => {
   const [phones, setPhones] = useState<Phone[]>([])
-  // const [isLoading, setIsLoading] = useState(false)
-
-  console.log(phones)
-
   const fetchAllPhones = async () => {
     try {
       const phonesFromServer = await getAllPhones()
-
-      // setIsLoading(true)
       setPhones(phonesFromServer)
     } catch (error) {
       console.log(error)
-    } finally {
-      // setIsLoading(false)
     }
   }
 
@@ -42,6 +34,7 @@ export const PhonesPage: React.FC = () => {
               </Grid>
             ))}
           </Grid>
+          <SortBar />
         </div>
       </div>
     </div>
