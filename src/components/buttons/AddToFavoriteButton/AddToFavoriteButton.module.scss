@@ -11,13 +11,13 @@
   background-color: $white-color;
   cursor: pointer;
   transition: background-image 0.5s;
+
+  &_active {
+    border: 1px solid $icons-color;
+    background-image: url('../../../assets/icons/favourites-filled.svg');
+  }
 }
 
 .buttonFavorites:hover {
   border: 1px solid $primary-color;
-}
-
-.buttonFavorites:active {
-  border: 1px solid $icons-color;
-  background-image: url('../../../assets/icons/favourites-filled.svg');
 }

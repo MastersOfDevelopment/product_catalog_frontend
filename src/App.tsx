@@ -12,6 +12,7 @@ import { PageNotFound } from 'pages/PageNotFound'
 import { useWindowSize } from 'utils/helper'
 import { ProductsProvider } from 'components/ProductsProvider'
 import { FavouritesPage } from 'pages/FavouritesPage'
+import { CartPage } from 'pages/CartPage'
 
 function App() {
   const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState(false)
@@ -35,6 +36,7 @@ function App() {
                   <Route path=":phoneId" element={<PhonesPage />} />
                 </Route>
                 <Route path="/favourites" element={<FavouritesPage />} />
+                <Route path="/cart" element={<CartPage />} />
               </Routes>
               <Footer />
             </>
