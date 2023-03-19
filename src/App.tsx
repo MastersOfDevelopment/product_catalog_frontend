@@ -1,5 +1,4 @@
 import './styles/global.scss'
-import './App.scss'
 import { Navigate, Route, Routes } from 'react-router'
 
 import { useState } from 'react'
@@ -21,12 +20,12 @@ function App() {
   return (
     <ProductsProvider>
       <div className="App">
-        <div className="container">
-          {isBurgerMenuOpen && screenWidth < 640 ? (
-            <BurgerMenu setIsBurgerMenuOpen={setIsBurgerMenuOpen} />
-          ) : (
-            <>
-              <Header setIsBurgerMenuOpen={setIsBurgerMenuOpen} />
+        {isBurgerMenuOpen && screenWidth < 640 ? (
+          <BurgerMenu setIsBurgerMenuOpen={setIsBurgerMenuOpen} />
+        ) : (
+          <>
+            <Header setIsBurgerMenuOpen={setIsBurgerMenuOpen} />
+            <div className="container">
               <Routes>
                 <Route path="*" element={<PageNotFound />} />
                 <Route path="/" element={<HomePage />} />
@@ -38,10 +37,11 @@ function App() {
                 <Route path="/favourites" element={<FavouritesPage />} />
                 <Route path="/cart" element={<CartPage />} />
               </Routes>
-              <Footer />
-            </>
-          )}
-        </div>
+            </div>
+
+            <Footer />
+          </>
+        )}
       </div>
     </ProductsProvider>
   )

@@ -39,3 +39,27 @@ h1 {
 button {
   font-family: 'Mont', sans-serif;
 }
+
+.App {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  flex-grow: 1;
+  max-width: 1200px;
+  margin: 0 24px;
+  justify-content: center;
+  align-items: center;
+  
+  @include onTablet {
+    display: block;
+    margin: 0 32px;
+  }
+  
+  @include onDesktop {
+    margin: 0 152px;
+  }
+}
