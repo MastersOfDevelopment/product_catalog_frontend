@@ -1,7 +1,9 @@
+@import '../../styles/variables.scss';
+
 .burgerMenu {
   &_container {
     display: flex;
-    border-bottom: 1px solid #e2e6e9;
+    border-bottom: 1px solid $elements-color;
     justify-content: space-between;
     align-items: center;
     height: 64px;
@@ -25,7 +27,7 @@
     line-height: normal;
     cursor: pointer;
     height: 64px;
-    border-left: 1px solid #e2e6e9;
+    border-left: 1px solid $elements-color;
   }
 
   &_close_image {
@@ -44,15 +46,15 @@
     bottom: 0;
     left: 0;
     right: 0;
-    border-top: 1px solid #e2e6e9;
+    border-top: 1px solid $elements-color;
     display: flex;
-    border-bottom: 1px solid #e2e6e9;
+    border-bottom: 1px solid $elements-color;
     height: 64px;
     width: 100%;
   }
 
   &_navLink_center {
-    background-color: black;
+    background-color: $primary-color;
     width: min-content;
   }
 

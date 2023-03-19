@@ -1,3 +1,5 @@
+@import '../../styles/variables.scss';
+
 .burgerMenu {
   &_navLink_element {
     position: relative;
@@ -8,13 +10,13 @@
     font-weight: 800;
     text-transform: uppercase;
     line-height: 64px;
-    color: #88939a;
+    color: $secondary-color;
     text-decoration: none;
   }
 }
 
 .activeLink {
-  color: black;
+  color: $primary-color;
 
   &::after {
     display: inline-block;
@@ -23,7 +25,7 @@
     height: 3px;
     bottom: 0;
     left: 0;
-    background-color: black;
+    background-color: $primary-color;
     border-radius: 8px;
     content: '';
   }
