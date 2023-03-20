@@ -1,7 +1,9 @@
+import { ProductsContext } from 'context/ProductsProvider'
+import { useContext } from 'react'
 import styles from './CardCheckout.module.scss'
 
 export const CardCheckout = () => {
-  console.log('here')
+  const { cart: phones } = useContext(ProductsContext)
 
   return (
     <>
@@ -9,12 +11,10 @@ export const CardCheckout = () => {
         <div className={styles.info}>
           {/* <p className={styles.total_price}>${totalPrice}</p> */}
           <p className={styles.total_price}>$255</p>
-          {/* <p className={styles.number_of_items}>
-            {`Total for ${totalPhones} ${totalPhones === 1 ? 'item' : 'items'}
-            `}
-          </p> */}
 
-          <p className={styles.number_of_items}>Total for 3 items</p>
+          <p className={styles.number_of_items}>
+            {phones.length === 1 ? `${phones.length} item` : `${phones.length} items`}
+          </p>
           <div className={styles.line}></div>
           <button className={styles.button_checkout} data-qa="hover">
             Checkout

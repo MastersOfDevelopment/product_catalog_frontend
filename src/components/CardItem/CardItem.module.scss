@@ -1,5 +1,5 @@
-@import '../../styles/variables';
-@import '../../styles/mixins';
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
 
 .cart {
   display: flex;
@@ -97,6 +97,7 @@
     align-items: center;
     margin-right: 13px;
     border: 1px solid $icons-color;
+    border-radius: 50%;
     background-color: $white-color;
     width: 32px;
     height: 32px;
@@ -120,6 +121,7 @@
     align-items: center;
     margin-right: 13px;
     border: 1px solid $icons-color;
+    border-radius: 50%;
     background-color: $white-color;
     width: 32px;
     height: 32px;
