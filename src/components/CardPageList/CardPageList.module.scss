@@ -1,0 +1,22 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+
+.total_cardPageList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 288px;
+  padding: 24px;
+
+  @include onTablet {
+    width: 592px;
+    padding: 24px;
+  }
+
+  @include onDesktop {
+    width: 752px;
+    padding: 0;
+    justify-content: space-between;
+  }
+}
