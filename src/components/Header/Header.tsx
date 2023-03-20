@@ -1,12 +1,9 @@
-import { NavLink } from 'react-router-dom'
 import React from 'react'
 import styles from './Header.module.scss'
 import { NavLinkBar } from 'components/NavLinkBar'
-import logoBagIcon from 'assets/icons/shopping-bag.svg'
 import burgerMenuIcon from 'assets/icons/burger-menu.svg'
 import { HeaderLogo } from '../HeaderLogo'
 import { BurgerMenuButton } from 'components/buttons/BurgerMenuButton'
-import classNames from 'classnames'
 import { HeaderFavouriteIcon } from 'components/HeaderFavouriteIcon'
 import { HeaderCartIcon } from 'components/HeaderCartIcon'
 
