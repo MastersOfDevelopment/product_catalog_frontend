@@ -8,6 +8,7 @@ import { HeaderLogo } from '../HeaderLogo'
 import { BurgerMenuButton } from 'components/buttons/BurgerMenuButton'
 import classNames from 'classnames'
 import { HeaderFavouriteIcon } from 'components/HeaderFavouriteIcon'
+import { HeaderCartIcon } from 'components/HeaderCartIcon'
 
 type Props = {
   setIsBurgerMenuOpen: (type: boolean) => void
@@ -38,16 +39,7 @@ export const Header: React.FC<Props> = ({ setIsBurgerMenuOpen }) => {
         </div>
         <div className={styles.header_menu}>
           <HeaderFavouriteIcon />
-          <NavLink
-            className={({ isActive }) =>
-              classNames(styles.header_shoppingbag_link, {
-                [styles.activeLink]: isActive,
-              })
-            }
-            to="/cart"
-          >
-            <img className={styles.header_shoppingbag_icon} alt="Shopping Bag icon" src={logoBagIcon} />
-          </NavLink>
+          <HeaderCartIcon />
           <BurgerMenuButton setIsBurgerMenuOpen={setIsBurgerMenuOpen} image={burgerMenuIcon} type={true} />
         </div>
       </div>

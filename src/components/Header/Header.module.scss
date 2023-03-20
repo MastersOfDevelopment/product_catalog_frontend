@@ -3,18 +3,6 @@
 .header {
   border-bottom: 1px solid $elements-color;
 
-  &_shoppingbag_icon {
-    height: 16px;
-    width: 16px;
-    margin: 24px;
-  }
-
-  &_shoppingbag_link {
-    position: relative;
-    height: 64px;
-    border-left: 1px solid $elements-color;
-  }
-
   &_container {
     display: flex;
     justify-content: space-between;

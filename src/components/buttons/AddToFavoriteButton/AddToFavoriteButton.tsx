@@ -1,5 +1,5 @@
 import classnames from 'classnames'
-import { ProductsContext } from 'components/ProductsProvider'
+import { ProductsContext } from 'context/ProductsProvider'
 import React, { useContext } from 'react'
 import { Phone } from 'types/Phone'
 import styles from './AddToFavoriteButton.module.scss'

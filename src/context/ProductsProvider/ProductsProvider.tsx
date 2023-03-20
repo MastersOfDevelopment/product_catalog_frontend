@@ -1,12 +1,13 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
-import React, { SetStateAction, useState } from 'react'
+import { useLocalStorage } from 'hooks'
+import React, { SetStateAction } from 'react'
 import { Phone } from 'types/Phone'
 
 type ContextType = {
   favourites: Phone[]
   setFavourites: React.Dispatch<SetStateAction<Phone[]>>
   cart: Phone[]
-  setCart: React.Dispatch<React.SetStateAction<Phone[]>>
+  setCart: React.Dispatch<SetStateAction<Phone[]>>
 }
 
 export const ProductsContext = React.createContext<ContextType>({
@@ -21,8 +22,8 @@ type Props = {
 }
 
 export const ProductsProvider: React.FC<Props> = ({ children }) => {
-  const [favourites, setFavourites] = useState<Phone[]>([])
-  const [cart, setCart] = useState<Phone[]>([])
+  const [favourites, setFavourites] = useLocalStorage<Phone[]>('favourites', [])
+  const [cart, setCart] = useLocalStorage<Phone[]>('cart', [])
 
   const contextValue = {
     favourites,

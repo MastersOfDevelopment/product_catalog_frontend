@@ -9,7 +9,7 @@ import { HomePage } from 'pages/HomePage'
 import { PhonesPage } from 'pages/PhonesPage'
 import { PageNotFound } from 'pages/PageNotFound'
 import { useWindowSize } from 'utils/helper'
-import { ProductsProvider } from 'components/ProductsProvider'
+import { ProductsProvider } from 'context/ProductsProvider'
 import { FavouritesPage } from 'pages/FavouritesPage'
 import { CartPage } from 'pages/CartPage'
 
