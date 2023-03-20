@@ -1,4 +1,8 @@
-import { Phone } from 'types/Phone'
+import { PhoneDetails } from 'types/PhoneDetails'
+import { PhonesData } from 'types/PhonesData'
 import { client } from 'utils/fetch'
 
-export const getAllPhones = async () => client.get<Phone[]>('/products')
+export const getPhoneDetails = async (phoneId: string) => client.get<PhoneDetails>(`/phone/${phoneId}`)
+export const getAllPhones = async (searchParams: string) => {
+  return client.get<PhonesData>(`/products?${searchParams}`)
+}

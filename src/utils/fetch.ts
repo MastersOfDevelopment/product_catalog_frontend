@@ -1,8 +1,6 @@
 const BASE_URL = 'https://product-catalog-backend-q6uq.onrender.com'
 
-type RequestMethod = 'GET' | 'POST' | 'PATCH' | 'DELETE'
-
-async function request<T>(url: string, method: RequestMethod = 'GET', data: any = null): Promise<T> {
+async function request<T>(url: string, method = 'GET', data: any = null): Promise<T> {
   const options: RequestInit = { method }
 
   if (data) {
@@ -12,18 +10,14 @@ async function request<T>(url: string, method: RequestMethod = 'GET', data: any 
     }
   }
 
-  const response = await fetch(BASE_URL + url, options)
-
-  if (!response.ok) {
-    throw new Error()
+  try {
+    const response = await fetch(BASE_URL + url, options)
+    return response.json()
+  } catch (error) {
+    throw new Error('Cannot fetch data')
   }
-
-  return response.json()
 }
 
 export const client = {
   get: <T>(url: string) => request<T>(url),
-  post: <T>(url: string, data: any) => request<T>(url, 'POST', data),
-  patch: <T>(url: string, data: any) => request<T>(url, 'PATCH', data),
-  delete: (url: string) => request(url, 'DELETE'),
 }

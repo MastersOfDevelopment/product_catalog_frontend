@@ -1,7 +1,13 @@
 import React from 'react'
 import styles from './Pagination.module.scss'
 
-export const Pagination: React.FC = () => {
+type Props = {
+  total: number
+}
+
+export const Pagination: React.FC<Props> = ({ total }) => {
+  console.log(total)
+
   return (
     <div className={styles.pagination__container}>
       <div className={styles.pagination__item}>
