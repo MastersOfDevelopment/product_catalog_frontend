@@ -1,0 +1,27 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.title {
+  font-size: 32px;
+  color: $primary-color;
+  margin-top: 24px;
+  margin-bottom: 16px;
+  width: 100%;
+  
+  @include onTablet {
+    font-size: 48px;
+  }
+}
+
+.cart_page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  @include onDesktop {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+}

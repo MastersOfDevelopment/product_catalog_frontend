@@ -1,0 +1,143 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.cart {
+  display: flex;
+  flex-direction: column;
+  width: 288px;
+  border: 1px solid $elements-color;
+  margin-bottom: 16px;
+  padding: 16px;
+  gap: 24px;
+  align-items: center;
+
+  @include onTablet {
+    flex-direction: row;
+    width: 592px;
+    padding: 24px;
+  }
+
+  @include onDesktop {
+    flex-direction: row;
+    width: 752px;
+  }
+}
+
+.cart_info {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.delete_button_link {
+  padding: 5px;
+  cursor: pointer;
+  margin-right: 25px;
+  border: 1px solid transparent;
+  background-color: white;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:active {
+    transition: none;
+    border-color: $primary-color;
+  }
+}
+
+.phone_image {
+  width: 66px;
+  height: auto;
+  max-width: 100%;
+  padding: 7px;
+  margin-right: 23px;
+}
+
+.content {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  padding-right: 10px;
+  color: $primary-color;
+
+  @include onTablet {
+    padding-right: 34px;
+    width: 176px;
+  }
+
+  @include onDesktop {
+    padding-right: 34px;
+    width: 336px;
+  }
+}
+
+.quantity_and_price {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  @include onTablet {
+    width: 200px;
+  }
+}
+
+.quantity_buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 33px;
+
+  &_minus {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 13px;
+    border: 1px solid $icons-color;
+    background-color: $white-color;
+    width: 32px;
+    height: 32px;
+    padding: 12px;
+
+    &:hover {
+      border: 1px solid $primary-color;
+    }
+
+    &:disabled {
+      cursor: auto;
+      border: 1px solid $icons-color;
+      opacity: 0.5;
+    }
+  }
+
+  &_plus {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 13px;
+    border: 1px solid $icons-color;
+    background-color: $white-color;
+    width: 32px;
+    height: 32px;
+    padding: 12px;
+
+    &:hover {
+      border: 1px solid $primary-color;
+    }
+  }
+
+  &_number {
+    margin-right: 14px;
+  }
+}
+
+.phone_price {
+  font-weight: 800;
+  font-size: 22px;
+  line-height: 140%;
+  color: $primary-color;
+}

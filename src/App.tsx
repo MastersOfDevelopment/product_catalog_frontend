@@ -11,7 +11,7 @@ import { PageNotFound } from 'pages/PageNotFound'
 import { useWindowSize } from 'utils/helper'
 import { ProductsProvider } from 'context/ProductsProvider'
 import { FavouritesPage } from 'pages/FavouritesPage'
-import { CartPage } from 'pages/CartPage'
+import { CartPage } from 'pages/CardPage'
 
 function App() {
   const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState(false)
