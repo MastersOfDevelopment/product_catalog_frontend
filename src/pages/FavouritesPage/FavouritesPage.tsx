@@ -1,5 +1,5 @@
 import { ProductList } from 'components/ProductList'
-import { ProductsContext } from 'components/ProductsProvider'
+import { ProductsContext } from 'context/ProductsProvider'
 import React, { useContext } from 'react'
 import styles from './FavouritesPage.module.scss'
 

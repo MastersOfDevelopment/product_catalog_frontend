@@ -53,12 +53,12 @@ button {
   margin: 0 24px;
   justify-content: center;
   align-items: center;
-  
+
   @include onTablet {
     display: block;
     margin: 0 32px;
   }
-  
+
   @include onDesktop {
     margin: 0 152px;
   }

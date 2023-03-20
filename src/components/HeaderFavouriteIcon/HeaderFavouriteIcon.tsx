@@ -1,5 +1,5 @@
 import classnames from 'classnames'
-import { ProductsContext } from 'components/ProductsProvider'
+import { ProductsContext } from 'context/ProductsProvider'
 import React, { useContext } from 'react'
 import { NavLink } from 'react-router-dom'
 import styles from './HeaderFavouriteIcon.module.scss'
