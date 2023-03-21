@@ -27,6 +27,8 @@
 }
 
 .photos {
+  margin-bottom: 20px;
+  
   @include onTablet {
     display: flex;
     flex-direction: row-reverse;
@@ -133,6 +135,11 @@
   @include onTablet {
     display: flex;
     flex-direction: column;
+    width: 270px;
+  }
+
+  @include onDesktop {
+    width: 320px;
   }
 }
 
@@ -280,9 +287,13 @@
 .butToAdd {
   width: 230px;
   height: 48px;
+
+  @include onTablet {
+    margin-right: 8px;
+  }
 }
 
 .butToFav {
-  width: 48px;
+  width: 50px;
   height: 48px;
 }
