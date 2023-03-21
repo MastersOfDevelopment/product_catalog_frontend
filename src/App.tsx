@@ -12,6 +12,7 @@ import { useWindowSize } from 'utils/helper'
 import { ProductsProvider } from 'components/ProductsProvider'
 import { FavouritesPage } from 'pages/FavouritesPage'
 import { CartPage } from 'pages/CartPage'
+import { PhoneItem } from 'pages/PhoneItem'
 
 function App() {
   const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState(false)
@@ -30,9 +31,9 @@ function App() {
                 <Route path="*" element={<PageNotFound />} />
                 <Route path="/" element={<HomePage />} />
                 <Route path="/home" element={<Navigate to="/" replace />} />
-                <Route path="/phones" element={<PhonesPage />}>
-                  <Route index />
-                  <Route path=":phoneId" element={<PhonesPage />} />
+                <Route path="/phones">
+                  <Route index element={<PhonesPage />} />
+                  <Route path=":phoneId" element={<PhoneItem />} />
                 </Route>
                 <Route path="/favourites" element={<FavouritesPage />} />
                 <Route path="/cart" element={<CartPage />} />

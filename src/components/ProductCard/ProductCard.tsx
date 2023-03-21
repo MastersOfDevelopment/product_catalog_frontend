@@ -3,16 +3,23 @@ import { Phone } from '../../types/Phone'
 import { AddToFavoriteButton } from '../buttons/AddToFavoriteButton'
 import { AddToCardButton } from '../buttons/AddToCardButton'
 import styles from './ProductCard.module.scss'
+import { useNavigate } from 'react-router-dom'
 
 type Props = {
   phone: Phone
 }
 
 export const ProductCard: React.FC<Props> = ({ phone }) => {
-  const { name, fullPrice, price, screen, capacity, ram, image } = phone
+  const navigate = useNavigate()
+
+  const { name, fullPrice, price, screen, capacity, ram, image, phoneId } = phone
+
+  const navigateToDetails = () => {
+    navigate(`/phones/${phoneId}`)
+  }
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} onClick={navigateToDetails}>
       <img src={require(`assets/${image}`)} alt={name} className={styles.image} />
       <p className={styles.name}>{name}</p>
 
