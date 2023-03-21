@@ -8,11 +8,13 @@ import { Loader } from 'components/Loader'
 import { ProductList } from 'components/ProductList'
 import { SortBar } from 'components/SortBar'
 import { useLocation } from 'react-router'
+import { BreadCrumbs } from 'components/BreadCrumbs'
 
 export const PhonesPage: React.FC = () => {
   const [phones, setPhones] = useState<Phone[]>([])
   const [isLoading, setIsLoading] = useState(false)
   const [total, setTotal] = useState(0)
+  const [hasError, setHasError] = useState(false)
 
   const location = useLocation()
   const searchParams = new URLSearchParams(location.search).toString()
@@ -26,7 +28,8 @@ export const PhonesPage: React.FC = () => {
         setPhones(phonesData.phones)
         setTotal(phonesData.total)
       } catch (error) {
-        console.log(error)
+        setHasError(true)
+        setIsLoading(false)
       } finally {
         setIsLoading(false)
       }
@@ -38,15 +41,17 @@ export const PhonesPage: React.FC = () => {
   return (
     <div className={styles.grid}>
       <div className={styles.main}>
+        <BreadCrumbs />
         <h1 className={styles.title}>Mobile phones</h1>
         <p className={styles.subtitle}>{`${total} models`}</p>
 
-        <SortBar />
-
         {isLoading && <Loader />}
 
-        {!isLoading && (
+        {hasError && <h3>Something went wrong</h3>}
+
+        {!isLoading && !hasError && (
           <>
+            <SortBar />
             <ProductList phones={phones} />
             <Pagination total={total} />
           </>

@@ -2,9 +2,7 @@ import React, { useContext } from 'react'
 import icon_minus from '../../assets/icons/minus.svg'
 import icon_plus from '../../assets/icons/plus.svg'
 import icon_close from '../../assets/icons/close.svg'
-// import { Phone } from 'types/Phone'
-import styles from './CardItem.module.scss'
-// import { ProductsContext } from 'context/ProductsProvider'
+import styles from './CartItem.module.scss'
 import { PhoneDetails } from 'types/PhoneDetails'
 import { CartContext } from 'context/CartContext'
 
@@ -13,7 +11,7 @@ type Props = {
   count: number
 }
 
-export const CardItem: React.FC<Props> = ({ product, count }) => {
+export const CartItem: React.FC<Props> = ({ product, count }) => {
   const { addOne, removeOne, removeItem } = useContext(CartContext)
 
   const { name, priceDiscount, images } = product
