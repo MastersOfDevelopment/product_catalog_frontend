@@ -10,17 +10,19 @@ import { HomePage } from 'pages/HomePage'
 import { PhonesPage } from 'pages/PhonesPage'
 import { PageNotFound } from 'pages/PageNotFound'
 import { useWindowSize } from 'utils/helper'
-import { ProductsProvider } from 'context/ProductsProvider'
+import { FavouritesProvider } from 'context/FavouritesProvider'
 import { FavouritesPage } from 'pages/FavouritesPage'
-import { CardPage } from 'pages/CardPage'
+import { CartPage } from 'pages/CartPage'
 import { CartProvider } from 'context/CartContext'
+import { TabletsPage } from 'pages/TabletsPage'
+import { AccessoriesPage } from 'pages/AccessoriesPage'
 
 function App() {
   const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState(false)
   const screenWidth = useWindowSize().width
 
   return (
-    <ProductsProvider>
+    <FavouritesProvider>
       <CartProvider>
         <div className="App">
           {isBurgerMenuOpen && screenWidth < 640 ? (
@@ -38,7 +40,9 @@ function App() {
                     <Route path=":phoneId" element={<PhonesPage />} />
                   </Route>
                   <Route path="/favourites" element={<FavouritesPage />} />
-                  <Route path="/cart" element={<CardPage />} />
+                  <Route path="/cart" element={<CartPage />} />
+                  <Route path="/tablets" element={<TabletsPage />} />
+                  <Route path="/accessories" element={<AccessoriesPage />} />
                 </Routes>
               </div>
 
@@ -47,7 +51,7 @@ function App() {
           )}
         </div>
       </CartProvider>
-    </ProductsProvider>
+    </FavouritesProvider>
   )
 }
 

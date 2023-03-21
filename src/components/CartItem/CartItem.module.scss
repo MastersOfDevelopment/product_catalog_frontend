@@ -6,6 +6,7 @@
   flex-direction: column;
   width: 288px;
   border: 1px solid $elements-color;
+  border-radius: 16px;
   margin-bottom: 16px;
   padding: 16px;
   gap: 24px;
@@ -18,7 +19,6 @@
   }
 
   @include onDesktop {
-    flex-direction: row;
     width: 752px;
   }
 }

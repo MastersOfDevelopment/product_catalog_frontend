@@ -22,7 +22,7 @@ export const Pagination: FC<Props> = ({ total }) => {
     }
   }
 
-  return numberOfPages > 1 ? (
+  return (
     <div className={styles.pagination__container}>
       <div className={styles.pagination__item}>
         <Link
@@ -49,5 +49,5 @@ export const Pagination: FC<Props> = ({ total }) => {
         />
       </div>
     </div>
-  ) : null
+  )
 }

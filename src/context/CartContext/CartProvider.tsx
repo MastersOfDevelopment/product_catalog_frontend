@@ -14,6 +14,7 @@ interface ContextType {
   isAdded: (productId: string) => boolean
   getCount: (productId: string) => number
   removeItem: (productId: string) => void
+  removeAll: () => void
 }
 
 const defaultValue: ContextType = {
@@ -23,6 +24,7 @@ const defaultValue: ContextType = {
   isAdded: () => false,
   getCount: () => 0,
   removeItem: () => {},
+  removeAll: () => {},
 }
 
 export const CartContext = createContext<ContextType>(defaultValue)
@@ -80,6 +82,10 @@ export const CartProvider: React.FC<Props> = ({ children }) => {
 
   const isAdded = (productId: string): boolean => cartItems.some(({ id }) => id === productId)
 
+  const removeAll = (): void => {
+    setCartItems([])
+  }
+
   const contextValue = {
     cartItems,
     setCartItems,
@@ -88,6 +94,7 @@ export const CartProvider: React.FC<Props> = ({ children }) => {
     isAdded,
     getCount,
     removeItem,
+    removeAll,
   }
 
   return <CartContext.Provider value={contextValue}>{children}</CartContext.Provider>
