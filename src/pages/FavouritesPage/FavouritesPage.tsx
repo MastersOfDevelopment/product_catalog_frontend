@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import { ProductList } from 'components/ProductList'
 import { ProductsContext } from 'context/ProductsProvider'
 import React, { useContext } from 'react'

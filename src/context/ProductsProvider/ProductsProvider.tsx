@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 /* eslint-disable @typescript-eslint/no-empty-function */
 import { useLocalStorage } from 'hooks'
 import React, { SetStateAction } from 'react'

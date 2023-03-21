@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import { PhoneDetails } from 'types/PhoneDetails'
 import { PhonesData } from 'types/PhonesData'
 import { client } from 'utils/fetch'

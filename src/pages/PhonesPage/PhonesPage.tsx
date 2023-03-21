@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import { Pagination } from 'components/Pagination'
 import { getAllPhones } from 'api/getPhones'
 import React, { useEffect, useState } from 'react'
