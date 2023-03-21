@@ -10,29 +10,27 @@
   }
 }
 
+.characteristics {
+  @include onTablet {
+    display: flex;
+    // flex-direction: column;
+  }
+}
+
 .containerMainInfo {
   display: flex;
   flex-direction: column;
-}
-
-.containerPhoto {
-  margin-top: 40px;
-  display: grid;
-  grid-template-columns: 1fr;
-  flex-direction: column;
 
   @include onTablet {
-    grid-template-columns: 1fr 1fr;
-    flex-direction: row;
-    gap: 10px
+    display: grid;
   }
+}
 
-  @media (min-width: 980px) {
-    gap: 40px
-  }
-
-  @include onDesktop {
-    gap: 76px
+.photos {
+  @include onTablet {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-right: 76px;
   }
 }
 
@@ -66,6 +64,14 @@
 .flex_container {
   display: flex;
   justify-content: space-between;
+
+  @include onTablet {
+    margin-right: 16px;
+  }
+
+  @include onDesktop {
+    margin-right: 25px;
+  }
 }
 
 .flex_boxes {
@@ -123,6 +129,13 @@
   object-position: center center;
 }
 
+.flex2 {
+  @include onTablet {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .form {
   display: flex;
   flex-direction: column;
@@ -138,7 +151,7 @@
   font-weight: 600;
   font-size: 12px;
   line-height: 15px;
-  margin-top: 40px;
+  margin-top: 24px;
   margin-bottom: 8px;
 }
 
@@ -184,7 +197,6 @@
 .separator {
   height: 1px;
   background-color: $elements-color;
-  margin-bottom: 8px;
 }
 
 .capacity {
@@ -229,4 +241,48 @@
   line-height: 28px;
   color: $primary-color;
   margin-right: 8px;
+}
+
+.buttonLine {
+  margin-top: 16px;
+}
+
+.description {
+  margin-top: 32px;
+  padding-bottom: 24px;
+}
+
+.descriptionTitle {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  color: $secondary-color;
+  margin-top: 8px;
+}
+
+.descriptionData {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  margin-top: 8px;
+}
+
+.line {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttonLine {
+  display: flex;
+  justify-content: space-between;
+}
+
+.butToAdd {
+  width: 230px;
+  height: 48px;
+}
+
+.butToFav {
+  width: 48px;
+  height: 48px;
 }
