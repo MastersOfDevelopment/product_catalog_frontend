@@ -13,7 +13,6 @@
 .characteristics {
   @include onTablet {
     display: flex;
-    // flex-direction: column;
   }
 }
 
@@ -28,7 +27,7 @@
 
 .photos {
   margin-bottom: 20px;
-  
+
   @include onTablet {
     display: flex;
     flex-direction: row-reverse;
