@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import React from 'react'
 import { HeaderLogo } from '../HeaderLogo'
 import styles from './BurgerMenu.module.scss'

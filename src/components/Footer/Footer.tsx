@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import { FC } from 'react'
 import styles from './Footer.module.scss'
 import mainLogo from 'assets/icons/logo.svg'

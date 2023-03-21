@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import React from 'react'
 import styles from './Header.module.scss'
 import { NavLinkBar } from 'components/NavLinkBar'
