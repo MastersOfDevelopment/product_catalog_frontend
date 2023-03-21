@@ -13,6 +13,7 @@ import { useWindowSize } from 'utils/helper'
 import { ProductsProvider } from 'context/ProductsProvider'
 import { FavouritesPage } from 'pages/FavouritesPage'
 import { CardPage } from 'pages/CardPage'
+import { CartProvider } from 'context/CartContext'
 
 function App() {
   const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState(false)
@@ -20,30 +21,32 @@ function App() {
 
   return (
     <ProductsProvider>
-      <div className="App">
-        {isBurgerMenuOpen && screenWidth < 640 ? (
-          <BurgerMenu setIsBurgerMenuOpen={setIsBurgerMenuOpen} />
-        ) : (
-          <>
-            <Header setIsBurgerMenuOpen={setIsBurgerMenuOpen} />
-            <div className="container">
-              <Routes>
-                <Route path="*" element={<PageNotFound />} />
-                <Route path="/" element={<HomePage />} />
-                <Route path="/home" element={<Navigate to="/" replace />} />
-                <Route path="/phones" element={<PhonesPage />}>
-                  <Route index />
-                  <Route path=":phoneId" element={<PhonesPage />} />
-                </Route>
-                <Route path="/favourites" element={<FavouritesPage />} />
-                <Route path="/cart" element={<CardPage />} />
-              </Routes>
-            </div>
+      <CartProvider>
+        <div className="App">
+          {isBurgerMenuOpen && screenWidth < 640 ? (
+            <BurgerMenu setIsBurgerMenuOpen={setIsBurgerMenuOpen} />
+          ) : (
+            <>
+              <Header setIsBurgerMenuOpen={setIsBurgerMenuOpen} />
+              <div className="container">
+                <Routes>
+                  <Route path="*" element={<PageNotFound />} />
+                  <Route path="/" element={<HomePage />} />
+                  <Route path="/home" element={<Navigate to="/" replace />} />
+                  <Route path="/phones" element={<PhonesPage />}>
+                    <Route index />
+                    <Route path=":phoneId" element={<PhonesPage />} />
+                  </Route>
+                  <Route path="/favourites" element={<FavouritesPage />} />
+                  <Route path="/cart" element={<CardPage />} />
+                </Routes>
+              </div>
 
-            <Footer />
-          </>
-        )}
-      </div>
+              <Footer />
+            </>
+          )}
+        </div>
+      </CartProvider>
     </ProductsProvider>
   )
 }
