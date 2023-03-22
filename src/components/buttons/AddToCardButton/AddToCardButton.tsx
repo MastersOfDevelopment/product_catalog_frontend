@@ -3,8 +3,8 @@ import classnames from 'classnames'
 import { CartContext } from 'context/CartContext'
 // import { ProductsContext } from 'context/ProductsProvider'
 import React, { useContext } from 'react'
-import { Phone } from 'types/Phone'
-import { PhoneDetails } from 'types/PhoneDetails'
+// import { Phone } from 'types/Phone'
+// import { PhoneDetails } from 'types/PhoneDetails'
 import styles from './AddToCardButton.module.scss'
 
 type Props = {

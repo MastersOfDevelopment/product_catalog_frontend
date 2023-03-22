@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import { getPhoneDetails } from 'api/getPhones'
 import { CartCheckout } from 'components/CartCheckout'
 import { CartItem } from 'components/CartItem'

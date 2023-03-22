@@ -19,7 +19,7 @@ export const ProductCard: React.FC<Props> = ({ phone }) => {
   }
 
   return (
-    <div className={styles.container}>
+    <div id="productCard" className={styles.container}>
       <img src={require(`assets/${image}`)} alt={name} onClick={navigateToDetails} className={styles.image} />
       <p className={styles.name}>{name}</p>
 

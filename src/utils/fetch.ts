@@ -1,3 +1,6 @@
+/* eslint-disable import/no-unresolved */
+// import { Phone } from 'types/Phone'
+
 const BASE_URL = 'https://product-catalog-backend-q6uq.onrender.com'
 
 async function request<T>(url: string, method = 'GET', data: any = null): Promise<T> {

@@ -1,9 +1,9 @@
 import React from 'react'
 import { useLocation } from 'react-router'
 import styles from './BreadCrumbs.module.scss'
-import HomeLogo from 'assets/icons/home.svg'
+import HomeLogo from '../../assets/icons/home.svg'
 import useBreadcrumbs from 'use-react-router-breadcrumbs'
-import ArrowRight from 'assets/icons/arrow-right.svg'
+import ArrowRight from '../../assets/icons/arrow-right.svg'
 import { NavLink } from 'react-router-dom'
 import classnames from 'classnames'
 

@@ -5,8 +5,6 @@ import cn from 'classnames'
 import styles from './BigSlider.module.scss'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-
-import banner from 'assets/img/Banner.png'
 import leftButton from 'assets/icons/left-button.svg'
 import buttonRight from '../../assets/icons/right-button.svg'
 
@@ -54,21 +52,16 @@ export const BigSlider: React.FC = () => {
 
   return (
     <div className={styles.container}>
+      {/* <h1 className={styles.homePage_header}>Welcome to Nice Gadgets store!</h1> */}
       <div className={styles.button} onClick={prevSlide}>
         <img src={leftButton} alt="prev slide" className={styles.button_image} />
       </div>
 
       <div className={styles.content}>
         <Slider ref={slider} {...settings}>
-          <div>
-            <img src={banner} alt="banner" className={styles.image} />
-          </div>
-          <div>
-            <img src={banner} alt="banner" className={styles.image} />
-          </div>
-          <div>
-            <img src={banner} alt="banner" className={styles.image} />
-          </div>
+          <div className={styles.slide}></div>
+          <div className={styles.slide}></div>
+          <div className={styles.slide}></div>
         </Slider>
       </div>
 

@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import React, { useContext } from 'react'
 import icon_minus from '../../assets/icons/minus.svg'
 import icon_plus from '../../assets/icons/plus.svg'

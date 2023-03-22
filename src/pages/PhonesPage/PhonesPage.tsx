@@ -1,6 +1,6 @@
 /* eslint-disable import/no-unresolved */
 import { Pagination } from 'components/Pagination'
-import { getAllPhones, getProductsWithDiscount } from 'api/getPhones'
+import { getAllPhones } from 'api/getPhones'
 import React, { useEffect, useState } from 'react'
 import { Phone } from 'types/Phone'
 import styles from './PhonesPage.module.scss'

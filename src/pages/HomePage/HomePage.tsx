@@ -1,12 +1,17 @@
 /* eslint-disable import/no-unresolved */
 import { BigSlider } from 'components/BigSlider'
+import { PhonesSwiper } from 'components/PhonesSwiper'
 import { Categories } from 'components/Categories'
 import React from 'react'
+import styles from './HomePage.module.scss'
 
 export const HomePage: React.FC = () => (
   <>
-    <h1>Welcome to Nice Gadgets store!</h1>
-    <BigSlider />
-    <Categories />
+    <div className={styles.container}>
+      <h1 className={styles.homePage_header}>Welcome to Nice Gadgets store!</h1>
+      <BigSlider />
+      <PhonesSwiper title={'Brand new models'} sortBy={'new'} />
+      <Categories />
+    </div>
   </>
 )

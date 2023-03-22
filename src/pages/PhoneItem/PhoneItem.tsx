@@ -1,8 +1,8 @@
-import { memo, useCallback, useEffect, useState } from 'react'
-import { useLocation, useNavigate, Link } from 'react-router-dom'
+/* eslint-disable import/no-unresolved */
+import { useCallback, useEffect, useState } from 'react'
+import { useNavigate, Link, useParams } from 'react-router-dom'
 import { PhoneDetails } from 'types/PhoneDetails'
 import { getPhoneDetails, getAllPhones } from 'api/getPhones'
-import { useParams } from 'react-router-dom'
 import { Phone } from '../../types/Phone'
 import styles from './PhoneItem.module.scss'
 import { AddToCardButton } from 'components/buttons/AddToCardButton'
@@ -13,20 +13,20 @@ import { BreadCrumbs } from 'components/BreadCrumbs'
 export const PhoneItem: React.FC = () => {
   const { phoneId = '' } = useParams()
   const [phoneItem, setPhoneItem] = useState<PhoneDetails | null>(null)
-  const [isLoading, setIsLoading] = useState<boolean>(true)
-  const [isError, setIsError] = useState<boolean>(false)
+  // const [isLoading, setIsLoading] = useState<boolean>(true)
+  // const [isError, setIsError] = useState<boolean>(false)
   const [mainPhoto, setMainPhoto] = useState<string | undefined>()
   const [currentPhoneId, setCurrentPhoneId] = useState<string>(phoneId)
   const [favoritePhone, setFavoritePhone] = useState<Phone | undefined>()
 
   const navigate = useNavigate()
-  const { pathname } = useLocation()
+  // const { pathname } = useLocation()
 
   const fetchOnePhone = useCallback(async (phoneId: string) => {
     try {
       const onePhoneData = await getPhoneDetails(phoneId)
       const photo = onePhoneData.images[0]
-      const firstCapacity = onePhoneData.capacity
+      // const firstCapacity = onePhoneData.capacity
       setPhoneItem(onePhoneData)
       setMainPhoto(photo)
       setCurrentPhoneId(onePhoneData.id)

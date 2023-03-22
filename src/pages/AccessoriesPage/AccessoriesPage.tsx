@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import { BreadCrumbs } from 'components/BreadCrumbs'
 import React from 'react'
 import styles from './AccessoriesPage.module.scss'
