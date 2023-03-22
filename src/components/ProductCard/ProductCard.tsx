@@ -50,7 +50,7 @@ export const ProductCard: React.FC<Props> = ({ phone }) => {
 
       <div className={styles.buttonLine}>
         <div className={styles.addToCardButton}>
-          <AddToCardButton />
+          <AddToCardButton phoneId={phoneId} />
         </div>
         <div className={styles.addToFavButton}>
           <AddToFavoriteButton phone={phone} />

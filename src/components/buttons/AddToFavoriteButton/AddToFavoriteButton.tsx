@@ -1,5 +1,6 @@
+/* eslint-disable import/no-unresolved */
 import classnames from 'classnames'
-import { ProductsContext } from 'components/ProductsProvider'
+import { FavouritesContext } from 'context/FavouritesProvider'
 import React, { useContext } from 'react'
 import { Phone } from 'types/Phone'
 import styles from './AddToFavoriteButton.module.scss'
@@ -9,7 +10,7 @@ type Props = {
 }
 
 export const AddToFavoriteButton: React.FC<Props> = ({ phone }) => {
-  const { favourites, setFavourites } = useContext(ProductsContext)
+  const { favourites, setFavourites } = useContext(FavouritesContext)
 
   const isActive = favourites.map((favPhone) => favPhone.id).includes(phone.id)
 

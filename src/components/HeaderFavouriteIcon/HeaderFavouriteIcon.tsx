@@ -1,12 +1,13 @@
+/* eslint-disable import/no-unresolved */
 import classnames from 'classnames'
-import { ProductsContext } from 'components/ProductsProvider'
+import { FavouritesContext } from 'context/FavouritesProvider'
 import React, { useContext } from 'react'
 import { NavLink } from 'react-router-dom'
 import styles from './HeaderFavouriteIcon.module.scss'
 import logoFavouriteIcon from 'assets/icons/favourites.svg'
 
 export const HeaderFavouriteIcon: React.FC = () => {
-  const { favourites } = useContext(ProductsContext)
+  const { favourites } = useContext(FavouritesContext)
 
   return (
     <div className={styles.container}>

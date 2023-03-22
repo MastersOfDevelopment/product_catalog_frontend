@@ -1,0 +1,43 @@
+@import '../../styles/variables.scss';
+@import '../../styles/fonts.scss';
+@import '../../styles/mixins.scss';
+
+.container {
+  display: flex;
+  margin-top: 25px;
+  margin-bottom: 24px;
+  align-items: center;
+
+  @include onTablet {
+    margin-bottom: 40px;
+  }
+}
+
+.path_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home_icon {
+  width: 16px;
+  height: 16px;
+}
+
+.arrow {
+  margin-left: 13px;
+}
+
+.link {
+  color: $secondary-color;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  margin-left: 13px;
+}
+
+.link_active {
+  font-family: 'Mont';
+  color: $primary-color;
+  font-weight: 800;
+}
