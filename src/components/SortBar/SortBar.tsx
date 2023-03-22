@@ -1,6 +1,6 @@
 import styles from './SortBar.module.scss'
 import { useSearchParams } from 'react-router-dom'
-import { getNewSearchParams } from '../../utils/getNewSearchParams'
+import { getNewSearchParams } from 'utils/getNewSearchParams'
 
 export const SortBar: React.FC = () => {
   const [searchParams, setSearchParams] = useSearchParams()

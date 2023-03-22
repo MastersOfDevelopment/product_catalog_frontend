@@ -2,9 +2,9 @@
 
 .phoneSwiper {
   @include onMobile {
-    margin-top: 66px;
     width: 320px;
     margin: 0 auto;
+    margin-top: 50px;
   }
 
   @include onTablet {

@@ -1,4 +1,3 @@
-/* eslint-disable import/no-unresolved */
 import { ProductCard } from 'components/ProductCard'
 import { Grid } from '@mui/material'
 import React from 'react'

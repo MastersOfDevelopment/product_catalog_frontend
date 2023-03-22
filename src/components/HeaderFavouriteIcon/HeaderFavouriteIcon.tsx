@@ -1,4 +1,3 @@
-/* eslint-disable import/no-unresolved */
 import classnames from 'classnames'
 import { FavouritesContext } from 'context/FavouritesProvider'
 import React, { useContext } from 'react'

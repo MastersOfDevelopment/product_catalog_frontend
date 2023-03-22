@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom'
 import { useLocation } from 'react-router'
 import { getAllPhones } from 'api/getPhones'
 import styles from './Categories.module.scss'
-import phones from '../../assets/img/categories/category-phones.jpg'
-import tablets from '../../assets/img/categories/category-tablets.jpg'
-import accessories from '../../assets/img/categories/category-accessories.jpg'
+import phones from 'assets/img/categories/category-phones.jpg'
+import tablets from 'assets/img/categories/category-tablets.jpg'
+import accessories from 'assets/img/categories/category-accessories.jpg'
 
 export const Categories: FC = () => {
   const [totalPhones, setTotalPhones] = useState(0)
