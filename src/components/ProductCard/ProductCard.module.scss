@@ -1,5 +1,6 @@
 @import '../../styles/mixins.scss';
 @import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
 
 .container {
   display: flex;
@@ -101,4 +102,14 @@
 .buttonLine {
   display: flex;
   justify-content: space-between;
+}
+
+.addToCardButton {
+  width: 160px;
+  height: 40px;
+}
+
+.addToFavButton {
+  width: 40px;
+  height: 40px;
 }

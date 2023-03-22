@@ -31,9 +31,45 @@ ul {
 }
 
 h1 {
-  font-family: 'Mont', sans-serif;
-  font-size: 48px;
+  font-size: 32px;
   font-weight: 800;
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: 800;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+@include onTablet {
+  h1 {
+    font-size: 48px;
+    font-weight: 800;
+  }
+
+  h2 {
+    font-size: 32px;
+    font-weight: 800;
+  }
+
+  h3 {
+    font-size: 22px;
+    font-weight: 800;
+  }
+
+  h4 {
+    font-size: 20px;
+    font-weight: 700;
+  }
 }
 
 button {
@@ -47,19 +83,17 @@ button {
 }
 
 .container {
-  display: flex;
   flex-grow: 1;
+  width: 100%;
   max-width: 1200px;
-  margin: 0 24px;
-  justify-content: center;
-  align-items: center;
+  margin: 0 auto;
+  padding: 0 16px;
 
   @include onTablet {
-    display: block;
-    margin: 0 32px;
+    padding: 0 24px;
   }
 
   @include onDesktop {
-    margin: 0 152px;
+    padding: 0 32px;
   }
 }

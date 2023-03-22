@@ -14,7 +14,7 @@ type Props = {
 }
 
 export const PhonesSwiper: React.FC<Props> = ({ title, sortBy }) => {
-  const cardInfo = document.getElementById('productcard')
+  const cardInfo = document.getElementById('productCard')
   const cardWidth = cardInfo?.offsetWidth
   const [phones, setPhones] = useState<Phone[]>([])
   const [position, setPosition] = useState(0)

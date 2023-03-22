@@ -3,7 +3,6 @@
 .title {
   font-size: 48px;
   color: $primary-color;
-  margin-top: 80px;
 }
 
 .subtitle {
@@ -11,4 +10,12 @@
   font-size: 14px;
   color: $secondary-color;
   margin-top: 8px;
+}
+
+.error_message {
+  display: flex;
+}
+
+.error_button {
+  margin-left: 10px;
 }

@@ -52,6 +52,7 @@ export const BigSlider: React.FC = () => {
 
   return (
     <div className={styles.container}>
+      {/* <h1 className={styles.homePage_header}>Welcome to Nice Gadgets store!</h1> */}
       <div className={styles.button} onClick={prevSlide}>
         <img src={leftButton} alt="prev slide" className={styles.button_image} />
       </div>
