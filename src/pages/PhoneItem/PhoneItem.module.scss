@@ -115,7 +115,6 @@
   border-radius: 4px;
   border: 1px solid $icons-color;
   margin-right: 8px;
-  margin-top: 24px;
   
   &:last-child {
     margin-right: 0;
@@ -240,6 +239,10 @@
   cursor: pointer;
   background-color: $white-color;
   margin-bottom: 24px;
+  text-align: center;
+  color: $primary-color;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 .availableCapacity {
