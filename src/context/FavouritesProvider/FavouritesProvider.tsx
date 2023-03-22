@@ -8,7 +8,7 @@ type ContextType = {
   setFavourites: React.Dispatch<SetStateAction<Phone[]>>
 }
 
-export const ProductsContext = React.createContext<ContextType>({
+export const FavouritesContext = React.createContext<ContextType>({
   favourites: [],
   setFavourites: () => {},
 })
@@ -17,7 +17,7 @@ type Props = {
   children: React.ReactNode
 }
 
-export const ProductsProvider: React.FC<Props> = ({ children }) => {
+export const FavouritesProvider: React.FC<Props> = ({ children }) => {
   const [favourites, setFavourites] = useLocalStorage<Phone[]>('favourites', [])
 
   const contextValue = {
@@ -25,5 +25,5 @@ export const ProductsProvider: React.FC<Props> = ({ children }) => {
     setFavourites,
   }
 
-  return <ProductsContext.Provider value={contextValue}>{children}</ProductsContext.Provider>
+  return <FavouritesContext.Provider value={contextValue}>{children}</FavouritesContext.Provider>
 }

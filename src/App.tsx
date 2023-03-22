@@ -1,3 +1,4 @@
+/* eslint-disable */
 import './styles/global.scss'
 import { Navigate, Route, Routes } from 'react-router'
 
@@ -9,17 +10,20 @@ import { HomePage } from 'pages/HomePage'
 import { PhonesPage } from 'pages/PhonesPage'
 import { PageNotFound } from 'pages/PageNotFound'
 import { useWindowSize } from 'utils/helper'
-import { ProductsProvider } from 'context/ProductsProvider'
+import { FavouritesProvider } from 'context/FavouritesProvider'
 import { FavouritesPage } from 'pages/FavouritesPage'
-import { CardPage } from 'pages/CardPage'
+import { CartPage } from 'pages/CartPage'
+import { PhoneItem } from 'pages/PhoneItem'
 import { CartProvider } from 'context/CartContext'
+import { TabletsPage } from 'pages/TabletsPage'
+import { AccessoriesPage } from 'pages/AccessoriesPage'
 
 function App() {
   const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState(false)
   const screenWidth = useWindowSize().width
 
   return (
-    <ProductsProvider>
+    <FavouritesProvider>
       <CartProvider>
         <div className="App">
           {isBurgerMenuOpen && screenWidth < 640 ? (
@@ -32,12 +36,14 @@ function App() {
                   <Route path="*" element={<PageNotFound />} />
                   <Route path="/" element={<HomePage />} />
                   <Route path="/home" element={<Navigate to="/" replace />} />
-                  <Route path="/phones" element={<PhonesPage />}>
-                    <Route index />
-                    <Route path=":phoneId" element={<PhonesPage />} />
+                  <Route path="/phones">
+                    <Route index element={<PhonesPage />} />
+                    <Route path=":phoneId" element={<PhoneItem />} />
                   </Route>
                   <Route path="/favourites" element={<FavouritesPage />} />
-                  <Route path="/cart" element={<CardPage />} />
+                  <Route path="/cart" element={<CartPage />} />
+                  <Route path="/tablets" element={<TabletsPage />} />
+                  <Route path="/accessories" element={<AccessoriesPage />} />
                 </Routes>
               </div>
 
@@ -46,7 +52,7 @@ function App() {
           )}
         </div>
       </CartProvider>
-    </ProductsProvider>
+    </FavouritesProvider>
   )
 }
 

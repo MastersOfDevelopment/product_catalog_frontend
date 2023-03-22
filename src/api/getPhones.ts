@@ -9,3 +9,4 @@ export const getAllPhones = async (searchParams: string) => {
 }
 export const getNewProducts = async () => client.get<Phone>('products/new')
 export const getRecommendedPhones = async (phoneId: string) => client.get<Phone>(`/phones/${phoneId}/recommended`)
+export const getProductsWithDiscount = async () => client.get<Phone>('/products/discount')

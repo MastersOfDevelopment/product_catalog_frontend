@@ -1,0 +1,63 @@
+@import '../../styles/global.scss';
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+@import '../../styles/fonts.scss';
+
+.categories {
+  margin-bottom: 56px;
+
+  @include onTablet {
+    margin-bottom: 64px;
+  }
+
+  @include onDesktop {
+    margin-bottom: 80px;
+  }
+
+  &__title {
+    font-weight: 800;
+    font-size: 22px;
+    margin-bottom: 24px;
+
+    @include onTablet {
+      font-size: 32px;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+
+    @include onTablet {
+      flex-direction: row;
+    }
+  }
+}
+
+.category {
+  list-style: none;
+
+  &__name {
+    font-weight: 700;
+    font-size: 20px;
+    color: $primary-color;
+    margin-bottom: 4px;
+  }
+
+  &__itemsCount {
+    font-weight: 500;
+    font-size: 14px;
+    color: $secondary-color;
+    margin-bottom: 32px;
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    margin-bottom: 24px;
+    border-radius: 8px;
+  }
+}

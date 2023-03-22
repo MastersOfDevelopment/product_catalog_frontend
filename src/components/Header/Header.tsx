@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import React from 'react'
 import styles from './Header.module.scss'
 import { NavLinkBar } from 'components/NavLinkBar'
@@ -29,7 +30,7 @@ export const Header: React.FC<Props> = ({ setIsBurgerMenuOpen }) => {
                 <NavLinkBar to="/tablets" title="tablets" />
               </li>
               <li className={styles.navLinkWrapper}>
-                <NavLinkBar to="/accesories" title="accesories" />
+                <NavLinkBar to="/accessories" title="accessories" />
               </li>
             </ul>
           </nav>

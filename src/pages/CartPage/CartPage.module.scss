@@ -2,13 +2,13 @@
 @import '../../styles/mixins.scss';
 
 .title {
-  font-size: 32px;
+  margin-top: 24px;
   color: $primary-color;
   margin-bottom: 16px;
   width: 100%;
-  
+
   @include onTablet {
-    font-size: 48px;
+    margin-top: 16px;
   }
 }
 
@@ -16,12 +16,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
   margin-top: 24px;
   margin-bottom: 64px;
 
-
   @include onDesktop {
+    gap: 16px;
     flex-direction: row;
     align-items: stretch;
     justify-content: space-between;
