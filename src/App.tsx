@@ -1,4 +1,4 @@
-/* eslint-disable import/no-unresolved */
+/* eslint-disable */
 import './styles/global.scss'
 import { Navigate, Route, Routes } from 'react-router'
 

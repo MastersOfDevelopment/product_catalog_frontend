@@ -1,6 +1,30 @@
 @import "../../styles/mixins.scss";
 @import "../../styles/variables.scss";
 
+.history {
+  display: flex;
+  align-items: baseline;
+  margin-top: 28px;
+  cursor: pointer;
+}
+
+.historyIcon {
+  background-image: url('../../assets/icons/arrow-left.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 5px;
+  height: 9px;
+  margin-right: 8px;
+}
+
+.historyTitle {
+  font-weight: 700;
+  font-size: 12px;
+  color: $secondary-color;
+  background-color: $white-color;
+  border: 1px transparent;
+}
+
 .title {
   margin-top: 16px;
   margin-bottom: 32px;
@@ -26,8 +50,6 @@
 }
 
 .photos {
-  margin-bottom: 20px;
-
   @include onTablet {
     display: flex;
     flex-direction: row-reverse;
@@ -41,10 +63,6 @@
   margin: 0 auto;
 
   @include onTablet {
-    display: grid;
-  }
-
-  @include onDesktop {
     width: 442px;
     height: 442px;
   }
@@ -205,6 +223,16 @@
   background-color: $elements-color;
 }
 
+.separatorInfo {
+  height: 1px;
+  background-color: $elements-color;
+  min-width: 288px;
+
+  @include onTablet {
+    min-width: 592px;
+  }
+}
+
 .capacity {
   width: 63px;
   padding: 7px 4px 8px;
@@ -255,11 +283,11 @@
 
 .description {
   margin-top: 32px;
-  padding-bottom: 24px;
+  margin-bottom: 56px;
 }
 
 .descriptionTitle {
-  font-weight: 600;
+  font-weight: 700;
   font-size: 12px;
   line-height: 15px;
   color: $secondary-color;
@@ -295,4 +323,46 @@
 .butToFav {
   width: 50px;
   height: 48px;
+}
+
+.subTitle {
+  font-weight: 700;
+  font-size: 20px;
+  color: $primary-color;
+  margin-bottom: 16px;
+  margin-top: 56px;
+}
+
+.subSubTitle {
+  font-weight: 700;
+  font-size: 16px;
+  color: $primary-color;
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+
+.textP {
+  font-weight: 700;
+  font-size: 14px;
+  color: $secondary-color;
+
+  :last-child {
+    margin-bottom: 56px;
+  }
+}
+
+.addInfo {
+  @include onDesktop {
+    display: flex;
+  }
+}
+
+.category {
+  @include onDesktop {
+    margin-bottom: 80px;
+
+    &:first-child {
+      margin-right: 64px;
+    }
+  }
 }

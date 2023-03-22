@@ -1,4 +1,4 @@
-/* eslint-disable import/no-unresolved */
+/* eslint-disable */
 import classnames from 'classnames'
 import { FavouritesContext } from 'context/FavouritesProvider'
 import React, { useContext } from 'react'
@@ -6,7 +6,7 @@ import { Phone } from 'types/Phone'
 import styles from './AddToFavoriteButton.module.scss'
 
 type Props = {
-  phone: Phone
+  phone?: Phone
 }
 
 export const AddToFavoriteButton: React.FC<Props> = ({ phone }) => {
