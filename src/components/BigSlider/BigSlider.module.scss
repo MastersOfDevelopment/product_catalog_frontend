@@ -15,6 +15,7 @@
   @include onTablet {
     max-width: 640px;
     flex-direction: row;
+    gap: 19px;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
@@ -55,7 +56,7 @@
   @include onTablet {
     background-image: url('../../assets/img/Banner.png');
     height: 189px;
-    width: 490px
+    width: 490px;
   }
 
   @include onDesktop {

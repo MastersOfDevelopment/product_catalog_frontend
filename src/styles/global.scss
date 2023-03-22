@@ -53,15 +53,13 @@ button {
   margin: 0 24px;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
 
   @include onTablet {
     display: block;
     margin: 0 32px;
-    flex-direction: row;
   }
 
   @include onDesktop {
-    margin: 0 auto;
+    margin: 0 152px;
   }
 }
