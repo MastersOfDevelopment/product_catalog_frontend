@@ -12,7 +12,7 @@ type Props = {
 export const AddToFavoriteButton: React.FC<Props> = ({ phone }) => {
   const { favourites, setFavourites } = useContext(FavouritesContext)
 
-  const isActive = favourites.map((favPhone) => favPhone.id).includes(phone.id)
+  // const isActive = favourites.map((favPhone) => favPhone.id).includes(phone.id)
 
   const handleAddToFavourites = (phone: Phone) => {
     const favouritesIds = favourites.map((favPhone) => favPhone.id)
@@ -30,9 +30,9 @@ export const AddToFavoriteButton: React.FC<Props> = ({ phone }) => {
         <button
           type="button"
           className={classnames(styles.buttonFavorites, {
-            [styles.buttonFavorites_active]: isActive,
+            // [styles.buttonFavorites_active]: isActive,
           })}
-          onClick={() => handleAddToFavourites(phone)}
+          // onClick={() => handleAddToFavourites(phone)}
         />
       </div>
     </>

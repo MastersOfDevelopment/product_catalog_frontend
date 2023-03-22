@@ -76,6 +76,7 @@ export const PhoneItem: React.FC = () => {
 
   return (
     <>
+      <BreadCrumbs />
       <div className={styles.history}>
         <a href="/phones" className={styles.historyLink} />
         <div className={styles.historyIcon} />
@@ -84,8 +85,6 @@ export const PhoneItem: React.FC = () => {
         </button>
       </div>
       <main>
-        <BreadCrumbs />
-
         <h1 className={styles.title}>{`${phoneItem?.name}`}</h1>
         <section className={styles.characteristics}>
           <div className={styles.photos}>
