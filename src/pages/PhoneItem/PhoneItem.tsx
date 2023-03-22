@@ -8,6 +8,7 @@ import styles from './PhoneItem.module.scss'
 import { AddToCardButton } from 'components/buttons/AddToCardButton'
 import { AddToFavoriteButton } from 'components/buttons/AddToFavoriteButton'
 import classNames from 'classnames'
+import { BreadCrumbs } from 'components/BreadCrumbs'
 
 export const PhoneItem: React.FC = () => {
   const { phoneId = '' } = useParams()
@@ -74,6 +75,8 @@ export const PhoneItem: React.FC = () => {
   return (
     <>
       <main>
+        <BreadCrumbs />
+
         <h1 className={styles.title}>{`${phoneItem?.name}`}</h1>
         <section className={styles.characteristics}>
           <div className={styles.photos}>
