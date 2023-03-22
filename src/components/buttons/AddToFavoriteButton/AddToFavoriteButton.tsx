@@ -6,7 +6,7 @@ import { Phone } from 'types/Phone'
 import styles from './AddToFavoriteButton.module.scss'
 
 type Props = {
-  phone: Phone
+  phone?: Phone
 }
 
 export const AddToFavoriteButton: React.FC<Props> = ({ phone }) => {

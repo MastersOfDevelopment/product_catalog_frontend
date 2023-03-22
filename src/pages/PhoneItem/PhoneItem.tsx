@@ -134,7 +134,8 @@ export const PhoneItem: React.FC = () => {
               <div className={styles.butToAdd}>
                 <AddToCardButton phoneId={phoneId} />
               </div>
-              <div className={styles.butToFav}> {favoritePhone && <AddToFavoriteButton phone={favoritePhone} />}</div>
+              <div className={styles.butToFav}>
+              <AddToFavoriteButton phone={favoritePhone} /></div>
             </div>
             <div className={styles.description}>
               <div className={styles.line}>

@@ -41,10 +41,6 @@
   margin: 0 auto;
 
   @include onTablet {
-    display: grid;
-  }
-
-  @include onDesktop {
     width: 442px;
     height: 442px;
   }
