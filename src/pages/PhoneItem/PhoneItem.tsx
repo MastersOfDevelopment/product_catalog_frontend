@@ -1,5 +1,5 @@
 import { memo, useCallback, useEffect, useState } from 'react'
-import { useLocation, useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate, Link } from 'react-router-dom'
 import { PhoneDetails } from 'types/PhoneDetails'
 import { getPhoneDetails, getAllPhones } from 'api/getPhones'
 import { useParams } from 'react-router-dom'
@@ -20,11 +20,11 @@ export const PhoneItem: React.FC = () => {
   const [favoritePhone, setFavoritePhone] = useState<Phone | undefined>()
 
   const navigate = useNavigate()
+  const { pathname } = useLocation()
 
   const fetchOnePhone = useCallback(async (phoneId: string) => {
     try {
       const onePhoneData = await getPhoneDetails(phoneId)
-      console.log('onePhoneData', onePhoneData)
       const photo = onePhoneData.images[0]
       const firstCapacity = onePhoneData.capacity
       setPhoneItem(onePhoneData)
@@ -46,20 +46,20 @@ export const PhoneItem: React.FC = () => {
   }, [])
 
   useEffect(() => {
-    console.log('use effect called')
+    console.log('use effect called', phoneId)
     const loadFunc = async () => {
-      await fetchOnePhone(currentPhoneId)
-      await fetchAllPhones(currentPhoneId)
+      await fetchOnePhone(phoneId)
+      await fetchAllPhones(phoneId)
     }
     loadFunc()
-  }, [fetchOnePhone, fetchAllPhones, currentPhoneId])
+  }, [phoneId, fetchOnePhone, fetchAllPhones])
 
   const getPhoneWithColor = useCallback(
     (color: string) => {
       const splittedId = currentPhoneId?.split('-')
       splittedId[splittedId.length - 1] = color.toLowerCase()
       const idWithNewColor = splittedId.join('-')
-      setCurrentPhoneId(idWithNewColor)
+      return `../${idWithNewColor}`
     },
     [currentPhoneId],
   )
@@ -69,23 +69,21 @@ export const PhoneItem: React.FC = () => {
       const splittedId = currentPhoneId?.split('-')
       splittedId[splittedId.length - 2] = capacity.toLowerCase()
       const idWithNewCapacity = splittedId.join('-')
-      setCurrentPhoneId(idWithNewCapacity)
+      return `../${idWithNewCapacity}`
     },
     [currentPhoneId],
   )
 
   return (
     <>
+      <BreadCrumbs />
       <div className={styles.history}>
-        <a href="/phones" className={styles.historyLink} />
         <div className={styles.historyIcon} />
         <button className={styles.historyTitle} onClick={() => navigate(-1)}>
           Back
         </button>
       </div>
       <main>
-        <BreadCrumbs />
-
         <h1 className={styles.title}>{`${phoneItem?.name}`}</h1>
         <section className={styles.characteristics}>
           <div className={styles.photos}>
@@ -109,15 +107,14 @@ export const PhoneItem: React.FC = () => {
               <div className={styles.availableColor}>
                 {phoneItem &&
                   phoneItem.colorsAvailable.map((currentColor) => (
-                    <div
-                      key={currentColor}
+                    <Link
+                      to={getPhoneWithColor(currentColor)}
                       className={classNames(styles.containerForColor, {
                         [styles.selectedColor]: currentColor === phoneItem?.color,
                       })}
-                      onClick={() => getPhoneWithColor(currentColor)}
                     >
                       <div className={styles.color} style={{ backgroundColor: currentColor }}></div>
-                    </div>
+                    </Link>
                   ))}
               </div>
             </div>
@@ -126,15 +123,14 @@ export const PhoneItem: React.FC = () => {
             <div className={styles.availableCapacity}>
               {phoneItem &&
                 phoneItem.capacityAvailable.map((currentCapacity) => (
-                  <button
-                    key={currentCapacity}
+                  <Link
+                    to={getPhoneWithCapacity(currentCapacity)}
                     className={classNames(styles.capacity, {
                       [styles.selectedCapacity]: currentCapacity === phoneItem.capacity,
                     })}
-                    onClick={() => getPhoneWithCapacity(currentCapacity)}
                   >
                     {currentCapacity}
-                  </button>
+                  </Link>
                 ))}
             </div>
             <div className={styles.separator} />
