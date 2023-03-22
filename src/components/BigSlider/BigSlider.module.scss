@@ -8,14 +8,22 @@
   max-width: 320px;
   flex-direction: column;
 
+  @include onMobile {
+    margin: 0 -24px;
+  }
+
   @include onTablet {
     max-width: 640px;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
   }
 
   @include onDesktop {
     flex-direction: row;
-    max-width: 1200px;
+    width: 1040px;
+    margin: 0 auto;
   }
 }
 
@@ -34,13 +42,26 @@
   }
 }
 
-.image {
-  width: 320px;
-  height: 320px;
+.slide {
+  @include onMobile {
+    background-image: url('../../assets/img/mobile-banner.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 320px;
+    width: 320px;
+  }
 
   @include onTablet {
-    width: 100%;
-    height: auto;
+    background-image: url('../../assets/img/Banner.png');
+    height: 189px;
+    width: 490px
+  }
+
+  @include onDesktop {
+    background-image: url('../../assets/img/Banner.png');
+    width: 1040px;
+    height: 400px;
   }
 }
 
