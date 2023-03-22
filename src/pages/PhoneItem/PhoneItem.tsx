@@ -25,7 +25,6 @@ export const PhoneItem: React.FC = () => {
   const fetchOnePhone = useCallback(async (phoneId: string) => {
     try {
       const onePhoneData = await getPhoneDetails(phoneId)
-      console.log('onePhoneData', onePhoneData)
       const photo = onePhoneData.images[0]
       const firstCapacity = onePhoneData.capacity
       setPhoneItem(onePhoneData)
@@ -60,7 +59,6 @@ export const PhoneItem: React.FC = () => {
       const splittedId = currentPhoneId?.split('-')
       splittedId[splittedId.length - 1] = color.toLowerCase()
       const idWithNewColor = splittedId.join('-')
-      // setCurrentPhoneId(idWithNewColor)
       return `../${idWithNewColor}`
     },
     [currentPhoneId],
@@ -71,7 +69,6 @@ export const PhoneItem: React.FC = () => {
       const splittedId = currentPhoneId?.split('-')
       splittedId[splittedId.length - 2] = capacity.toLowerCase()
       const idWithNewCapacity = splittedId.join('-')
-      // () => setCurrentPhoneId(idWithNewCapacity)
       return `../${idWithNewCapacity}`
     },
     [currentPhoneId],
