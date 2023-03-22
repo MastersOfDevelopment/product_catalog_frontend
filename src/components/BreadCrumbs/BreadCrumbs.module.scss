@@ -16,7 +16,6 @@
 .path_container {
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
 .home_icon {
@@ -37,7 +36,6 @@
 }
 
 .link_active {
-  font-family: 'Mont';
   color: $primary-color;
   font-weight: 800;
 }

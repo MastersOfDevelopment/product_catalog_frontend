@@ -1,4 +1,3 @@
-/* eslint-disable import/no-unresolved */
 import { BigSlider } from 'components/BigSlider'
 import { PhonesSwiper } from 'components/PhonesSwiper'
 import { Categories } from 'components/Categories'
@@ -11,7 +10,8 @@ export const HomePage: React.FC = () => (
       <h1 className={styles.homePage_header}>Welcome to Nice Gadgets store!</h1>
       <BigSlider />
       <PhonesSwiper title={'Brand new models'} sortBy={'new'} />
-      <Categories />
     </div>
+    <Categories />
+    <PhonesSwiper title={'Hot prices'} sortBy={'discount'} />
   </>
 )

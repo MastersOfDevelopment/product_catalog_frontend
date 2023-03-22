@@ -1,7 +1,7 @@
 import React from 'react'
 import { Phone } from '../../types/Phone'
 import { AddToFavoriteButton } from '../buttons/AddToFavoriteButton'
-import { AddToCardButton } from '../buttons/AddToCardButton'
+import { AddToCartButton } from '../buttons/AddToCartButton'
 import styles from './ProductCard.module.scss'
 import { useNavigate } from 'react-router-dom'
 
@@ -50,7 +50,7 @@ export const ProductCard: React.FC<Props> = ({ phone }) => {
 
       <div className={styles.buttonLine}>
         <div className={styles.addToCardButton}>
-          <AddToCardButton phoneId={phoneId} />
+          <AddToCartButton phoneId={phoneId} />
         </div>
         <div className={styles.addToFavButton}>
           <AddToFavoriteButton phone={phone} />

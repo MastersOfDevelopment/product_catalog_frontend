@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { useSearchParams, Link } from 'react-router-dom'
-import { visiblePageLinks } from '../../utils/visiblePageLinks'
-import { getNewSearchParams } from '../../utils/getNewSearchParams'
+import { visiblePageLinks } from 'utils/visiblePageLinks'
+import { getNewSearchParams } from 'utils/getNewSearchParams'
 import styles from './Pagination.module.scss'
 
 type Props = {

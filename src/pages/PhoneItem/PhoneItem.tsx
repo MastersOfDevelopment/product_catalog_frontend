@@ -1,37 +1,33 @@
-/* eslint-disable import/no-unresolved */
 import { useCallback, useEffect, useState } from 'react'
-import { useNavigate, Link, useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { PhoneDetails } from 'types/PhoneDetails'
 import { getPhoneDetails, getAllPhones } from 'api/getPhones'
-import { Phone } from '../../types/Phone'
+import { Phone } from 'types/Phone'
 import styles from './PhoneItem.module.scss'
-import { AddToCardButton } from 'components/buttons/AddToCardButton'
+import { AddToCartButton } from 'components/buttons/AddToCartButton'
 import { AddToFavoriteButton } from 'components/buttons/AddToFavoriteButton'
 import classNames from 'classnames'
 import { BreadCrumbs } from 'components/BreadCrumbs'
+import { BackButton } from 'components/buttons/BackButton'
+import { PhonesSwiper } from 'components/PhonesSwiper'
 
 export const PhoneItem: React.FC = () => {
   const { phoneId = '' } = useParams()
-  const [phoneItem, setPhoneItem] = useState<PhoneDetails | null>(null)
-  // const [isLoading, setIsLoading] = useState<boolean>(true)
-  // const [isError, setIsError] = useState<boolean>(false)
-  const [mainPhoto, setMainPhoto] = useState<string | undefined>()
+  const [phoneItem, setPhoneItem] = useState<PhoneDetails>()
+  const [isError, setIsError] = useState<boolean>(false)
+  const [mainPhoto, setMainPhoto] = useState<string>()
   const [currentPhoneId, setCurrentPhoneId] = useState<string>(phoneId)
-  const [favoritePhone, setFavoritePhone] = useState<Phone | undefined>()
-
-  const navigate = useNavigate()
-  // const { pathname } = useLocation()
+  const [favoritePhone, setFavoritePhone] = useState<Phone>()
 
   const fetchOnePhone = useCallback(async (phoneId: string) => {
     try {
       const onePhoneData = await getPhoneDetails(phoneId)
       const photo = onePhoneData.images[0]
-      // const firstCapacity = onePhoneData.capacity
       setPhoneItem(onePhoneData)
       setMainPhoto(photo)
       setCurrentPhoneId(onePhoneData.id)
     } catch (error) {
-      console.log(error)
+      setIsError(true)
     }
   }, [])
 
@@ -39,14 +35,15 @@ export const PhoneItem: React.FC = () => {
     try {
       const phonesToFavorite = await getAllPhones(phoneId)
       const firstPhone = phonesToFavorite.phones.find((phone) => phone.itemId === phoneId)
-      setFavoritePhone(firstPhone)
+      if (firstPhone) {
+        setFavoritePhone(firstPhone)
+      }
     } catch (error) {
       console.log(error)
     }
   }, [])
 
   useEffect(() => {
-    console.log('use effect called', phoneId)
     const loadFunc = async () => {
       await fetchOnePhone(phoneId)
       await fetchAllPhones(phoneId)
@@ -77,12 +74,7 @@ export const PhoneItem: React.FC = () => {
   return (
     <>
       <BreadCrumbs />
-      <div className={styles.history}>
-        <div className={styles.historyIcon} />
-        <button className={styles.historyTitle} onClick={() => navigate(-1)}>
-          Back
-        </button>
-      </div>
+      <BackButton />
       <main>
         <h1 className={styles.title}>{`${phoneItem?.name}`}</h1>
         <section className={styles.characteristics}>
@@ -140,11 +132,9 @@ export const PhoneItem: React.FC = () => {
             </div>
             <div className={styles.buttonLine}>
               <div className={styles.butToAdd}>
-                <AddToCardButton phoneId={phoneId} />
+                <AddToCartButton phoneId={phoneId} />
               </div>
-              <div className={styles.butToFav}>
-                <AddToFavoriteButton phone={favoritePhone} />
-              </div>
+              <div className={styles.butToFav}>{favoritePhone && <AddToFavoriteButton phone={favoritePhone} />}</div>
             </div>
             <div className={styles.description}>
               <div className={styles.line}>
@@ -247,6 +237,7 @@ export const PhoneItem: React.FC = () => {
             </div>
           </div>
         </div>
+        <PhonesSwiper title={'You may also like'} sortBy={'new'} />
       </main>
     </>
   )

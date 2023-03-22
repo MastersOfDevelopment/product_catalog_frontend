@@ -1,9 +1,9 @@
 import { FC } from 'react'
 import { Link } from 'react-router-dom'
 import styles from './Categories.module.scss'
-import phones from '../../assets/img/categories/category-phones.jpg'
-import tablets from '../../assets/img/categories/category-tablets.jpg'
-import accessories from '../../assets/img/categories/category-accessories.jpg'
+import phones from 'assets/img/categories/category-phones.jpg'
+import tablets from 'assets/img/categories/category-tablets.jpg'
+import accessories from 'assets/img/categories/category-accessories.jpg'
 
 export const Categories: FC = () => {
   return (
@@ -18,7 +18,7 @@ export const Categories: FC = () => {
           <Link to={'/phones'} className={styles.category__name}>
             Mobile phones
           </Link>
-          <p className={styles.category__itemsCount}>95 models</p>
+          <p className={styles.category__itemsCount}>71 models</p>
         </li>
 
         <li className={styles.category}>

@@ -1,5 +1,6 @@
 /* eslint-disable import/no-unresolved */
 import { getPhoneDetails } from 'api/getPhones'
+import { BackButton } from 'components/buttons/BackButton'
 import { CartCheckout } from 'components/CartCheckout'
 import { CartItem } from 'components/CartItem'
 import { CartModal } from 'components/CartModal'
@@ -31,6 +32,7 @@ export const CartPage: React.FC = () => {
 
   return (
     <div>
+      <BackButton />
       <h1 className={styles.title}>Cart</h1>
       {isModalVisible && totalCost > 0 && <CartModal handleModal={handleModal} />}
       <div className={styles.cart_page}>

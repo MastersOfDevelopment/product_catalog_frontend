@@ -1,4 +1,3 @@
-/* eslint-disable import/no-unresolved */
 import React, { useState } from 'react'
 import Slider from 'react-slick'
 import cn from 'classnames'
@@ -6,7 +5,7 @@ import styles from './BigSlider.module.scss'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import leftButton from 'assets/icons/left-button.svg'
-import buttonRight from '../../assets/icons/right-button.svg'
+import buttonRight from 'assets/icons/right-button.svg'
 
 export const BigSlider: React.FC = () => {
   const slider = React.useRef<Slider>(null)
@@ -52,7 +51,6 @@ export const BigSlider: React.FC = () => {
 
   return (
     <div className={styles.container}>
-      {/* <h1 className={styles.homePage_header}>Welcome to Nice Gadgets store!</h1> */}
       <div className={styles.button} onClick={prevSlide}>
         <img src={leftButton} alt="prev slide" className={styles.button_image} />
       </div>
