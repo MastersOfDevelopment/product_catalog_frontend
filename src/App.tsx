@@ -37,9 +37,9 @@ function App() {
                   <Route path="/" element={<HomePage />} />
                   <Route path="/home" element={<Navigate to="/" replace />} />
                   <Route path="/phones">
-                  <Route index element={<PhonesPage />} />
-                  <Route path=":phoneId" element={<PhoneItem />} />
-                </Route>
+                    <Route index element={<PhonesPage />} />
+                    <Route path=":phoneId" element={<PhoneItem />} />
+                  </Route>
                   <Route path="/favourites" element={<FavouritesPage />} />
                   <Route path="/cart" element={<CartPage />} />
                   <Route path="/tablets" element={<TabletsPage />} />
