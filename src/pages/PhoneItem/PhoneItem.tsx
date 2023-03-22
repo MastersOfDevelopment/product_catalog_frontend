@@ -39,7 +39,7 @@ export const PhoneItem: React.FC = () => {
         setFavoritePhone(firstPhone)
       }
     } catch (error) {
-      console.log(error)
+      setIsError(true)
     }
   }, [])
 
@@ -75,6 +75,7 @@ export const PhoneItem: React.FC = () => {
     <>
       <BreadCrumbs />
       <BackButton />
+      {isError && <h3>Something went wrong</h3>}
       <main>
         <h1 className={styles.title}>{`${phoneItem?.name}`}</h1>
         <section className={styles.characteristics}>
