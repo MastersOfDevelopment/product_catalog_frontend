@@ -1,11 +1,15 @@
 @import '../../styles/variables.scss';
 
 .header {
+  position: sticky;
+  top: 0;
   border-bottom: 1px solid $elements-color;
+  z-index: 1;
 
   &_container {
     display: flex;
     justify-content: space-between;
+    background-color: $white-color;
     height: 64px;
     align-items: center;
   }
