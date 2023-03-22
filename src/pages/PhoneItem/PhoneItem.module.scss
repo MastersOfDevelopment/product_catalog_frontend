@@ -251,7 +251,7 @@
 
 .description {
   margin-top: 32px;
-  padding-bottom: 24px;
+  margin-bottom: 56px;
 }
 
 .descriptionTitle {
@@ -291,4 +291,29 @@
 .butToFav {
   width: 50px;
   height: 48px;
+}
+
+.subTitle {
+  font-weight: 700;
+  font-size: 20px;
+  color: $primary-color;
+  margin-bottom: 16px;
+}
+
+.subSubTitle {
+  font-weight: 700;
+  font-size: 16px;
+  color: $primary-color;
+  margin-bottom: 32px;
+  margin-bottom: 16px;
+}
+
+.textP {
+  font-weight: 700;
+  font-size: 14px;
+  color: $secondary-color;
+
+  :last-child {
+    margin-bottom: 56px;
+  }
 }

@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { memo, useCallback, useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import { PhoneDetails } from 'types/PhoneDetails'
@@ -160,54 +161,86 @@ export const PhoneItem: React.FC = () => {
             </div>
           </div>
         </section>
-        {/* <section className={styles.description}>
-          <div className={styles.description}>
-            <div className={styles.line}>
-              <p className={styles.descriptionTitle}>Screen</p>
-              <p className={styles.descriptionData}>{phoneItem?.screen}</p>
-            </div>
+        <div>
+          <div>
+            <h2 className={styles.subTitle}>About</h2>
+            <div className={styles.separator} />
+            <h3 className={styles.subSubTitle}>And then there was Pro</h3>
+            <p className={styles.textP}>A transformative triple‑camera system that adds tons of capability without
+              complexity.
+              <br />
+              <br />
+              An unprecedented leap in battery life. And a mind‑blowing chip that
+              doubles down on machine learning and pushes the boundariesof what a
+              smartphone can do. Welcome to the first iPhone powerful enough to be
+              called Pro.
+            </p>
+            <h3 className={styles.subSubTitle}>Camera</h3>
+            <p className={styles.textP}>Meet the first triple‑camera system to combine cutting‑edge technology
+              with the legendary simplicity of iPhone. Capture up to four times more
+              scene. Get beautiful images in drastically lower light. Shoot the
+              highest‑quality video in a smartphone — then edit with the same tools you
+              love for photos. You’ve never shot with anything like it.</p>
+            <h3 className={styles.subSubTitle}>Shoot it. Flip it. Zoom it. Crop it. Cut it. Light it. Tweak it. Love it.</h3>
+            <p className={styles.textP}>iPhone 11 Pro lets you capture videos that are beautifully true to life,
+              with greater detail and smoother motion. Epic processing power means it
+              can shoot 4K video with extended dynamic range and cinematic video
+              stabilization — all at 60 fps. You get more creative control, too, with
+              four times more scene and powerful new editing tools to play with.</p>
+          </div>
+          <div>
+            <h2 className={styles.subTitle}>Tech specs</h2>
+            <div className={styles.separator} />
+            <div>
+              <div className={styles.description}>
+                <div className={styles.line}>
+                  <p className={styles.descriptionTitle}>Screen</p>
+                  <p className={styles.descriptionData}>{phoneItem?.screen}</p>
+                </div>
 
-            <div className={styles.line}>
-              <p className={styles.descriptionTitle}>Capacity</p>
-              <p className={styles.descriptionData}>{phoneItem?.capacity}</p>
-            </div>
+                <div className={styles.line}>
+                  <p className={styles.descriptionTitle}>Resolution</p>
+                  <p className={styles.descriptionData}>{phoneItem?.resolution}</p>
+                </div>
 
-            <div className={styles.line}>
-              <p className={styles.descriptionTitle}>RAM</p>
-              <p className={styles.descriptionData}>ram</p>
+                <div className={styles.line}>
+                  <p className={styles.descriptionTitle}>Processor</p>
+                  <p className={styles.descriptionData}>{phoneItem?.processor}</p>
+                </div>
+
+                <div className={styles.line}>
+                  <p className={styles.descriptionTitle}>RAM</p>
+                  <p className={styles.descriptionData}>{phoneItem?.ram}</p>
+                </div>
+
+                <div className={styles.line}>
+                  <p className={styles.descriptionTitle}>RAM</p>
+                  <p className={styles.descriptionData}>{phoneItem?.ram}</p>
+                </div>
+
+                <div className={styles.line}>
+                  <p className={styles.descriptionTitle}>Built in memory</p>
+                  <p className={styles.descriptionData}>{phoneItem?.capacity}</p>
+                </div>
+
+                <div className={styles.line}>
+                  <p className={styles.descriptionTitle}>Camera</p>
+                  <p className={styles.descriptionData}>{phoneItem?.camera}</p>
+                </div>
+
+                <div className={styles.line}>
+                  <p className={styles.descriptionTitle}>Zoom</p>
+                  <p className={styles.descriptionData}>{phoneItem?.zoom}</p>
+                </div>
+
+                <div className={styles.line}>
+                  <p className={styles.descriptionTitle}>Cell</p>
+                  <p className={styles.descriptionData}>{phoneItem?.cell.join(',')}</p>
+                </div>
+              </div>
             </div>
           </div>
-        </section> */}
-        {/* <section className={styles.about}>
-          <h2>About</h2>
-          <div className={styles.separator} />
-          <div>
-            <h3>And then there was Pro</h3>
-            <p>
-              A transformative triple‑camera system that adds tons of capability without complexity. */}
-        {/* An unprecedented leap in battery life. And a mind‑blowing chip that doubles down on machine learning and pushes the boundaries of what a smartphone can do. Welcome to the first iPhone powerful enough to be called Pro. */}
-        {/* </p>
-          </div>
-          <div>
-            <h3>Camera</h3>
-            <p> */}
-        {/* Meet the first triple‑camera system to combine cutting‑edge technology with the legendary simplicity of iPhone. Capture up to four times more scene. Get beautiful images in drastically lower light. Shoot the highest‑quality video in a smartphone — then edit with the same tools you love for photos. You’ve never shot with anything like it. */}
-        {/* </p>
-          </div>
-          <div>
-            <h3>Shoot it. Flip it. Zoom it. Crop it. Cut it. Light it. Tweak it. Love it.</h3>
-            <p> */}
-        {/* iPhone 11 Pro lets you capture videos that are beautifully true to life, with greater detail and smoother motion. Epic processing power means it can shoot 4K video with extended dynamic range and cinematic video stabilization — all at 60 fps. You get more creative control, too, with four times more scene and powerful new editing tools to play with. */}
-        {/* </p>
-          </div>
-        </section>
-        <section className={styles.tech}>
-          <h2>Tech specs</h2>
-          <div className={styles.separator} />
-        </section>
-        <section className={styles.featered}>
-          <h1>You may also like</h1>
-        </section> */}
+        </div>
       </main>
     </>
   )
