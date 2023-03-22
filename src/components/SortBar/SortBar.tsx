@@ -4,19 +4,28 @@ import { getNewSearchParams } from 'utils/getNewSearchParams'
 
 export const SortBar: React.FC = () => {
   const [searchParams, setSearchParams] = useSearchParams()
-  const sort = searchParams.get('sort') || 'year'
-  const perPage = searchParams.get('perPage') || '16'
+  const sort = searchParams.get('sort') || 'default'
+  const perPage = searchParams.get('perPage') || 'all'
 
-  const handleSorting = (value: string) => {
+  const handleSorting = (sort: string | null) => {
+    if (sort === 'default') {
+      sort = null
+    }
     const newParams = getNewSearchParams(searchParams, {
-      sort: value,
+      sort,
     })
     setSearchParams(newParams)
   }
 
-  const handlePerPage = (value: string) => {
+  const handlePerPage = (perPage: string | null) => {
+    let page: string | null = '1'
+    if (perPage === 'all') {
+      perPage = null
+      page = null
+    }
     const newParams = getNewSearchParams(searchParams, {
-      perPage: value,
+      perPage,
+      page,
     })
     setSearchParams(newParams)
   }
@@ -31,6 +40,9 @@ export const SortBar: React.FC = () => {
           className={styles.sortBar__select}
           name=""
         >
+          <option className={styles.sortBar__option} value="default">
+            Select sort
+          </option>
           <option className={styles.sortBar__option} value="year">
             Newest
           </option>
@@ -60,8 +72,8 @@ export const SortBar: React.FC = () => {
           <option className={styles.sortBar__option} value="16">
             16
           </option>
-          <option className={styles.sortBar__option} value="0">
-            all
+          <option className={styles.sortBar__option} value="all">
+            All
           </option>
         </select>
       </div>
