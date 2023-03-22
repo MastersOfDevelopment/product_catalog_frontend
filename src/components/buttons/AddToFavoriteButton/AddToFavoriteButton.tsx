@@ -25,12 +25,16 @@ export const AddToFavoriteButton: React.FC<Props> = ({ phone }) => {
   }
 
   return (
-    <button
-      type="button"
-      className={classnames(styles.buttonFavorites, {
-        [styles.buttonFavorites_active]: isActive,
-      })}
-      onClick={() => handleAddToFavourites(phone)}
-    />
+    <>
+      <div className={styles.buttonConteiner}>
+        <button
+          type="button"
+          className={classnames(styles.buttonFavorites, {
+            [styles.buttonFavorites_active]: isActive,
+          })}
+          onClick={() => handleAddToFavourites(phone)}
+        />
+      </div>
+    </>
   )
 }
