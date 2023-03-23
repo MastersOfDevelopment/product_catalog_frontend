@@ -4,19 +4,16 @@
   @include onMobile {
     width: 320px;
     margin: 0 auto;
-    margin-top: 50px;
   }
 
   @include onTablet {
     width: 600px;
     margin: 0 auto;
-    margin-top: 74px;
   }
 
   @include onDesktop {
     width: 1136px;
     margin: 0;
-    margin-top: 90px;
   }
 
   &_head {

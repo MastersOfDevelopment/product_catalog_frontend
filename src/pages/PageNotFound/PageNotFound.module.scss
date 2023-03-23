@@ -6,10 +6,8 @@ $violet-color: #4219d0;
 }
 
 .content {
-  position: absolute;
-  top: 50%;
-  right: 50%;
-  transform: translate(50%, -50%);
+  margin-top: 100px;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
