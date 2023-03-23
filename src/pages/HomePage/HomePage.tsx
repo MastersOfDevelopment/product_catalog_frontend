@@ -10,8 +10,8 @@ export const HomePage: React.FC = () => (
       <h1 className={styles.homePage_header}>Welcome to Nice Gadgets store!</h1>
       <BigSlider />
       <PhonesSwiper title={'Brand new models'} sortBy={'new'} />
+      <Categories />
+      <PhonesSwiper title={'Hot prices'} sortBy={'discount'} />
     </div>
-    <Categories />
-    <PhonesSwiper title={'Hot prices'} sortBy={'discount'} />
   </>
 )
