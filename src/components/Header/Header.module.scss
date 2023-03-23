@@ -47,14 +47,11 @@
   align-items: center;
   list-style-type: none;
   gap: 64px;
+  width: 0;
 
-  @include onMobile {
-    width: 0;
-  }
-
-  @include onTablet {
+   @include onTablet {
     width: auto;
-  }
+   }
 }
 
 .activeLink {

@@ -48,10 +48,11 @@
 
   &_buttons {
     display: flex;
+    justify-content: space-between;
   }
 
   &_button {
-    margin-left: 16px;
+    // margin-left: 16px;
     display: block;
     width: 32px;
     height: 32px;

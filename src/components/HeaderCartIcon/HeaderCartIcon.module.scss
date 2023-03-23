@@ -3,6 +3,7 @@
 
 .container {
   display: flex;
+  width: 0;
   visibility: hidden;
 }
 
@@ -20,6 +21,7 @@
   }
 
   .container {
+    width: auto;
     visibility: visible;
   }
 
