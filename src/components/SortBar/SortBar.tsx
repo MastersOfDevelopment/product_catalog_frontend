@@ -8,11 +8,13 @@ export const SortBar: React.FC = () => {
   const perPage = searchParams.get('perPage') || 'all'
 
   const handleSorting = (sort: string | null) => {
+    const page: string | null = '1'
     if (sort === 'default') {
       sort = null
     }
     const newParams = getNewSearchParams(searchParams, {
       sort,
+      page,
     })
     setSearchParams(newParams)
   }

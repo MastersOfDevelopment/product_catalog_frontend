@@ -8,7 +8,8 @@
   flex-direction: column;
   justify-content: space-evenly;
   height: 257px;
-  max-width: 360px;
+  max-width: 320px;
+  padding: 0 16px;
   margin: 0 auto;
 
   @include onTablet {
@@ -17,11 +18,12 @@
     align-items: center;
     height: 96px;
     padding: 0 24px;
-    max-width: 1200px;
+    max-width: 640px;
   }
 
   @include onDesktop {
     padding: 0 32px;
+    max-width: 1200px;
   }
 
   &__container {
