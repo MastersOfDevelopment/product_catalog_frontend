@@ -14,7 +14,6 @@
   border: 1px solid $elements-color;
   border-radius: 8px;
   padding: 32px;
-  cursor: pointer;
 
   @include onDesktop {
     width: 272px;
@@ -23,6 +22,7 @@
 
 .container:hover {
   box-shadow: 0px 2px 15px rgba(23, 32, 49, 0.4);
+  transition: all 0.3s;
 }
 
 .product-card {
@@ -36,9 +36,14 @@
 .image {
   display: block;
   object-fit: contain;
-  width: 208px;
   height: 196px;
   margin-bottom: 24px;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+    transition: all 0.3s;
+  }
 }
 
 .name {
@@ -48,6 +53,7 @@
   line-height: 21px;
   color: $primary-color;
   margin-bottom: 8px;
+  cursor: pointer;
 }
 
 .prices {

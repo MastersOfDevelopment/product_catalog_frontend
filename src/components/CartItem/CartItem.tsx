@@ -5,6 +5,7 @@ import icon_close from 'assets/icons/close.svg'
 import styles from './CartItem.module.scss'
 import { PhoneDetails } from 'types/PhoneDetails'
 import { CartContext } from 'context/CartContext'
+import { useNavigate } from 'react-router'
 
 type Props = {
   product: PhoneDetails
@@ -13,8 +14,13 @@ type Props = {
 
 export const CartItem: React.FC<Props> = ({ product, count }) => {
   const { addOne, removeOne, removeItem } = useContext(CartContext)
+  const { name, priceDiscount, images, id } = product
 
-  const { name, priceDiscount, images } = product
+  const navigate = useNavigate()
+
+  const navigateToDetails = () => {
+    navigate(`/phones/${id}`)
+  }
 
   const image = images[0]
   const totalPrice = priceDiscount * count
@@ -33,8 +39,15 @@ export const CartItem: React.FC<Props> = ({ product, count }) => {
         >
           <img className={styles.delete_button_img} src={icon_close} alt="remove phone" />
         </button>
-        <img className={styles.phone_image} src={require(`assets/${image}`)} alt={image} />
-        <a className={styles.content}>{name}</a>
+        <img
+          className={styles.phone_image}
+          onClick={() => navigateToDetails()}
+          src={require(`assets/${image}`)}
+          alt={image}
+        />
+        <a className={styles.content} onClick={() => navigateToDetails()}>
+          {name}
+        </a>
       </div>
 
       <div className={styles.quantity_and_price}>

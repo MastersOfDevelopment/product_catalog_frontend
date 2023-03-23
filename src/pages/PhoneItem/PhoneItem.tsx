@@ -10,6 +10,7 @@ import classNames from 'classnames'
 import { BreadCrumbs } from 'components/BreadCrumbs'
 import { BackButton } from 'components/buttons/BackButton'
 import { PhonesSwiper } from 'components/PhonesSwiper'
+import { getColorHex } from 'utils/getColorHex'
 
 export const PhoneItem: React.FC = () => {
   const { phoneId = '' } = useParams()
@@ -99,16 +100,21 @@ export const PhoneItem: React.FC = () => {
                 <p className={styles.formTitle}>Available colors</p>
                 <div className={styles.availableColor}>
                   {phoneItem &&
-                    phoneItem.colorsAvailable.map((currentColor) => (
-                      <Link
-                        to={getPhoneWithColor(currentColor)}
-                        className={classNames(styles.containerForColor, {
-                          [styles.selectedColor]: currentColor === phoneItem?.color,
-                        })}
-                      >
-                        <div className={styles.color} style={{ backgroundColor: currentColor }}></div>
-                      </Link>
-                    ))}
+                    phoneItem.colorsAvailable.map((currentColor) => {
+                      const preparedColor = getColorHex(currentColor)
+
+                      const isSelected = currentColor === phoneItem?.color
+                      return (
+                        <Link
+                          to={getPhoneWithColor(currentColor)}
+                          className={classNames(styles.containerForColor, {
+                            [styles.selectedColor]: isSelected,
+                          })}
+                        >
+                          <div className={styles.color} style={{ backgroundColor: preparedColor }}></div>
+                        </Link>
+                      )
+                    })}
                 </div>
               </div>
               <div className={styles.separator} />
