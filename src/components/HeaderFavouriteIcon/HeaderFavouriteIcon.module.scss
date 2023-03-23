@@ -3,11 +3,13 @@
 
 .container {
   display: flex;
+  width: 0;
   visibility: hidden;
 }
 
 @include onTablet {
   .container {
+    width: auto;
     visibility: visible;
   }
 
