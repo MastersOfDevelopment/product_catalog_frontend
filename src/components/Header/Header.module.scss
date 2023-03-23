@@ -1,4 +1,5 @@
 @import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
 
 .header {
   position: sticky;
@@ -46,6 +47,14 @@
   align-items: center;
   list-style-type: none;
   gap: 64px;
+
+  @include onMobile {
+    width: 0;
+  }
+
+  @include onTablet {
+    width: auto;
+  }
 }
 
 .activeLink {

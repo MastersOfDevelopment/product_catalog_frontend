@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import { Loader } from 'components/Loader'
-import { getProductsByCategory } from 'api/getPhones'
-import { ProductCard } from 'components/ProductCard'
+import { Loader } from '../../components/Loader'
+import { getProductsByCategory } from '../../api/getPhones'
+import { ProductCard } from '../../components/ProductCard'
 import styles from './PhonesSwiper.module.scss'
-import { Phone } from 'types/Phone'
-import leftButton from 'assets/icons/left-button.svg'
-import rightButton from 'assets/icons/right-button.svg'
+import { Phone } from '../../types/Phone'
+import leftButton from '../../assets/icons/left-button.svg'
+import rightButton from '../../assets/icons/right-button.svg'
 
 type Props = {
   title: string
