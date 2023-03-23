@@ -5,12 +5,15 @@
 
 .categories {
   margin-bottom: 56px;
+  margin: 0 auto;
 
   @include onTablet {
     margin-bottom: 64px;
   }
 
   @include onDesktop {
+    position: relative;
+    left: -250px;
     margin-bottom: 80px;
   }
 
@@ -33,13 +36,14 @@
 
     @include onTablet {
       flex-direction: row;
+      max-width: 640px;
     }
   }
 }
 
 .category {
   list-style: none;
-  
+
   &__img__wrapper {
     border-radius: 8px;
     overflow: hidden;
@@ -53,6 +57,15 @@
 
   &__img {
     display: block;
+    max-width: 320px;
+
+    @include onTablet {
+      max-width: 186px;
+    }
+
+    @include onDesktop {
+      max-width: 360px;
+    }
 
     &:hover {
       transition: all 0.3s;
