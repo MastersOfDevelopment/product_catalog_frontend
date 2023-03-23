@@ -17,6 +17,7 @@ import { PhoneItem } from 'pages/PhoneItem'
 import { CartProvider } from 'context/CartContext'
 import { TabletsPage } from 'pages/TabletsPage'
 import { AccessoriesPage } from 'pages/AccessoriesPage'
+import { Contacts } from 'pages/Contacts'
 
 function App() {
   const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState(false)
@@ -42,6 +43,7 @@ function App() {
                   </Route>
                   <Route path="/favourites" element={<FavouritesPage />} />
                   <Route path="/cart" element={<CartPage />} />
+                  <Route path="/contacts" element={<Contacts />} />
                   <Route path="/tablets" element={<TabletsPage />} />
                   <Route path="/accessories" element={<AccessoriesPage />} />
                 </Routes>

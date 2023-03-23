@@ -1,0 +1,72 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.title {
+  font-size: 48px;
+  color: $primary-color;
+  margin-bottom: 40px;
+}
+
+
+.container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 287px;
+  border: 1px solid $elements-color;
+  border-radius: 8px;
+  padding: 32px;
+  cursor: pointer;
+
+  @include onTablet {
+    width: 229px;
+  }
+
+  @include onDesktop {
+    width: 272px;
+  }
+}
+
+.gridMui {
+  margin-bottom: 80px;
+}
+
+.image {
+  display: block;
+  object-fit: contain;
+  height: 196px;
+  margin-bottom: 16px;
+  transition: all 0.3s;
+
+  &:hover {
+    transition: all 0.3s;
+    transform: scale(1.1);
+  }
+
+}
+
+
+.name {
+  font-size: 18px;
+  color: $primary-color;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.position {
+  font-size: 14px;
+  line-height: 21px;
+  color: $primary-color;
+  margin-bottom: 16px;
+
+}
+
+.people_links{
+  display: flex;
+  justify-content: space-around;
+}
+
+.logo {
+  width: 24px;
+  height: 24px;
+}
