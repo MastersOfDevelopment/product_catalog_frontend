@@ -54,6 +54,12 @@
   max-width: 100%;
   padding: 7px;
   margin-right: 23px;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+    transition: all 0.3s;
+  }
 }
 
 .content {
@@ -62,6 +68,7 @@
   line-height: 21px;
   padding-right: 10px;
   color: $primary-color;
+  cursor: pointer;
 
   @include onTablet {
     padding-right: 34px;
