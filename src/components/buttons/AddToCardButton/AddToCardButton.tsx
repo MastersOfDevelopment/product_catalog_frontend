@@ -1,13 +1,17 @@
+/* eslint-disable import/no-unresolved */
 import classnames from 'classnames'
-import { CartContext } from '../../../context/CartContext'
+import { CartContext } from 'context/CartContext'
+// import { ProductsContext } from 'context/ProductsProvider'
 import React, { useContext } from 'react'
-import styles from './AddToCartButton.module.scss'
+// import { Phone } from 'types/Phone'
+// import { PhoneDetails } from 'types/PhoneDetails'
+import styles from './AddToCardButton.module.scss'
 
 type Props = {
   phoneId: string
 }
 
-export const AddToCartButton: React.FC<Props> = ({ phoneId }) => {
+export const AddToCardButton: React.FC<Props> = ({ phoneId }) => {
   const cartContext = useContext(CartContext)
 
   const isAdded = cartContext.isAdded(phoneId)

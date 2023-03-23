@@ -2,8 +2,8 @@ import classnames from 'classnames'
 import React, { useContext } from 'react'
 import { NavLink } from 'react-router-dom'
 import styles from './HeaderCartIcon.module.scss'
-import logoBagIcon from 'assets/icons/shopping-bag.svg'
-import { CartContext } from 'context/CartContext'
+import logoBagIcon from '../../assets/icons/shopping-bag.svg'
+import { CartContext } from '../../context/CartContext'
 
 export const HeaderCartIcon: React.FC = () => {
   const { cartItems: cart } = useContext(CartContext)

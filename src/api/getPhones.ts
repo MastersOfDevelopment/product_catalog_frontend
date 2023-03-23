@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import { Phone } from 'types/Phone'
 import { PhoneDetails } from 'types/PhoneDetails'
 import { PhonesData } from 'types/PhonesData'

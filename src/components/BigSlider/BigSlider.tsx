@@ -4,8 +4,8 @@ import cn from 'classnames'
 import styles from './BigSlider.module.scss'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-import leftButton from 'assets/icons/left-button.svg'
-import buttonRight from 'assets/icons/right-button.svg'
+import leftButton from '../../assets/icons/left-button.svg'
+import buttonRight from '../../assets/icons/right-button.svg'
 
 export const BigSlider: React.FC = () => {
   const slider = React.useRef<Slider>(null)

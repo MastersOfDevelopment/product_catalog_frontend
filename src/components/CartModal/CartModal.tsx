@@ -1,4 +1,4 @@
-import { CartContext } from 'context/CartContext'
+import { CartContext } from '../../context/CartContext'
 import React, { useContext } from 'react'
 import styles from './CartModal.module.scss'
 

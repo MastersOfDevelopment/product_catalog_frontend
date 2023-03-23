@@ -13,7 +13,7 @@ export const ProductList: React.FC<Props> = ({ phones }) => (
     <Grid container justifyContent="center" rowSpacing={5} columnSpacing={2} className={styles.gridMui}>
       {phones.map((phone) => (
         <Grid key={phone.id} justifyContent="center" item>
-          <ProductCard phone={phone} />
+          <ProductCard isFullPrice={true} phone={phone} />
         </Grid>
       ))}
     </Grid>

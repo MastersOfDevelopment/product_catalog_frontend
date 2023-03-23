@@ -1,9 +1,9 @@
 import classNames from 'classnames'
-import { FavouritesContext } from 'context/FavouritesProvider'
+import { FavouritesContext } from '../../context/FavouritesProvider'
 import React, { useContext } from 'react'
 import { NavLink } from 'react-router-dom'
 import styles from './BurgerMenuIcon.module.scss'
-import { CartContext } from 'context/CartContext'
+import { CartContext } from '../../context/CartContext'
 
 type Props = {
   setIsBurgerMenuOpen: (type: boolean) => void

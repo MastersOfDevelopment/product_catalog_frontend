@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import styles from './Footer.module.scss'
-import mainLogo from 'assets/icons/logo.svg'
+import mainLogo from '../../assets/icons/logo.svg'
 import { Link } from 'react-router-dom'
 
 export const Footer: FC = () => {

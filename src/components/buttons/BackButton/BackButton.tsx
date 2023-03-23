@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './BackButton.module.scss'
 import { useNavigate } from 'react-router-dom'
-import BackArrow from 'assets/icons/arrow-left.svg'
+import BackArrow from '../../../assets/icons/arrow-left.svg'
 
 export const BackButton: React.FC = () => {
   const navigate = useNavigate()

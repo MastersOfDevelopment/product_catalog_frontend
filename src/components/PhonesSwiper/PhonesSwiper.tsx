@@ -1,18 +1,19 @@
 import React, { useEffect, useState } from 'react'
-import { Loader } from 'components/Loader'
-import { getProductsByCategory } from 'api/getPhones'
-import { ProductCard } from 'components/ProductCard'
+import { Loader } from '../../components/Loader'
+import { getProductsByCategory } from '../../api/getPhones'
+import { ProductCard } from '../../components/ProductCard'
 import styles from './PhonesSwiper.module.scss'
-import { Phone } from 'types/Phone'
-import leftButton from 'assets/icons/left-button.svg'
-import rightButton from 'assets/icons/right-button.svg'
+import { Phone } from '../../types/Phone'
+import leftButton from '../../assets/icons/left-button.svg'
+import rightButton from '../../assets/icons/right-button.svg'
 
 type Props = {
   title: string
   sortBy: string
+  isFullPrice: boolean
 }
 
-export const PhonesSwiper: React.FC<Props> = ({ title, sortBy }) => {
+export const PhonesSwiper: React.FC<Props> = ({ title, sortBy, isFullPrice = true }) => {
   const cardInfo = document.getElementById('productCard')
   const cardWidth = cardInfo?.offsetWidth
   const [phones, setPhones] = useState<Phone[]>([])
@@ -59,7 +60,7 @@ export const PhonesSwiper: React.FC<Props> = ({ title, sortBy }) => {
             onClick={() => {
               setPosition((position) => position + 1)
             }}
-            disabled={position === phones.length - 1}
+            disabled={position === phones.length - 4}
           >
             <img src={rightButton} alt="next button" className={styles.button_image} />
           </button>
@@ -71,7 +72,7 @@ export const PhonesSwiper: React.FC<Props> = ({ title, sortBy }) => {
         <div className={styles.phoneSwiper_cards}>
           {phones.map((phone) => (
             <div style={{ transform: `translateX(-${moveCard}px)` }} key={phone.id} className={styles.phoneSwiper_card}>
-              <ProductCard phone={phone} />
+              <ProductCard isFullPrice={isFullPrice} phone={phone} />
             </div>
           ))}
         </div>

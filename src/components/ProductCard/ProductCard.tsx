@@ -7,9 +7,10 @@ import { useNavigate } from 'react-router-dom'
 
 type Props = {
   phone: Phone
+  isFullPrice: boolean
 }
 
-export const ProductCard: React.FC<Props> = ({ phone }) => {
+export const ProductCard: React.FC<Props> = ({ phone, isFullPrice = true }) => {
   const navigate = useNavigate()
 
   const { name, fullPrice, price, screen, capacity, ram, image, phoneId } = phone
@@ -27,7 +28,7 @@ export const ProductCard: React.FC<Props> = ({ phone }) => {
         <div className={styles.prices}>
           <p className={styles.price}>${price}</p>
 
-          <p className={styles.fullPrice}>${fullPrice}</p>
+          {isFullPrice && <p className={styles.fullPrice}>${fullPrice}</p>}
         </div>
 
         <div className={styles.separator} />
