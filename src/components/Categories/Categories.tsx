@@ -29,7 +29,9 @@ export const Categories: FC = () => {
       <ul className={styles.categories__container}>
         <li className={styles.category}>
           <Link to={'/phones'}>
-            <img className={styles.category__img} src={phones} alt="Mobile phones page" />
+            <div className={styles.category__img__wrapper}>
+              <img className={styles.category__img} src={phones} alt="Mobile phones page" />
+            </div>
           </Link>
           <Link to={'/phones'} className={styles.category__name}>
             Mobile phones
@@ -39,7 +41,9 @@ export const Categories: FC = () => {
 
         <li className={styles.category}>
           <Link to={'/tablets'}>
-            <img className={styles.category__img} src={tablets} alt="Tablets page" />
+            <div className={styles.category__img__wrapper}>
+              <img className={styles.category__img} src={tablets} alt="Tablets page" />
+            </div>
           </Link>
           <Link to={'/tablets'} className={styles.category__name}>
             Tablets
@@ -49,7 +53,9 @@ export const Categories: FC = () => {
 
         <li className={styles.category}>
           <Link to={'/accessories'}>
-            <img className={styles.category__img} src={accessories} alt="Accessories page" />
+            <div className={styles.category__img__wrapper}>
+              <img className={styles.category__img} src={accessories} alt="Accessories page" />
+            </div>
           </Link>
           <Link to={'/accessories'} className={styles.category__name}>
             Accessories

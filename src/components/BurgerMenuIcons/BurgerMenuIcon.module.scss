@@ -15,6 +15,26 @@
   }
 }
 
+.icon_container {
+  position: relative;
+}
+
+.counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  top: 95%;
+  right: 42%;
+  background-color: $accent-color;
+  color: $white-color;
+  border-radius: 50%;
+  font-size: 9px;
+  border: 1px solid $white-color;
+}
+
 .activeLink {
   &::after {
     display: inline-block;

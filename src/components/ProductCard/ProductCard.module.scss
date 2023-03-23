@@ -9,7 +9,6 @@
   border: 1px solid $elements-color;
   border-radius: 8px;
   padding: 32px;
-  cursor: pointer;
 
   @include onTablet {
     width: 229px;
@@ -38,6 +37,12 @@
   object-fit: contain;
   height: 196px;
   margin-bottom: 24px;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+    transition: all 0.3s;
+  }
 }
 
 .name {
@@ -47,6 +52,7 @@
   line-height: 21px;
   color: $primary-color;
   margin-bottom: 8px;
+  cursor: pointer;
 }
 
 .prices {
