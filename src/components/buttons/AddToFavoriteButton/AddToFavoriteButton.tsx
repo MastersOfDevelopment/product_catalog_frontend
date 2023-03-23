@@ -1,7 +1,7 @@
 import classnames from 'classnames'
-import { FavouritesContext } from 'context/FavouritesProvider'
+import { FavouritesContext } from '../../../context/FavouritesProvider'
 import React, { useContext } from 'react'
-import { Phone } from 'types/Phone'
+import { Phone } from '../../../types/Phone'
 import styles from './AddToFavoriteButton.module.scss'
 
 type Props = {

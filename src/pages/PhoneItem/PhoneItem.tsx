@@ -235,7 +235,7 @@ export const PhoneItem: React.FC = () => {
             </div>
           </div>
         </div>
-        <PhonesSwiper title={'You may also like'} sortBy={'new'} />
+        <PhonesSwiper isFullPrice={true} title={'You may also like'} sortBy={'new'} />
       </main>
     </>
   )

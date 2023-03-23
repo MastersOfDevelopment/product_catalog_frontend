@@ -1,10 +1,10 @@
 import React, { useContext } from 'react'
-import icon_minus from 'assets/icons/minus.svg'
-import icon_plus from 'assets/icons/plus.svg'
-import icon_close from 'assets/icons/close.svg'
+import icon_minus from '../../assets/icons/minus.svg'
+import icon_plus from '../../assets/icons/plus.svg'
+import icon_close from '../../assets/icons/close.svg'
 import styles from './CartItem.module.scss'
-import { PhoneDetails } from 'types/PhoneDetails'
-import { CartContext } from 'context/CartContext'
+import { PhoneDetails } from '../../types/PhoneDetails'
+import { CartContext } from '../../context/CartContext'
 import { useNavigate } from 'react-router'
 
 type Props = {

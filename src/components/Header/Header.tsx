@@ -1,11 +1,11 @@
 import React from 'react'
 import styles from './Header.module.scss'
-import { NavLinkBar } from 'components/NavLinkBar'
-import burgerMenuIcon from 'assets/icons/burger-menu.svg'
-import { HeaderLogo } from 'components/HeaderLogo'
-import { BurgerMenuButton } from 'components/buttons/BurgerMenuButton'
-import { HeaderFavouriteIcon } from 'components/HeaderFavouriteIcon'
-import { HeaderCartIcon } from 'components/HeaderCartIcon'
+import { NavLinkBar } from '../../components/NavLinkBar'
+import burgerMenuIcon from '../../assets/icons/burger-menu.svg'
+import { HeaderLogo } from '../../components/HeaderLogo'
+import { BurgerMenuButton } from '../../components/buttons/BurgerMenuButton'
+import { HeaderFavouriteIcon } from '../../components/HeaderFavouriteIcon'
+import { HeaderCartIcon } from '../../components/HeaderCartIcon'
 
 type Props = {
   setIsBurgerMenuOpen: (type: boolean) => void
