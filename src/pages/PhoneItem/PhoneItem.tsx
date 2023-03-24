@@ -20,19 +20,20 @@ export const PhoneItem: React.FC = () => {
   const [currentPhoneId, setCurrentPhoneId] = useState<string>(phoneId)
   const [favoritePhone, setFavoritePhone] = useState<Phone>()
 
-  const fetchOnePhone = useCallback(async (phoneId: string) => {
+  const fetchOnePhone = async (phoneId: string) => {
     try {
       const onePhoneData = await getPhoneDetails(phoneId)
       const photo = onePhoneData.images[0]
       setPhoneItem(onePhoneData)
       setMainPhoto(photo)
       setCurrentPhoneId(onePhoneData.id)
+      setIsError(false)
     } catch (error) {
       setIsError(true)
     }
-  }, [])
+  }
 
-  const fetchAllPhones = useCallback(async (phoneId: string) => {
+  const fetchAllPhones = async (phoneId: string) => {
     try {
       const phonesToFavorite = await getAllPhones(phoneId)
       const firstPhone = phonesToFavorite.phones.find((phone) => phone.itemId === phoneId)
@@ -42,15 +43,15 @@ export const PhoneItem: React.FC = () => {
     } catch (error) {
       setIsError(true)
     }
-  }, [])
+  }
 
   useEffect(() => {
-    const loadFunc = async () => {
-      await fetchOnePhone(phoneId)
-      await fetchAllPhones(phoneId)
+    const loadFunc = () => {
+      fetchOnePhone(phoneId)
+      fetchAllPhones(phoneId)
     }
     loadFunc()
-  }, [phoneId, fetchOnePhone, fetchAllPhones])
+  }, [phoneId])
 
   const getPhoneWithColor = useCallback(
     (color: string) => {
@@ -108,6 +109,7 @@ export const PhoneItem: React.FC = () => {
                           const isSelected = currentColor === phoneItem?.color
                           return (
                             <Link
+                              key={currentColor}
                               to={getPhoneWithColor(currentColor)}
                               className={classNames(styles.containerForColor, {
                                 [styles.selectedColor]: isSelected,
@@ -125,6 +127,7 @@ export const PhoneItem: React.FC = () => {
                     {phoneItem &&
                       phoneItem.capacityAvailable.map((currentCapacity) => (
                         <Link
+                          key={currentCapacity}
                           to={getPhoneWithCapacity(currentCapacity)}
                           className={classNames(styles.capacity, {
                             [styles.selectedCapacity]: currentCapacity === phoneItem.capacity,
