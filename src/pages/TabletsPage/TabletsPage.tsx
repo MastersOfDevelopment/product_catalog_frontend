@@ -4,7 +4,7 @@ import UnderConstruction from 'assets/img/UnderConstruction.png'
 
 export const TabletsPage: React.FC = () => (
   <div className={styles.container}>
-    <h2>This page is under construction</h2>
+    <h1>This page is under construction</h1>
     <img className={styles.image} src={UnderConstruction} alt="under-construction" />
   </div>
 )

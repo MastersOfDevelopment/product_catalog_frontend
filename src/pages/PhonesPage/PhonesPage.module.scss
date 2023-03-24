@@ -1,15 +1,22 @@
 @import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
 
 .title {
   font-size: 48px;
   color: $primary-color;
+  line-height: 41px;
 }
 
 .subtitle {
-  font-weight: 600;
+  font-weight: 700;
   font-size: 14px;
   color: $secondary-color;
   margin-top: 8px;
+  margin-bottom: 32px;
+
+  @include onTablet {
+    margin-bottom: 40px;
+  }
 }
 
 .error_message {
