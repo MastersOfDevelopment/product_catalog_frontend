@@ -1,47 +1,77 @@
-# Getting Started with Create React App
+# Project Title
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Masters of development
+ 
+Wellcome to Nice Gadgets - online store project which was created using React.js, Typescript, Node.js, HTML, CSS, our skills, passion, sleepless nights and long-long meetings.
+Our goal was to create a user-friendly online store with beautiful clear interface and slight logic.
+We used husky, prettier and eslint to check the quality of our code, Material UI, React Router, react-slick, ORM Sequelize libraries. Such tools as Postgres and Postman hepled us in backend part.
 
-## Available Scripts
+We have performed both backend and frontend part.
 
-In the project directory, you can run:
+## Frontend part includes:
+1.adaptive layout
+2.dividing into logical components
+3.performing logic based on user flow
+4.creating adding favourite product user flow and adding items to the cart and checkout
+5.animation
 
-### `npm start`
+### Install & run
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+    $ git clone https://github.com/YOUR_USERNAME/PROJECT_TITLE
+    $ cd PROJECT_TITLE
+    $ npm install
+    $ npm start
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Backend part:
+### Install & run
 
-### `npm run build`
+    $ git clone https://github.com/YOUR_USERNAME/PROJECT_TITLE
+    $ cd PROJECT_TITLE
+    $ npm install
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Setup DB locally
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  $ add .env file in root directory
+   fill it with following variables:
+      DB_HOST='host'
+      DB_NAME='db name'
+      DB_USER='user'
+      DB_PASSWORD='pass'
+      DB_DRIVER='postgres'
+  $ add config.json file inside src/config with following text:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+{
+  "development": {
+    "dialectOptions": {
+      "ssl": {
+        "rejectUnauthorized": true
+      }
+    },
+    "username": "DB_NAME",
+    "password": "DB_PASSWORD",
+    "database": "DB_PASSWORD",
+    "host": "DB_HOST",
+    "dialect": "DB_DRIVER"
+  },
+  "test": {
+    "username": "DB_NAME",
+    "password": "DB_PASSWORD",
+    "database": "DB_PASSWORD",
+    "host": "DB_HOST",
+    "dialect": "DB_DRIVER"
+  },
+  "production": {
+    "username": "DB_NAME",
+    "password": "DB_PASSWORD",
+    "database": "DB_PASSWORD",
+    "host": "DB_HOST",
+    "dialect": "DB_DRIVER"
+  }
+}
 
-### `npm run eject`
+### Running the project
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+    $ npm start
 
