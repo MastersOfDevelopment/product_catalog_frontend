@@ -85,10 +85,6 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-
-  @include onTablet {
-    width: 200px;
-  }
 }
 
 .quantity_buttons {
@@ -136,6 +132,12 @@
 
     &:hover {
       border: 1px solid $primary-color;
+    }
+
+    &:disabled {
+      cursor: auto;
+      border: 1px solid $icons-color;
+      opacity: 0.5;
     }
   }
 

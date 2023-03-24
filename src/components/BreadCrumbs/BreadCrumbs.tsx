@@ -24,8 +24,8 @@ export const BreadCrumbs: React.FC = () => {
       </NavLink>
       {breadcrumbs.map(({ match, breadcrumb }) => {
         return (
-          <div className={styles.path_container}>
-            <React.Fragment key={match.pathname}>
+          <div key={match.pathname} className={styles.path_container}>
+            <React.Fragment>
               <img className={styles.arrow} src={ArrowRight} alt="arrow-right" />
               <NavLink
                 key={match.pathname}
