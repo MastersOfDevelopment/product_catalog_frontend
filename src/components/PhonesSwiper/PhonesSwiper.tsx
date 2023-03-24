@@ -21,7 +21,6 @@ export const PhonesSwiper: React.FC<Props> = ({ title, sortBy, isFullPrice = tru
   const [isLoading, setIsLoading] = useState(false)
   const moveCard = (cardWidth ? cardWidth + 16 : 288) * position
 
-  console.log(cardWidth)
   const loadPhonesData = async () => {
     try {
       setIsLoading(true)
@@ -72,7 +71,7 @@ export const PhonesSwiper: React.FC<Props> = ({ title, sortBy, isFullPrice = tru
         <div className={styles.phoneSwiper_cards}>
           {phones.map((phone) => (
             <div style={{ transform: `translateX(-${moveCard}px)` }} key={phone.id} className={styles.phoneSwiper_card}>
-              <ProductCard isFullPrice={isFullPrice} phone={phone} />
+              <ProductCard isCardForSwiper={true} isFullPrice={isFullPrice} phone={phone} />
             </div>
           ))}
         </div>

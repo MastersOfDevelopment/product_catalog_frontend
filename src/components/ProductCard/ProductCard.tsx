@@ -4,13 +4,15 @@ import { AddToFavoriteButton } from '../buttons/AddToFavoriteButton'
 import { AddToCartButton } from '../buttons/AddToCartButton'
 import styles from './ProductCard.module.scss'
 import { useNavigate } from 'react-router-dom'
+import classNames from 'classnames'
 
 type Props = {
   phone: Phone
   isFullPrice: boolean
+  isCardForSwiper: boolean
 }
 
-export const ProductCard: React.FC<Props> = ({ phone, isFullPrice = true }) => {
+export const ProductCard: React.FC<Props> = ({ phone, isFullPrice = true, isCardForSwiper }) => {
   const navigate = useNavigate()
 
   const { name, fullPrice, price, screen, capacity, ram, image, phoneId } = phone
@@ -21,7 +23,12 @@ export const ProductCard: React.FC<Props> = ({ phone, isFullPrice = true }) => {
 
   return (
     <div className={styles.productCardPage}>
-      <div id="productCard" className={styles.container}>
+      <div
+        id="productCard"
+        className={classNames(styles.container, {
+          [styles.container_for_swiper]: isCardForSwiper,
+        })}
+      >
         <img src={require(`assets/${image}`)} alt={name} onClick={navigateToDetails} className={styles.image} />
         <p className={styles.name}>{name}</p>
 
