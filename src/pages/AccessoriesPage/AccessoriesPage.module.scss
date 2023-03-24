@@ -6,7 +6,7 @@
   flex-grow: 1;
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 48px auto 0;
   padding: 0px 30px;
   align-items: center;
   justify-content: center;
@@ -20,5 +20,6 @@
 }
 
 .image {
+  margin: 20px auto;
   max-width: 80%;
 }
