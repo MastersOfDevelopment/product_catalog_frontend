@@ -7,7 +7,6 @@
   margin-bottom: 40px;
 }
 
-
 .container {
   text-align: center;
   display: flex;
@@ -42,9 +41,7 @@
     transition: all 0.3s;
     transform: scale(1.1);
   }
-
 }
-
 
 .name {
   font-size: 18px;
@@ -58,10 +55,9 @@
   line-height: 21px;
   color: $primary-color;
   margin-bottom: 16px;
-
 }
 
-.people_links{
+.people_links {
   display: flex;
   justify-content: space-around;
 }
