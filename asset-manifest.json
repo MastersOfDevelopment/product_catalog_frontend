@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/product_catalog_frontend/static/css/main.f6251ffc.css",
-    "main.js": "/product_catalog_frontend/static/js/main.3e42cd9c.js",
+    "main.css": "/product_catalog_frontend/static/css/main.15dfc57d.css",
+    "main.js": "/product_catalog_frontend/static/js/main.27eec271.js",
     "static/media/category-tablets.png": "/product_catalog_frontend/static/media/category-tablets.51782e18205a1ca01ce8.png",
     "static/media/category-phones.png": "/product_catalog_frontend/static/media/category-phones.af93d992917380dfe206.png",
     "static/media/banner-phones.png": "/product_catalog_frontend/static/media/banner-phones.b4eeda8bd82b712057a2.png",
@@ -12,6 +12,7 @@
     "static/media/Mont-SemiBold.otf": "/product_catalog_frontend/static/media/Mont-SemiBold.8979d71a3146ca1d761f.otf",
     "static/media/Mont-Bold.otf": "/product_catalog_frontend/static/media/Mont-Bold.03c8c2f6127c1da0fc39.otf",
     "static/media/Banner.png": "/product_catalog_frontend/static/media/Banner.d050523a38b733655d0b.png",
+    "static/media/marharyta_frolova.jpg": "/product_catalog_frontend/static/media/marharyta_frolova.bf10b76b7d6faff37433.jpg",
     "static/media/01.jpg": "/product_catalog_frontend/static/media/01.0ef6a6762d9cdb256f60.jpg",
     "static/media/00.jpg": "/product_catalog_frontend/static/media/00.c41366d349d0ae9419a7.jpg",
     "static/media/03.jpg": "/product_catalog_frontend/static/media/03.60558962d469beaed756.jpg",
@@ -22,8 +23,12 @@
     "static/media/picthree.bdd2e0fc.png": "/product_catalog_frontend/static/media/picthree.bdd2e0fc.bdd2e0fca0159e52f41c.png",
     "static/media/mobile-banner.png": "/product_catalog_frontend/static/media/mobile-banner.efbec9e7fa491a9a8b7b.png",
     "static/media/category-phones.jpg": "/product_catalog_frontend/static/media/category-phones.67bd69b97a7ffa95e348.jpg",
+    "static/media/yurii_demkiv.jpg": "/product_catalog_frontend/static/media/yurii_demkiv.e36cff7ec2e439e01cef.jpg",
     "static/media/UnderConstruction.png": "/product_catalog_frontend/static/media/UnderConstruction.dba8ba4ad5b7ba241f1c.png",
     "static/media/04.jpg": "/product_catalog_frontend/static/media/04.3c4b6b47c1321f9dce59.jpg",
+    "static/media/iryna_pysanko.jpg": "/product_catalog_frontend/static/media/iryna_pysanko.e86529eac4dbd646ac09.jpg",
+    "static/media/vladyslav-horovyi.jpg": "/product_catalog_frontend/static/media/vladyslav-horovyi.d405990800dcbfb5d69c.jpg",
+    "static/media/ihor_mariash.jpg": "/product_catalog_frontend/static/media/ihor_mariash.f6d7a3038ef87dca5e6c.jpg",
     "static/media/shopping-bag-with-counter.svg": "/product_catalog_frontend/static/media/shopping-bag-with-counter.f7a79e79ed1510c07d18.svg",
     "static/media/slick.svg": "/product_catalog_frontend/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/favourites-with-counter.svg": "/product_catalog_frontend/static/media/favourites-with-counter.1b6297ebeacd2912b2cb.svg",
@@ -31,12 +36,15 @@
     "static/media/slick.ttf": "/product_catalog_frontend/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/shopping-bag.svg": "/product_catalog_frontend/static/media/shopping-bag.df23e4fbb25ff3701b16978082a61721.svg",
     "static/media/favourites.svg": "/product_catalog_frontend/static/media/favourites.cc696932b63c19f487763e75a935dfcb.svg",
+    "static/media/github.svg": "/product_catalog_frontend/static/media/github.404cf1f281dfe905edb0c3a79fe4eb5f.svg",
     "static/media/slick.woff": "/product_catalog_frontend/static/media/slick.295183786cd8a1389865.woff",
     "static/media/home.svg": "/product_catalog_frontend/static/media/home.9a24a70540404ccecd05fd9f900ddeeb.svg",
+    "static/media/telegram.svg": "/product_catalog_frontend/static/media/telegram.cf0713f5692f977540283e1714f603a2.svg",
+    "static/media/linkedin.svg": "/product_catalog_frontend/static/media/linkedin.36ad5c082b1ada97384a53f1bec88922.svg",
     "static/media/search.svg": "/product_catalog_frontend/static/media/search.d8fcb9d1e3842ba3279d.svg",
     "static/media/favourites-filled.svg": "/product_catalog_frontend/static/media/favourites-filled.b224c57f5cf288112dee.svg",
-    "index.html": "/product_catalog_frontend/index.html",
     "static/media/close.svg": "/product_catalog_frontend/static/media/close.cdfb6ae506fe360c9ad495bfc61f521d.svg",
+    "index.html": "/product_catalog_frontend/index.html",
     "static/media/burger-menu.svg": "/product_catalog_frontend/static/media/burger-menu.3f3c3f2fcc2d0b60dfa752fd3c1cab9c.svg",
     "static/media/plus.svg": "/product_catalog_frontend/static/media/plus.d886cbead86167dad78ed7d08416c466.svg",
     "static/media/right-button.svg": "/product_catalog_frontend/static/media/right-button.a96d198de7ec6e137ad0ba81dfd3fab2.svg",
@@ -47,11 +55,11 @@
     "static/media/arrow-down.svg": "/product_catalog_frontend/static/media/arrow-down.98c9dd6d98b47f2f1977.svg",
     "static/media/arrow-up.svg": "/product_catalog_frontend/static/media/arrow-up.1ea6958a07717117d3d5.svg",
     "static/media/minus.svg": "/product_catalog_frontend/static/media/minus.6147cb5db4c975f91de08b377dc8a814.svg",
-    "main.f6251ffc.css.map": "/product_catalog_frontend/static/css/main.f6251ffc.css.map",
-    "main.3e42cd9c.js.map": "/product_catalog_frontend/static/js/main.3e42cd9c.js.map"
+    "main.15dfc57d.css.map": "/product_catalog_frontend/static/css/main.15dfc57d.css.map",
+    "main.27eec271.js.map": "/product_catalog_frontend/static/js/main.27eec271.js.map"
   },
   "entrypoints": [
-    "static/css/main.f6251ffc.css",
-    "static/js/main.3e42cd9c.js"
+    "static/css/main.15dfc57d.css",
+    "static/js/main.27eec271.js"
   ]
 }
