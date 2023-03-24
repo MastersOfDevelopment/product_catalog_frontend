@@ -30,7 +30,7 @@ export const ProductCard: React.FC<Props> = ({ phone, isFullPrice = true, isCard
         })}
       >
         <img src={require(`assets/${image}`)} alt={name} onClick={navigateToDetails} className={styles.image} />
-        <p className={styles.name} onClick={navigateToDetails}>
+        <p className={styles.name} onClick={navigateToDetails} title={name}>
           {name}
         </p>
 

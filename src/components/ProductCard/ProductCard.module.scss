@@ -54,6 +54,11 @@
 
 .name {
   display: flex;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
   min-height: 42px;
   font-size: 14px;
   line-height: 21px;
