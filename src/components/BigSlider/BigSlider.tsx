@@ -57,9 +57,9 @@ export const BigSlider: React.FC = () => {
 
       <div className={styles.content}>
         <Slider ref={slider} {...settings}>
-          <div className={styles.slide}></div>
-          <div className={styles.slide}></div>
-          <div className={styles.slide}></div>
+          <div className={styles.first_slide}></div>
+          <div className={styles.second_slide}></div>
+          <div className={styles.third_slide}></div>
         </Slider>
       </div>
 
