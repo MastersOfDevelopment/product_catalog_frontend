@@ -45,7 +45,7 @@
   }
 }
 
-.slide {
+.first_slide {
   cursor: pointer;
   border-radius: 8px;
   @include onMobile {
@@ -64,7 +64,54 @@
   }
 
   @include onDesktop {
-    background-image: url('../../assets/img/Banner.png');
+    width: 1040px;
+    height: 400px;
+  }
+}
+
+.second_slide {
+  cursor: pointer;
+  border-radius: 8px;
+  @include onMobile {
+    background-image: url('../../assets/img/Banner-2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 320px;
+    width: 320px;
+  }
+
+  @include onTablet {
+    height: 189px;
+    width: 490px;
+    background-position-y: 30%;
+  }
+
+  @include onDesktop {
+    width: 1040px;
+    height: 400px;
+  }
+}
+
+.third_slide {
+  cursor: pointer;
+  border-radius: 8px;
+  @include onMobile {
+    background-image: url('../../assets/img/Banner-3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 320px;
+    width: 320px;
+  }
+
+  @include onTablet {
+    height: 189px;
+    width: 490px;
+    background-position-y: 15%;
+  }
+
+  @include onDesktop {
     width: 1040px;
     height: 400px;
   }
