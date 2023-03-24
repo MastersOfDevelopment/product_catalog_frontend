@@ -46,6 +46,8 @@
 }
 
 .slide {
+  cursor: pointer;
+  border-radius: 8px;
   @include onMobile {
     background-image: url('../../assets/img/mobile-banner.png');
     background-repeat: no-repeat;
